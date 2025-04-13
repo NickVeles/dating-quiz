@@ -149,6 +149,11 @@ const App: React.FC = () => {
               {/* Question */}
               {!dealbreaker && currentQuestion && (
                 <>
+                  {currentQuestion.category && (
+                    <p className="mb-2 text-sm font-semibold text-gray-600">
+                      {currentQuestion.category}
+                    </p>
+                  )}
                   {currentQuestion.image && (
                     <img
                       src={currentQuestion.image}
