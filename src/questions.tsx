@@ -191,12 +191,12 @@ export const Questions: Question[] = [
     text: "What's the greatest value of life? (in your opinion)",
     answers: [
       { text: "Family", points: 25 },
-      { text: "I don't know...", points: 10 },
       { text: "Knowledge", points: 75 },
       { text: "Money & Wealth", points: 50 },
       { text: "Pleasure", points: 0, dealbreaker: <p>Dealbreaker!</p> },
       { text: "Power", points: 50 },
       { text: "Self-discovery", points: 100 },
+      { text: "I don't know...", points: 10 },
       { text: "Other", points: 50 },
     ],
     category: "🧭 Values & Mindset",
@@ -210,7 +210,7 @@ export const Questions: Question[] = [
     category: "🧭 Values & Mindset",
     },
     {
-    text: "How would you feel if you discovered you'd relive your life endlessly, always the same way?",
+    text: "How would you feel if you discovered you'd relive your life endlessly, always the same exact way?",
     answers: [
       { text: "Great! I love my life despite occasional suffering!", points: 100 },
       { text: "Well... At least it's better than nothing?", points: 50 },
@@ -251,7 +251,7 @@ export const Questions: Question[] = [
     {
     text: "Are you extroverted/introverted?",
     answers: [
-      { text: "Party animal", points: 0 },
+      { text: "Party animal", points: 0, dealbreaker: <p>Dealbreaker!</p> },
       { text: "Extroverted", points: 10 },
       { text: "A mix of both", points: 25 },
       { text: "Introverted", points: 50 },
