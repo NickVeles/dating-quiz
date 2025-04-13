@@ -103,7 +103,7 @@ const App: React.FC = () => {
                 .map((question, index) => (
                   <div key={index} className="flex justify-center items-center">
                   {question.selected?.dealbreaker ? (
-                    <BrokenHeart className="w-6 h-6 text-black" />
+                    <BrokenHeart className="w-6 h-6 text-pink-500" />
                   ) : question.selected ? (
                     <Heart className="w-6 h-6 text-pink-500" />
                   ) : (
