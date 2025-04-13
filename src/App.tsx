@@ -7,7 +7,6 @@ import Question from "../model/Question";
 import Answer from "../model/Answer";
 
 const App: React.FC = () => {
-  const maxPoints = Questions.reduce((sum, q) => sum + q.maxPoints, 0);
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(-1);
   const [currentQuestion, setCurrentQuestion] = useState<Question | null>(null);
   const [dealbreaker, setDealbreaker] = useState<React.ReactNode | null>(null);
@@ -22,7 +21,7 @@ const App: React.FC = () => {
     } else {
       setCurrentQuestion(null);
     }
-  }, [currentQuestionIndex]);
+  }, [currentQuestionIndex, questions]);
 
   const handleAnswerSelect = useCallback(
     (answer: Answer) => {
@@ -33,8 +32,17 @@ const App: React.FC = () => {
       if (answer.dealbreaker) {
         setDealbreaker(answer.dealbreaker);
       }
-
       setCurrentQuestionIndex(currentQuestionIndex + 1);
+
+      if (currentQuestionIndex >= questions.length - 1) {
+        setUserPoints(
+          questions.reduce(
+            (total, question) =>
+              total + (question.selected ? question.selected.points : 0),
+            0
+          )
+        );
+      }
     },
     [currentQuestionIndex, questions, setQuestions]
   );
@@ -93,33 +101,29 @@ const App: React.FC = () => {
               )}
 
               {/* Go back button */}
-              {currentQuestionIndex > 0 && currentQuestionIndex < Questions.length && (
-                <button
-                  className="bg-gray-200 hover:bg-gray-300 text-gray-800 font-semibold py-2 px-4 rounded focus:outline-none focus:shadow-outline mb-4"
-                  onClick={handleGoBack}
-                >
-                  {`<<< ${dealbreaker ? "Oops... Take me back" : "Go Back"}`}
-                </button>
-              )}
+              {currentQuestionIndex > 0 &&
+                currentQuestionIndex < Questions.length && (
+                  <button
+                    className="bg-gray-200 hover:bg-gray-300 text-gray-800 font-semibold py-2 px-4 rounded focus:outline-none focus:shadow-outline mb-4"
+                    onClick={handleGoBack}
+                  >
+                    {`<<< ${dealbreaker ? "Oops... Take me back" : "Go Back"}`}
+                  </button>
+                )}
+
+              {/* Dealbreaker screen */}
+              {dealbreaker}
 
               {/* Results screen */}
-              {currentQuestionIndex >= questions.length && (
+              {!dealbreaker && currentQuestionIndex >= questions.length && (
                 <div>
                   <h3 className="text-xl font-semibold mb-4">
                     Your Compatibility Score:
                   </h3>
                   <p className="text-4xl font-bold text-blue-600 mb-6">
-                    {userPoints} / {maxPoints}
+                    {userPoints}
                   </p>
                   <p className="text-lg mb-4">{getCompatibilityMessage()}</p>
-                </div>
-              )}
-
-              {/* Dealbreaker screen */}
-              {dealbreaker && (
-                <div className="text-red-600 mb-4">
-                  <h3 className="text-xl font-semibold mb-4">Dealbreaker:</h3>
-                  <p className="text-lg">{dealbreaker}</p>
                 </div>
               )}
 
@@ -129,7 +133,7 @@ const App: React.FC = () => {
                   {currentQuestion.image && (
                     <img
                       src={currentQuestion.image}
-                      alt="Question Image"
+                      alt="Question"
                       className="mb-4 rounded-md w-full h-auto"
                     />
                   )}

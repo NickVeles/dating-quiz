@@ -7,5 +7,4 @@ export default interface Question {
   image?: string;
   answers: Answer[];
   selected?: Answer;
-  maxPoints: number;
 }

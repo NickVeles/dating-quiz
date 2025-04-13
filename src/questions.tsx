@@ -7,11 +7,10 @@ export const Questions: Question[] = [
     text: "What is your favorite color?",
     answers: [
       { id: uuidv4(), text: "Red", points: 1 },
-      { id: uuidv4(), text: "Blue", points: 2 },
+      { id: uuidv4(), text: "Blue", points: 2, dealbreaker: <p>Dealbreaker!</p> },
       { id: uuidv4(), text: "Green", points: 3 },
       { id: uuidv4(), text: "Yellow", points: 4 },
     ],
-    maxPoints: 4,
   },
   // Add more questions here!
 ];
