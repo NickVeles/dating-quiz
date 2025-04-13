@@ -76,6 +76,40 @@ const App: React.FC = () => {
             Are We a Match?
           </h2>
 
+          {/* Go back button */}
+          <button
+            className={`bg-gray-200 text-gray-800 font-semibold p-3 rounded-full focus:outline-none focus:shadow-outline mb-4 flex items-center justify-center ${
+              dealbreaker ||
+              (currentQuestionIndex > 0 &&
+                currentQuestionIndex < Questions.length)
+                ? "hover:bg-gray-300"
+                : "opacity-50 cursor-not-allowed"
+            }`}
+            onClick={handleGoBack}
+            disabled={
+              !(
+                dealbreaker ||
+                (currentQuestionIndex > 0 &&
+                  currentQuestionIndex < Questions.length)
+              )
+            }
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              strokeWidth={1.5}
+              stroke="currentColor"
+              className="w-6 h-6"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                d="M15.75 19.5 8.25 12l7.5-7.5"
+              />
+            </svg>
+          </button>
+
           <AnimatePresence mode="wait">
             <motion.div
               key={currentQuestionIndex}
@@ -99,17 +133,6 @@ const App: React.FC = () => {
                   </button>
                 </div>
               )}
-
-              {/* Go back button */}
-              {currentQuestionIndex > 0 &&
-                currentQuestionIndex < Questions.length && (
-                  <button
-                    className="bg-gray-200 hover:bg-gray-300 text-gray-800 font-semibold py-2 px-4 rounded focus:outline-none focus:shadow-outline mb-4"
-                    onClick={handleGoBack}
-                  >
-                    {`<<< ${dealbreaker ? "Oops... Take me back" : "Go Back"}`}
-                  </button>
-                )}
 
               {/* Dealbreaker screen */}
               {dealbreaker}
