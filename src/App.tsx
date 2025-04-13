@@ -76,7 +76,7 @@ const App: React.FC = () => {
             Are We a Match?
           </h2>
 
-          <AnimatePresence>
+          <AnimatePresence mode="wait">
             <motion.div
               key={currentQuestionIndex}
               variants={questionVariants}
