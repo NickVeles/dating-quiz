@@ -72,10 +72,6 @@ const App: React.FC = () => {
     <div className="min-h-screen bg-gray-100 py-10">
       <div className="max-w-md mx-auto bg-white shadow-md rounded-lg overflow-hidden">
         <div className="p-6">
-          <h2 className="text-2xl font-semibold mb-4 text-center">
-            Are We a Match?
-          </h2>
-
           {/* Go back button */}
           <button
             className={`bg-gray-200 text-gray-800 font-semibold p-3 rounded-full focus:outline-none focus:shadow-outline mb-4 flex items-center justify-center ${
