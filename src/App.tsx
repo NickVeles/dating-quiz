@@ -5,7 +5,7 @@ import { Questions } from "./questions";
 import "./App.css";
 import Question from "../model/Question";
 import Answer from "../model/Answer";
-import { ChevronLeft } from "./components/Icons";
+import { BrokenHeart, ChevronLeft, Circle, Heart } from "./components/Icons";
 
 const App: React.FC = () => {
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(-1);
@@ -94,6 +94,28 @@ const App: React.FC = () => {
             <ChevronLeft className="w-6 h-6" />
           </button>
 
+            {/* Question indicator */}
+            <div className="flex flex-col gap-2 mb-4">
+              {Array.from({ length: Math.ceil(questions.length / 12) }, (_, rowIndex) => (
+              <div key={rowIndex} className="flex justify-center gap-1">
+                {questions
+                .slice(rowIndex * 13, rowIndex * 13 + 13)
+                .map((question, index) => (
+                  <div key={index} className="flex justify-center items-center">
+                  {question.selected?.dealbreaker ? (
+                    <BrokenHeart className="w-6 h-6 text-black" />
+                  ) : question.selected ? (
+                    <Heart className="w-6 h-6 text-pink-500" />
+                  ) : (
+                    <Circle className="w-6 h-6 text-gray-400" />
+                  )}
+                  </div>
+                ))}
+              </div>
+              ))}
+            </div>
+
+          {/* Content */}
           <AnimatePresence mode="wait">
             <motion.div
               key={currentQuestionIndex}
