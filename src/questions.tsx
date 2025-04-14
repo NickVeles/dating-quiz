@@ -106,11 +106,12 @@ export const Questions: Question[] = [
     category: "🌿 Lifestyle & Habits",
   },
   {
-    text: "What is your take on social media?",
+    text: "How often do you use social media?",
     answers: [
-      { text: "Addicted to doom-scrolling", points: 0, dealbreaker: <p>Dealbreaker!</p> },
-      { text: "I'm on there from time to time", points: 25 },
-      { text: "Not for me", points: 50 },
+      { text: "I'm addicted to doom-scrolling", points: 0, dealbreaker: <p>Dealbreaker!</p> },
+      { text: "Often", points: 0 },
+      { text: "Sometimes", points: 25 },
+      { text: "Rarely/Never", points: 50 },
     ],
     category: "🌿 Lifestyle & Habits",
   },
@@ -168,9 +169,9 @@ export const Questions: Question[] = [
     category: "💞 Relationship Philosophy",
   },
   {
-    text: "Deep and long talks?",
+    text: "Do you like deep and long talks?",
     answers: [
-      { text: "Yes, please!", points: 50 },
+      { text: "Yes!", points: 50 },
       { text: "Booooring!", points: 0 },
     ],
     category: "💞 Relationship Philosophy",
