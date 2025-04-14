@@ -111,7 +111,7 @@ export const Questions: Question[] = [
       { text: "I'm addicted to doom-scrolling", points: 0, dealbreaker: <p>Dealbreaker!</p> },
       { text: "Often", points: 0 },
       { text: "Sometimes", points: 25 },
-      { text: "Rarely/Never", points: 50 },
+      { text: "Rarely / Never", points: 50 },
     ],
     category: "🌿 Lifestyle & Habits",
   },
@@ -229,7 +229,7 @@ export const Questions: Question[] = [
     category: "🧭 Values & Mindset",
     },
     {
-    text: "Your take on immortality?",
+    text: "What is your take on immortality?",
     answers: [
       { text: "Hell yeah!", points: 50 },
       { text: "Only my partner gets to be immortal as well", points: 50 },
@@ -262,8 +262,8 @@ export const Questions: Question[] = [
     text: "Are you extroverted/introverted?",
     answers: [
       { text: "Party animal", points: 0, dealbreaker: <p>Dealbreaker!</p> },
-      { text: "Extroverted", points: 10 },
-      { text: "A mix of both", points: 25 },
+      { text: "Extroverted", points: 25 },
+      { text: "A mix of both", points: 50 },
       { text: "Introverted", points: 50 },
       { text: "Socially anxious", points: 10 },
     ],
