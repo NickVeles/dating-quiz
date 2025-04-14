@@ -73,47 +73,55 @@ const App: React.FC = () => {
     <div className="min-h-screen bg-gray-100 py-10">
       <div className="max-w-md mx-auto bg-white shadow-md rounded-lg overflow-hidden">
         <div className="p-6">
-          {/* Go back button */}
-          <button
-            className={`bg-gray-200 text-gray-800 font-semibold p-3 rounded-full focus:outline-none focus:shadow-outline mb-4 flex items-center justify-center ${
-              dealbreaker ||
-              (currentQuestionIndex > 0 &&
-                currentQuestionIndex < Questions.length)
-                ? "hover:bg-gray-300"
-                : "opacity-50 cursor-not-allowed"
-            }`}
-            onClick={handleGoBack}
-            disabled={
-              !(
+          <div className="flex items-center mb-4">
+            {/* Go back button */}
+            <button
+              className={`bg-gray-200 text-gray-800 font-semibold p-3 rounded-full focus:outline-none focus:shadow-outline flex items-center justify-center ${
                 dealbreaker ||
                 (currentQuestionIndex > 0 &&
                   currentQuestionIndex < Questions.length)
-              )
-            }
-          >
-            <ChevronLeft className="w-6 h-6" />
-          </button>
+                  ? "hover:bg-gray-300"
+                  : "opacity-50 cursor-not-allowed"
+              }`}
+              onClick={handleGoBack}
+              disabled={
+                !(
+                  dealbreaker ||
+                  (currentQuestionIndex > 0 &&
+                    currentQuestionIndex < Questions.length)
+                )
+              }
+            >
+              <ChevronLeft className="w-6 h-6" />
+            </button>
 
             {/* Question indicator */}
-            <div className="flex flex-col gap-2 mb-4">
-              {Array.from({ length: Math.ceil(questions.length / 12) }, (_, rowIndex) => (
-              <div key={rowIndex} className="flex justify-center gap-1">
-                {questions
-                .slice(rowIndex * 13, rowIndex * 13 + 13)
-                .map((question, index) => (
-                  <div key={index} className="flex justify-center items-center">
-                  {question.selected?.dealbreaker ? (
-                    <BrokenHeart className="w-6 h-6 text-pink-500" />
-                  ) : question.selected ? (
-                    <Heart className="w-6 h-6 text-pink-500" />
-                  ) : (
-                    <Circle className="w-6 h-6 text-gray-400" />
-                  )}
+            <div className="flex flex-col gap-2 ml-4">
+              {Array.from(
+                { length: Math.ceil(questions.length / 14) },
+                (_, rowIndex) => (
+                  <div key={rowIndex} className="flex justify-center gap-1">
+                    {questions
+                      .slice(rowIndex * 14, rowIndex * 14 + 14)
+                      .map((question, index) => (
+                        <div
+                          key={index}
+                          className="flex justify-center items-center"
+                        >
+                          {question.selected?.dealbreaker ? (
+                            <BrokenHeart className="w-5 h-5 text-pink-500" />
+                          ) : question.selected ? (
+                            <Heart className="w-5 h-5 text-pink-500" />
+                          ) : (
+                            <Circle className="w-5 h-5 text-gray-400" />
+                          )}
+                        </div>
+                      ))}
                   </div>
-                ))}
-              </div>
-              ))}
+                )
+              )}
             </div>
+          </div>
 
           {/* Content */}
           <AnimatePresence mode="wait">
