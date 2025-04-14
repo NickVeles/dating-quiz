@@ -19,7 +19,7 @@ export const Questions: Question[] = [
     category: "🔒 Practical Filters",
   },
   {
-    text: "What's your gender?",
+    text: "What is your gender?",
     answers: [
       { text: "Man", points: 0, dealbreaker: <p>Dealbreaker!</p> },
       { text: "Woman", points: 0 },
@@ -28,7 +28,7 @@ export const Questions: Question[] = [
     category: "🔒 Practical Filters",
   },
   {
-    text: "What's your sexuality?",
+    text: "What is your sexuality?",
     answers: [
       { text: "Straight", points: 50 },
       { text: "Bi", points: 50 },
@@ -52,7 +52,7 @@ export const Questions: Question[] = [
     text: "Could you take up a Long-Distance Relationship (LDR)?",
     answers: [
       { text: "Yes", points: 50 },
-      { text: "Only if we're in the same country", points: 10 },
+      { text: "Only if we were in the same country", points: 10 },
       { text: "No", points: 0, dealbreaker: <p>Dealbreaker!</p> },
     ],
     category: "🔒 Practical Filters",
@@ -77,7 +77,7 @@ export const Questions: Question[] = [
     category: "🌿 Lifestyle & Habits",
   },
   {
-    text: "Your take on drugs?",
+    text: "What is your take on drugs?",
     answers: [
       { text: "I love both hard and soft drugs!", points: 0, dealbreaker: <p>Dealbreaker!</p> },
       { text: "I love soft drugs!", points: 0 },
@@ -106,7 +106,7 @@ export const Questions: Question[] = [
     category: "🌿 Lifestyle & Habits",
   },
   {
-    text: "Your take on social media?",
+    text: "What is your take on social media?",
     answers: [
       { text: "Addicted to doom-scrolling", points: 0, dealbreaker: <p>Dealbreaker!</p> },
       { text: "I'm on there from time to time", points: 25 },
@@ -152,7 +152,7 @@ export const Questions: Question[] = [
     category: "💞 Relationship Philosophy",
   },
   {
-    text: "Your take on non-monogamy? (Having multiple partners)",
+    text: "What is your take on non-monogamy? (Having multiple partners)",
     answers: [
       { text: "Hell yeah!", points: 0, dealbreaker: <p>Dealbreaker!</p> },
       { text: "Eww...", points: 50 },
