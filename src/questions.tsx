@@ -177,7 +177,7 @@ export const Questions: Question[] = [
     category: "💞 Relationship Philosophy",
   },
   {
-    text: "Your love language?",
+    text: "What is your love language?",
     answers: [
       { text: "Words of affirmation", points: 25 },
       { text: "Quality time", points: 50 },
@@ -198,7 +198,7 @@ export const Questions: Question[] = [
     category: "💞 Relationship Philosophy",
   },
   {
-    text: "What's the greatest value of life? (in your opinion)",
+    text: "What is the greatest value of life? (in your opinion)",
     answers: [
       { text: "Family", points: 25 },
       { text: "Knowledge", points: 75 },
@@ -220,7 +220,7 @@ export const Questions: Question[] = [
     category: "🧭 Values & Mindset",
     },
     {
-    text: "How would you feel if you discovered you'd relive your life endlessly, always the same exact way?",
+    text: "How would you feel if you discovered that after death, you would relive your life repeatedly, always the same exact way?",
     answers: [
       { text: "Great! I love my life despite occasional suffering!", points: 100 },
       { text: "Well... At least it's better than nothing?", points: 50 },
