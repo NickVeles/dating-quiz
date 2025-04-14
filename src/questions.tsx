@@ -143,6 +143,15 @@ export const Questions: Question[] = [
     category: "💞 Relationship Philosophy",
   },
   {
+    text: "What do you think about selling nude content online?",
+    answers: [
+      { text: "I do it myself!", points: 0, dealbreaker: <p>Dealbreaker!</p> },
+      { text: "Not for me, but I think it empowers women", points: 0 },
+      { text: "I don't like it", points: 50 },
+    ],
+    category: "💞 Relationship Philosophy",
+  },
+  {
     text: "Your take on non-monogamy? (Having multiple partners)",
     answers: [
       { text: "Hell yeah!", points: 0, dealbreaker: <p>Dealbreaker!</p> },
