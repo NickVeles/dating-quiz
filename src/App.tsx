@@ -168,7 +168,7 @@ const App: React.FC = () => {
               {!dealbreaker && currentQuestion && (
                 <>
                   {currentQuestion.category && (
-                    <p className="mb-2 text-sm font-semibold text-gray-600">
+                    <p className="mb-2 text-sm font-semibold text-gray-600 text-center">
                       {currentQuestion.category}
                     </p>
                   )}
