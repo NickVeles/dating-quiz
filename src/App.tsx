@@ -184,10 +184,10 @@ const App: React.FC = () => {
                     {currentQuestion.answers?.map((answer) => (
                       <button
                         key={answer.text}
-                        className={`bg-gray-200 hover:bg-gray-300 text-gray-800 font-semibold py-2 px-4 rounded focus:outline-none focus:shadow-outline ${
+                        className={`text-gray-800 font-semibold py-2 px-4 rounded focus:outline-none focus:shadow-outline ${
                           questions[currentQuestionIndex]?.selected === answer
-                            ? "bg-blue-400 text-white"
-                            : ""
+                            ? "bg-pink-200 hover:bg-pink-300"
+                            : "bg-gray-200 hover:bg-gray-300"
                         }`}
                         onClick={() => handleAnswerSelect(answer)}
                       >
