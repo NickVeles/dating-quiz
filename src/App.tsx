@@ -6,11 +6,12 @@ import "./App.css";
 import Question from "../model/Question";
 import Answer from "../model/Answer";
 import { BrokenHeart, ChevronLeft, Circle, Heart } from "./components/Icons";
+import Dealbreaker from "../model/Dealbreaker";
 
 const App: React.FC = () => {
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(-1);
   const [currentQuestion, setCurrentQuestion] = useState<Question | null>(null);
-  const [dealbreaker, setDealbreaker] = useState<React.ReactNode | null>(null);
+  const [dealbreaker, setDealbreaker] = useState<Dealbreaker | null>(null);
   const [userPoints, setUserPoints] = useState(0);
   const [questions, setQuestions] = useState<Question[]>(
     Questions.map((q) => ({ ...q }))
@@ -154,7 +155,21 @@ const App: React.FC = () => {
                   <p className="mb-2 text-sm font-semibold text-gray-600 text-center">
                     Oops... That's a dealbreaker
                   </p>
-                  {dealbreaker}
+                  <h3>{dealbreaker.title}</h3>
+                  {dealbreaker.subtitle && (
+                    <div className="text-center text-gray-700 mb-4">
+                      {dealbreaker.subtitle}
+                    </div>
+                  )}
+                  {dealbreaker.image && (
+                    <div className="flex justify-center mb-4">
+                      <img
+                        src={dealbreaker.image}
+                        alt="dealbreaker"
+                        className="max-w-full h-auto rounded-lg"
+                      />
+                    </div>
+                  )}
                 </>
               )}
 

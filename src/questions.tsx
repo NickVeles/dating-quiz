@@ -14,16 +14,27 @@ export const Questions: Question[] = [
       { text: "🇸🇬 Singapore", points: 100 },
       { text: "🇹🇼 Taiwan", points: 85 },
       { text: "🇺🇸 USA", points: 65 },
-      { text: "Other", points: 0, dealbreaker: <p>Dealbreaker!</p> },
+      { text: "Other", points: 0, dealbreaker: {
+        title: "Sorry!",
+        subtitle: <p>Only accepting the following countries:</p>,
+        image: "./img/db01a.png",
+      } },
     ],
     category: "🔒 Practical Filters",
   },
   {
-    text: "What is your gender?",
+    text: "What is your sex?",
     answers: [
-      { text: "Man", points: 0, dealbreaker: <p>Dealbreaker!</p> },
-      { text: "Woman", points: 0 },
-      { text: "Other", points: 0, dealbreaker: <p>Dealbreaker!</p> },
+      { text: "Male", points: 0, dealbreaker: {
+        title: "Sorry homie, this quiz ain't for you",
+        subtitle: "Take this goodnight kiss tho",
+        image: "./img/db02a.png",
+      } },
+      { text: "Female", points: 0 },
+      { text: "Other (including trans people)", points: 0, dealbreaker: {
+        title: "Not a match!",
+        subtitle: <p>No hard feelings tho ❤️🌈</p>,
+      } },
     ],
     category: "🔒 Practical Filters",
   },
@@ -31,10 +42,16 @@ export const Questions: Question[] = [
     text: "What is your sexuality?",
     answers: [
       { text: "Straight", points: 50 },
-      { text: "Bi", points: 50 },
-      { text: "Pansexual", points: 50 },
-      { text: "Gay", points: 0, dealbreaker: <p>Dealbreaker!</p> },
-      { text: "Asexual", points: 0, dealbreaker: <p>Dealbreaker!</p> },
+      { text: "Bi", points: 25 },
+      { text: "Pansexual", points: 25 },
+      { text: "Gay", points: 0, dealbreaker: {
+        title: "Not a match!",
+        subtitle: <p>No hard feelings tho ❤️🌈</p>,
+      } },
+      { text: "Asexual", points: 0, dealbreaker: {
+        title: "Sorry dude",
+        subtitle: <p>My deck ain't needing more aces 🃏</p>,
+      } },
       { text: "Other", points: 0 },
     ],
     category: "🔒 Practical Filters",
@@ -44,7 +61,10 @@ export const Questions: Question[] = [
     answers: [
       { text: `18-${new Date().getFullYear() - 2003 - 1}`, points: 50 },
       { text: `${new Date().getFullYear() - 2003}`, points: 20 },
-      { text: `${new Date().getFullYear() - 2003 + 1}+`, points: 0, dealbreaker: <p>Dealbreaker!</p> },
+      { text: `${new Date().getFullYear() - 2003 + 1}+`, points: 0, dealbreaker: {
+        title: "This u?",
+        image: "./img/db04a.webp",
+      } },
     ],
     category: "🔒 Practical Filters",
   },
@@ -53,15 +73,30 @@ export const Questions: Question[] = [
     answers: [
       { text: "Yes", points: 50 },
       { text: "Only if we were in the same country", points: 10 },
-      { text: "No", points: 0, dealbreaker: <p>Dealbreaker!</p> },
+      { text: "No", points: 0, dealbreaker: {
+        title: "😐",
+        subtitle: <>
+        <p>Bruh the fact u seeing this means I'm in a different country.</p>
+        <p>Like, all I can offer is an LDR rn.</p>
+        </>,
+        image: "./img/db05a.webp",
+      } },
     ],
     category: "🔒 Practical Filters",
   },
   {
-    text: "How often do you smoke?",
+    text: "How often do you smoke/vape?",
     answers: [
-      { text: "Often", points: 0, dealbreaker: <p>Dealbreaker!</p> },
-      { text: "Sometimes", points: 0, dealbreaker: <p>Dealbreaker!</p> },
+      { text: "Often", points: 0, dealbreaker: {
+        title: "Lung cancer? No thank you 🚭",
+        subtitle: <p>Prefering fresh air enthusiasts lmao</p>,
+        image: "./img/db06.png",
+      } },
+      { text: "Sometimes", points: 0, dealbreaker: {
+        title: "Still too smoky 🚭",
+        subtitle: <p>Prefering fresh air enthusiasts lmao</p>,
+        image: "./img/db06.png",
+      } },
       { text: "Never", points: 50 },
       { text: "Trying to quit", points: 10 },
     ],
@@ -70,7 +105,11 @@ export const Questions: Question[] = [
   {
     text: "How often do you drink?",
     answers: [
-      { text: "Often", points: 0, dealbreaker: <p>Dealbreaker!</p> },
+      { text: "Often", points: 0, dealbreaker: {
+        title: "Nah",
+        subtitle: <p>Alcoholism ain't cute</p>,
+        image: "./img/db07a.jpeg",
+      } },
       { text: "Sometimes", points: 10 },
       { text: "Never", points: 50 },
     ],
@@ -79,7 +118,11 @@ export const Questions: Question[] = [
   {
     text: "What is your take on drugs?",
     answers: [
-      { text: "I love both hard and soft drugs!", points: 0, dealbreaker: <p>Dealbreaker!</p> },
+      { text: "I love both hard and soft drugs!", points: 0, dealbreaker: {
+        title: "NAH",
+        subtitle: <p>Hard in Hard Drugs stands for a Hard Pass lmao</p>,
+        image: "./img/db08a.png",
+      } },
       { text: "I love soft drugs!", points: 0 },
       { text: "I could try weed, but I don't want to be a stoner", points: 10 },
       { text: "No, thank you", points: 50 },
@@ -98,7 +141,13 @@ export const Questions: Question[] = [
   {
     text: "Are you religious?",
     answers: [
-      { text: "Yes", points: 0, dealbreaker: <p>Dealbreaker!</p> },
+      { text: "Yes", points: 0, dealbreaker: {
+        title: "Not a match!",
+        subtitle: <>
+        <p>But we would just have a very awkward time talking about philosophy and the foundations of our values 💀</p>
+        <p>No offense ofc</p>
+        </>,
+      } },
       { text: "Yes, I'm a Deist, but not associated with any particular religion", points: 0 },
       { text: "No, I'm an Atheist/Agnostic", points: 50 },
       { text: "I don't know, I doubt my current beliefs", points: 10 },
@@ -108,7 +157,10 @@ export const Questions: Question[] = [
   {
     text: "How often do you use social media?",
     answers: [
-      { text: "I'm addicted to doom-scrolling", points: 0, dealbreaker: <p>Dealbreaker!</p> },
+      { text: "I'm addicted to doom-scrolling", points: 0, dealbreaker: {
+        title: "Addiction is an addiction dude",
+        image: "./img/db11a.jpg",
+      } },
       { text: "Often", points: 0 },
       { text: "Sometimes", points: 25 },
       { text: "Rarely / Never", points: 50 },
@@ -126,7 +178,11 @@ export const Questions: Question[] = [
   {
     text: "What do you think about casual hookups?",
     answers: [
-      { text: "Love them!", points: 0, dealbreaker: <p>Dealbreaker!</p> },
+      { text: "Love them!", points: 0, dealbreaker: {
+        title: "💎",
+        subtitle: <p>Even diamonds can be turned into a hoe with a couple of sticks.</p>,
+        image: "./img/db13a.png",
+      } },
       { text: "Not for me", points: 20 },
       { text: "Eww...", points: 50 },
     ],
@@ -139,14 +195,21 @@ export const Questions: Question[] = [
       { text: "1", points: 50 },
       { text: "2", points: 25 },
       { text: "3", points: 0 },
-      { text: "4+", points: 0, dealbreaker: <p>Dealbreaker!</p> },
+      { text: "4+", points: 0, dealbreaker: {
+        title: "Wow...",
+        subtitle: <p>Can't quite get it right, huh? 🙃</p>,
+      } },
     ],
     category: "💞 Relationship Philosophy",
   },
   {
     text: "What do you think about selling nude content online?",
     answers: [
-      { text: "I do it myself!", points: 0, dealbreaker: <p>Dealbreaker!</p> },
+      { text: "I do it myself!", points: 0, dealbreaker: {
+        title: "BOO!",
+        subtitle: <p>Did I scare you? I'm a job application</p>,
+        image: "./img/db15a.jpg",
+      } },
       { text: "Not for me, but I think it empowers women", points: 0 },
       { text: "I don't like it", points: 50 },
     ],
@@ -155,7 +218,10 @@ export const Questions: Question[] = [
   {
     text: "What is your take on non-monogamy? (Having multiple partners)",
     answers: [
-      { text: "Hell yeah!", points: 0, dealbreaker: <p>Dealbreaker!</p> },
+      { text: "Hell yeah!", points: 0, dealbreaker: {
+        title: "That's just a no for me",
+        subtitle: <p>Weird ass mfers these days...</p>,
+      } },
       { text: "Eww...", points: 50 },
     ],
     category: "💞 Relationship Philosophy",
@@ -203,7 +269,10 @@ export const Questions: Question[] = [
       { text: "Family", points: 25 },
       { text: "Knowledge", points: 75 },
       { text: "Money & Wealth", points: 50 },
-      { text: "Pleasure", points: 0, dealbreaker: <p>Dealbreaker!</p> },
+      { text: "Pleasure", points: 0, dealbreaker: {
+        title: "🔫🔫🔫",
+        image: "./img/db21a.webp",
+      } },
       { text: "Power", points: 50 },
       { text: "Self-discovery", points: 100 },
       { text: "I don't know...", points: 10 },
@@ -244,7 +313,11 @@ export const Questions: Question[] = [
       { text: "Helping others", points: 50 },
       { text: "Traveling and exploring", points: 25 },
       { text: "Achieving goals", points: 25 },
-      { text: "Partying and letting loose", points: 0, dealbreaker: <p>Dealbreaker!</p> },
+      { text: "Partying and letting loose", points: 0, dealbreaker: {
+        title: "ok",
+        subtitle: "It's 2am as I'm coding, take this cat image and leave",
+        image: "./img/db25a.png",
+      } },
       { text: "I don't really know", points: 10 },
     ],
     category: "🧭 Values & Mindset",
@@ -261,7 +334,10 @@ export const Questions: Question[] = [
     {
     text: "Are you extroverted/introverted?",
     answers: [
-      { text: "Party animal", points: 0, dealbreaker: <p>Dealbreaker!</p> },
+      { text: "Party animal", points: 0, dealbreaker: {
+        title: "This u?",
+        image: "./img/db27a.jpg",
+      } },
       { text: "Extroverted", points: 25 },
       { text: "A mix of both", points: 50 },
       { text: "Introverted", points: 50 },
