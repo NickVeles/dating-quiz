@@ -149,7 +149,14 @@ const App: React.FC = () => {
               )}
 
               {/* Dealbreaker screen */}
-              {dealbreaker}
+              {dealbreaker && (
+                <>
+                  <p className="mb-2 text-sm font-semibold text-gray-600 text-center">
+                    Oops... That's a dealbreaker
+                  </p>
+                  {dealbreaker}
+                </>
+              )}
 
               {/* Results screen */}
               {!dealbreaker && currentQuestionIndex >= questions.length && (
@@ -171,13 +178,6 @@ const App: React.FC = () => {
                     <p className="mb-2 text-sm font-semibold text-gray-600 text-center">
                       {currentQuestion.category}
                     </p>
-                  )}
-                  {currentQuestion.image && (
-                    <img
-                      src={currentQuestion.image}
-                      alt="Question"
-                      className="mb-4 rounded-md w-full h-auto"
-                    />
                   )}
                   <p className="mb-4 font-medium">{currentQuestion.text}</p>
                   <div className="grid grid-cols-1 gap-3">
