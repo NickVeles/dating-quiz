@@ -15,10 +15,9 @@ import {
 } from "./components/Icons";
 import Dealbreaker from "../model/Dealbreaker";
 import ReactModal from "react-modal";
-import { TransformWrapper, TransformComponent } from "react-zoom-pan-pinch";
 
 // Set the app element for accessibility
-ReactModal.setAppElement('#root');
+ReactModal.setAppElement("#root");
 
 const App: React.FC = () => {
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(-1);
@@ -218,7 +217,7 @@ const App: React.FC = () => {
                         <img
                           src={dealbreaker.image}
                           alt="dealbreaker"
-                          className="max-w-full h-auto rounded-lg"
+                          className="max-w-full h-auto rounded-lg hover:cursor-pointer"
                           onClick={() => openModal(dealbreaker.image!)}
                         />
                       </div>
@@ -240,7 +239,7 @@ const App: React.FC = () => {
                       <img
                         src={scoreResult.image}
                         alt="result"
-                        className="max-w-full h-auto rounded-lg"
+                        className="max-w-full h-auto rounded-lg hover:cursor-pointer"
                         onClick={() => openModal(scoreResult.image)}
                       />
                     </div>
@@ -312,37 +311,31 @@ const App: React.FC = () => {
         isOpen={isModalOpen}
         onRequestClose={closeModal}
         contentLabel="Image Modal"
-        className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-25"
-        overlayClassName="fixed inset-0 bg-black bg-opacity-50"
-        shouldCloseOnOverlayClick={true}
+        className="fixed inset-0 flex items-center justify-center bg-black"
         shouldCloseOnEsc={true}
         style={{
-          overlay: {
-            backgroundColor: "rgba(0, 0, 0, 0.1)",
-          },
           content: {
-            background: "rgba(0, 0, 0, 0.4)",
+            inset: "0",
+            background: "black",
+            border: "none",
+            padding: "0",
           },
         }}
       >
-        <div className="relative bg-white rounded-lg p-4 max-w-3xl w-full mx-2 flex flex-col">
+        <div className="w-full h-full flex flex-col">
           <button
-            className="text-gray-600 hover:text-gray-800 flex self-start mb-2"
+            className="text-white hover:text-gray-300 flex-right mb-2"
             onClick={closeModal}
           >
-            <Close className="w-8 h-8" />
+            <Close className="w-12 h-12" />
           </button>
           {modalImage && (
-            <div className="flex justify-center">
-              <TransformWrapper>
-                <TransformComponent>
-                  <img
-                    src={modalImage}
-                    alt="Zoomable"
-                    className="max-w-full h-auto rounded-lg"
-                  />
-                </TransformComponent>
-              </TransformWrapper>
+            <div className="flex justify-center items-center w-full h-full">
+              <img
+                src={modalImage}
+                alt="Zoomable"
+                className="max-w-full max-h-full"
+              />
             </div>
           )}
         </div>
