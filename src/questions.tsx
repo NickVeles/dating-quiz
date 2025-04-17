@@ -62,6 +62,7 @@ export const Questions: Question[] = [
         dealbreaker: {
           title: "Not a match!",
           subtitle: <p>No hard feelings tho ❤️🌈</p>,
+          image: "/img/db03a.webp",
         },
       },
       {
