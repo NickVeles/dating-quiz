@@ -78,162 +78,165 @@ const App: React.FC = () => {
       <p className="text-center text-gray-600 mb-6">
         Let's see how compatible we are 😎
       </p>
-      <div className="max-w-md mx-auto bg-white shadow-md rounded-lg overflow-hidden">
-        <div className="p-6">
-          <div className="flex items-center mb-6">
-            {/* Go back button */}
-            <button
-              className={`bg-gray-200 text-gray-800 font-semibold p-3 rounded-full focus:outline-none focus:shadow-outline flex items-center justify-center ${
-                dealbreaker ||
-                (currentQuestionIndex > 0 &&
-                  currentQuestionIndex < Questions.length)
-                  ? "hover:bg-gray-300"
-                  : "opacity-50 cursor-not-allowed"
-              }`}
-              onClick={handleGoBack}
-              disabled={
-                !(
+      <div className="mx-2">
+        <div className="max-w-md mx-auto bg-white shadow-md rounded-lg overflow-hidden">
+          <div className="p-6">
+            <div className="flex items-center mb-6">
+              {/* Go back button */}
+              <button
+                className={`bg-gray-200 text-gray-800 font-semibold p-3 rounded-full focus:outline-none focus:shadow-outline flex items-center justify-center ${
                   dealbreaker ||
                   (currentQuestionIndex > 0 &&
                     currentQuestionIndex < Questions.length)
-                )
-              }
-            >
-              <ChevronLeft className="w-6 h-6" />
-            </button>
+                    ? "hover:bg-gray-300"
+                    : "opacity-50 cursor-not-allowed"
+                }`}
+                onClick={handleGoBack}
+                disabled={
+                  !(
+                    dealbreaker ||
+                    (currentQuestionIndex > 0 &&
+                      currentQuestionIndex < Questions.length)
+                  )
+                }
+              >
+                <ChevronLeft className="w-6 h-6" />
+              </button>
 
-            {/* Question indicator */}
-            <div className="flex flex-col gap-2 ml-4">
-              {Array.from(
-                { length: Math.ceil(questions.length / 14) },
-                (_, rowIndex) => (
-                  <div key={rowIndex} className="flex justify-center gap-1">
-                    {questions
-                      .slice(rowIndex * 14, rowIndex * 14 + 14)
-                      .map((question, index) => (
-                        <div
-                          key={index}
-                          className="flex justify-center items-center"
-                        >
-                          {question.selected?.dealbreaker ? (
-                            <BrokenHeart className="w-5 h-5 text-pink-500" />
-                          ) : question.selected ? (
-                            <Heart className="w-5 h-5 text-pink-500" />
-                          ) : (
-                            <Circle className="w-5 h-5 text-gray-400" />
-                          )}
-                        </div>
-                      ))}
-                  </div>
-                )
-              )}
+              {/* Question indicator */}
+              <div className="flex flex-col gap-2 ml-4">
+                {Array.from(
+                  { length: Math.ceil(questions.length / 14) },
+                  (_, rowIndex) => (
+                    <div key={rowIndex} className="flex justify-center gap-1">
+                      {questions
+                        .slice(rowIndex * 14, rowIndex * 14 + 14)
+                        .map((question, index) => (
+                          <div
+                            key={index}
+                            className="flex justify-center items-center"
+                          >
+                            {question.selected?.dealbreaker ? (
+                              <BrokenHeart className="w-5 h-5 text-pink-500" />
+                            ) : question.selected ? (
+                              <Heart className="w-5 h-5 text-pink-500" />
+                            ) : (
+                              <Circle className="w-5 h-5 text-gray-400" />
+                            )}
+                          </div>
+                        ))}
+                    </div>
+                  )
+                )}
+              </div>
             </div>
-          </div>
 
-          {/* Content */}
-          <AnimatePresence mode="wait">
-            <motion.div
-              key={currentQuestionIndex}
-              variants={questionVariants}
-              initial="initial"
-              animate="animate"
-              exit="exit"
-              transition={{ duration: 0.2 }}
-            >
-              {/* Start screen */}
-              {currentQuestionIndex < 0 && (
-                <div className="text-center mb-4">
-                  <p className="text-lg mb-4">
-                    Answer the questions to find out your compatibility score!
-                  </p>
-                  <button
-                    className="bg-blue-500 hover:bg-blue-700 text-white font-semibold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
-                    onClick={() => setCurrentQuestionIndex(0)}
-                  >
-                    Start
-                  </button>
-                </div>
-              )}
-
-              {/* Dealbreaker screen */}
-              {dealbreaker && (
-                <>
-                  <p className="mb-2 text-sm font-semibold text-gray-600 text-center">
-                    Oops... That's a dealbreaker
-                  </p>
-                  <h3 className="text-xl font-semibold mb-2">
-                    {dealbreaker.title}
-                  </h3>
-                  {dealbreaker.subtitle && (
-                    <div className="text-gray-700 mb-4">
-                      {dealbreaker.subtitle}
-                    </div>
-                  )}
-                  {dealbreaker.image && (
-                    <div className="flex justify-center mb-4">
-                      <img
-                        src={dealbreaker.image}
-                        alt="dealbreaker"
-                        className="max-w-full h-auto rounded-lg"
-                      />
-                    </div>
-                  )}
-                </>
-              )}
-
-              {/* Results screen */}
-              {!dealbreaker && currentQuestionIndex >= questions.length && (
-                <div>
-                  <h3 className="text-xl font-semibold mb-4">
-                    Your Compatibility Score:
-                  </h3>
-                  <p className="text-4xl font-bold text-blue-600 mb-6">
-                    {userPoints}
-                  </p>
-                  <p className="text-lg mb-4">{getCompatibilityMessage()}</p>
-                </div>
-              )}
-
-              {/* Question */}
-              {!dealbreaker && currentQuestion && (
-                <>
-                  {currentQuestion.category && (
-                    <p className="mb-2 text-sm font-semibold text-gray-600 text-center">
-                      {currentQuestion.category}
+            {/* Content */}
+            <AnimatePresence mode="wait">
+              <motion.div
+                key={currentQuestionIndex}
+                variants={questionVariants}
+                initial="initial"
+                animate="animate"
+                exit="exit"
+                transition={{ duration: 0.2 }}
+              >
+                {/* Start screen */}
+                {currentQuestionIndex < 0 && (
+                  <div className="text-center mb-4">
+                    <p className="text-lg mb-4">
+                      Answer the questions to find out your compatibility score!
                     </p>
-                  )}
-                  <p className="mb-4 font-medium">{currentQuestion.text}</p>
-                  <div className="grid grid-cols-1 gap-3">
-                    {currentQuestion.answers?.map((answer) => (
-                      <button
-                        key={answer.text}
-                        className={`text-gray-800 font-semibold py-2 px-4 rounded focus:outline-none focus:shadow-outline ${
-                          questions[currentQuestionIndex]?.selected === answer
-                            ? "bg-pink-200 hover:bg-pink-300"
-                            : "bg-gray-200 hover:bg-gray-300"
-                        }`}
-                        onClick={() => handleAnswerSelect(answer)}
-                      >
-                        {answer.text}
-                      </button>
-                    ))}
+                    <button
+                      className="bg-blue-500 hover:bg-blue-700 text-white font-semibold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+                      onClick={() => setCurrentQuestionIndex(0)}
+                    >
+                      Start
+                    </button>
                   </div>
-                </>
-              )}
-            </motion.div>
-          </AnimatePresence>
+                )}
+
+                {/* Dealbreaker screen */}
+                {dealbreaker && (
+                  <>
+                    <p className="mb-2 text-sm font-semibold text-gray-600 text-center">
+                      Oops... That's a dealbreaker
+                    </p>
+                    <h3 className="text-xl font-semibold mb-2">
+                      {dealbreaker.title}
+                    </h3>
+                    {dealbreaker.subtitle && (
+                      <div className="text-gray-700 mb-4">
+                        {dealbreaker.subtitle}
+                      </div>
+                    )}
+                    {dealbreaker.image && (
+                      <div className="flex justify-center mb-4">
+                        <img
+                          src={dealbreaker.image}
+                          alt="dealbreaker"
+                          className="max-w-full h-auto rounded-lg"
+                        />
+                      </div>
+                    )}
+                  </>
+                )}
+
+                {/* Results screen */}
+                {!dealbreaker && currentQuestionIndex >= questions.length && (
+                  <div>
+                    <h3 className="text-xl font-semibold mb-4">
+                      Your Compatibility Score:
+                    </h3>
+                    <p className="text-4xl font-bold text-blue-600 mb-6">
+                      {userPoints}
+                    </p>
+                    <p className="text-lg mb-4">{getCompatibilityMessage()}</p>
+                  </div>
+                )}
+
+                {/* Question */}
+                {!dealbreaker && currentQuestion && (
+                  <>
+                    {currentQuestion.category && (
+                      <p className="mb-2 text-sm font-semibold text-gray-600 text-center">
+                        {currentQuestion.category}
+                      </p>
+                    )}
+                    <p className="mb-4 font-medium">{currentQuestion.text}</p>
+                    <div className="grid grid-cols-1 gap-3">
+                      {currentQuestion.answers?.map((answer) => (
+                        <button
+                          key={answer.text}
+                          className={`text-gray-800 font-semibold py-2 px-4 rounded focus:outline-none focus:shadow-outline ${
+                            questions[currentQuestionIndex]?.selected === answer
+                              ? "bg-pink-200 hover:bg-pink-300"
+                              : "bg-gray-200 hover:bg-gray-300"
+                          }`}
+                          onClick={() => handleAnswerSelect(answer)}
+                        >
+                          {answer.text}
+                        </button>
+                      ))}
+                    </div>
+                  </>
+                )}
+              </motion.div>
+            </AnimatePresence>
+          </div>
         </div>
       </div>
+      {/* Footer */}
       <footer className="mt-10 text-center text-gray-600">
         <p>
-          Made with ❤️ by Nick. You can find this project on my {" "}
+          Made with ❤️ by Nick. You can find this project on my{" "}
           <a
-        href="https://github.com/NickVeles/dating-quiz"
-        target="_blank"
-        rel="noopener noreferrer"
-        className="text-blue-500 hover:underline"
+            href="https://github.com/NickVeles/dating-quiz"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-blue-500 hover:underline"
           >
-        GitHub
+            GitHub
           </a>
           .
         </p>
