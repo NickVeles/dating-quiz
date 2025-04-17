@@ -23,6 +23,7 @@ ReactModal.setAppElement("#root");
 const App: React.FC = () => {
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(-1);
   const [currentQuestion, setCurrentQuestion] = useState<Question | null>(null);
+  const [isAgreementChecked, setIsAgreementChecked] = useState(false);
   const [dealbreaker, setDealbreaker] = useState<Dealbreaker | null>(null);
   const [userPoints, setUserPoints] = useState(0);
   const [scoreResult, setScoreResult] = useState({
@@ -187,12 +188,53 @@ const App: React.FC = () => {
                 {/* Start screen */}
                 {currentQuestionIndex < 0 && (
                   <div className="text-center mb-4">
-                    <p className="text-lg mb-4">
-                      Answer the questions to find out your compatibility score!
-                    </p>
+                    <h3 className="text-xl font-semibold mb-4">
+                      Before you begin!
+                    </h3>
+                    <ol className="list-decimal list-outside my-4 text-left px-4">
+                      <li className="mb-2">
+                        This site does not collect any data, and this quiz is
+                        fully anonymous &ndash; your answers will not be stored
+                        anywhere.
+                      </li>
+                      <li className="mb-2">
+                        Please answer honestly to get the best results &ndash;
+                        this quiz is for you, not for me (the creator).
+                      </li>
+                      <li className="mb-2">
+                        Nevertheless, you might feel judged during this quiz
+                        (unlucky). Take it with a grain of salt.
+                      </li>
+                    </ol>
+                    <div className="my-6 text-left">
+                      <label className="flex items-center">
+                        <input
+                          type="checkbox"
+                          className="mr-2"
+                          checked={isAgreementChecked}
+                          onChange={(e) =>
+                            setIsAgreementChecked(e.target.checked)
+                          }
+                        />
+                        <span
+                          className={`font-medium ${
+                            !isAgreementChecked
+                              ? "text-red-500"
+                              : "text-green-800"
+                          }`}
+                        >
+                          I've read and understood the above points
+                        </span>
+                      </label>
+                    </div>
                     <button
-                      className="bg-blue-500 hover:bg-blue-700 text-white font-semibold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+                      className={`bg-blue-500 text-white font-semibold py-2 px-4 rounded focus:outline-none focus:shadow-outline ${
+                        isAgreementChecked
+                          ? "hover:bg-blue-600"
+                          : "opacity-50 cursor-not-allowed"
+                      }`}
                       onClick={() => setCurrentQuestionIndex(0)}
+                      disabled={!isAgreementChecked}
                     >
                       Start
                     </button>
