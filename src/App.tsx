@@ -155,9 +155,12 @@ const App: React.FC = () => {
                   <p className="mb-2 text-sm font-semibold text-gray-600 text-center">
                     Oops... That's a dealbreaker
                   </p>
-                  <h3>{dealbreaker.title}</h3>
+                  <br />
+                  <h3 className="text-xl font-semibold mb-4">
+                    {dealbreaker.title}
+                  </h3>
                   {dealbreaker.subtitle && (
-                    <div className="text-center text-gray-700 mb-4">
+                    <div className="text-gray-700 mb-4">
                       {dealbreaker.subtitle}
                     </div>
                   )}
