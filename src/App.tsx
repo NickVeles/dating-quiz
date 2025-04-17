@@ -71,14 +71,14 @@ const App: React.FC = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gray-100 py-10">
+    <div className="min-h-screen bg-gray-100 py-10 flex flex-col">
       <h1 className="text-center text-2xl font-bold text-gray-800 mb-2">
         Nick's Dating Quiz
       </h1>
       <p className="text-center text-gray-600 mb-6">
         Let's see how compatible we are 😎
       </p>
-      <div className="mx-2">
+      <div className="mx-2 flex-grow">
         <div className="max-w-md mx-auto bg-white shadow-md rounded-lg overflow-hidden">
           <div className="p-6">
             <div className="flex items-center mb-6">
