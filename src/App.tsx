@@ -38,7 +38,7 @@ const App: React.FC = () => {
   );
 
   // Image modal
-  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [isImageModalOpen, setIsImageModalOpen] = useState(false);
   const [modalImage, setModalImage] = useState<string | null>(null);
 
   useEffect(() => {
@@ -108,14 +108,14 @@ const App: React.FC = () => {
   }, [currentQuestionIndex]);
 
   // Function to open modal
-  const openModal = (image: string) => {
+  const openImageModal = (image: string) => {
     setModalImage(image);
-    setIsModalOpen(true);
+    setIsImageModalOpen(true);
   };
 
   // Function to close modal
-  const closeModal = () => {
-    setIsModalOpen(false);
+  const closeImageModal = () => {
+    setIsImageModalOpen(false);
     setModalImage(null);
   };
 
@@ -219,7 +219,7 @@ const App: React.FC = () => {
                           src={dealbreaker.image}
                           alt="dealbreaker"
                           className="max-w-full h-auto rounded-lg hover:cursor-pointer border-1 border-gray-100"
-                          onClick={() => openModal(dealbreaker.image!)}
+                          onClick={() => openImageModal(dealbreaker.image!)}
                         />
                       </div>
                     )}
@@ -241,7 +241,7 @@ const App: React.FC = () => {
                         src={scoreResult.image}
                         alt="result"
                         className="max-w-full h-auto rounded-lg hover:cursor-pointer border-1 border-gray-100"
-                        onClick={() => openModal(scoreResult.image)}
+                        onClick={() => openImageModal(scoreResult.image)}
                       />
                     </div>
                     <p className="mb-4">{scoreResult.instagram}</p>
@@ -309,8 +309,8 @@ const App: React.FC = () => {
 
       {/* Image modal */}
       <ReactModal
-        isOpen={isModalOpen}
-        onRequestClose={closeModal}
+        isOpen={isImageModalOpen}
+        onRequestClose={closeImageModal}
         contentLabel="Image Modal"
         className="fixed inset-0 flex items-center justify-center bg-black"
         shouldCloseOnEsc={true}
@@ -326,7 +326,7 @@ const App: React.FC = () => {
         <div className="w-full h-full flex flex-col">
           <button
             className="text-white hover:text-gray-300 flex-right"
-            onClick={closeModal}
+            onClick={closeImageModal}
           >
             <Close className="w-12 h-12" />
           </button>
