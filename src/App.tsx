@@ -209,7 +209,7 @@ const App: React.FC = () => {
                       <li className="mb-2">
                         You might consider taking a look at my{" "}
                         <span
-                          className="text-blue-500 hover:underline"
+                          className="text-blue-500 hover:underline hover:cursor-pointer"
                           onClick={() => {}}
                         >
                           philosophy
@@ -234,7 +234,7 @@ const App: React.FC = () => {
                               : "text-green-800"
                           }`}
                         >
-                          I've read and understood the above points
+                          *I've read and understood the above points
                         </span>
                       </label>
                     </div>
