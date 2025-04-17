@@ -22,10 +22,10 @@ const InfoModal: React.FC<InfoModalProps> = ({ isOpen, onRequestClose }) => {
           overlayClassName={"bg-transparent"}
         >
           <motion.div
-            className="w-full h-full flex flex-col bg-white"
-            initial={{ y: '100%' }}
+            className="w-full h-full flex flex-col bg-white outline-1 outline-gray-300"
+            initial={{ y: "100%" }}
             animate={{ y: 0 }}
-            exit={{ y: '100%' }}
+            exit={{ y: "100%" }}
             transition={{ duration: 0.3 }}
           >
             <button
@@ -34,8 +34,25 @@ const InfoModal: React.FC<InfoModalProps> = ({ isOpen, onRequestClose }) => {
             >
               <Close className="w-12 h-12" />
             </button>
-            <div className="flex justify-center items-center w-full h-full">
-              {/* Add modal content here */}
+            <h3 className="text-center text-xl font-semibold mb-2">
+              Stats
+            </h3>
+            <div className="mx-2 mb-12">
+              <div className="max-w-md mx-auto bg-gray-50 shadow-md rounded-lg overflow-hidden">
+                <div className="p-6">
+                  {/*  */}
+                </div>
+              </div>
+            </div>
+            <h3 className="text-center text-xl font-semibold mb-2">
+              Philosophy
+            </h3>
+            <div className="mx-2 mb-12">
+              <div className="max-w-md mx-auto bg-gray-50 shadow-md rounded-lg overflow-hidden">
+                <div className="p-6">
+                  {/*  */}
+                </div>
+              </div>
             </div>
           </motion.div>
         </ReactModal>
