@@ -218,7 +218,7 @@ const App: React.FC = () => {
                             setIsInfoModalOpen(true);
                           }}
                         >
-                          philosophy
+                          about-me
                         </span>
                         .
                       </li>
