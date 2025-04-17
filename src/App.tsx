@@ -224,6 +224,20 @@ const App: React.FC = () => {
           </AnimatePresence>
         </div>
       </div>
+      <footer className="mt-10 text-center text-gray-600">
+        <p>
+          Made with ❤️ by Nick. You can find this project on my {" "}
+          <a
+        href="https://github.com/NickVeles/dating-quiz"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="text-blue-500 hover:underline"
+          >
+        GitHub
+          </a>
+          .
+        </p>
+      </footer>
     </div>
   );
 };
