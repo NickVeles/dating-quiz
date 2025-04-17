@@ -200,7 +200,7 @@ export const Questions: Question[] = [
           subtitle: (
             <>
               <p>
-                But we would just have a very awkward time talking about
+                We would simply have a very awkward time while talking about
                 philosophy and the foundations of our values 💀
               </p>
               <p>No offense ofc</p>
