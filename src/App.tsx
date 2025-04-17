@@ -218,7 +218,7 @@ const App: React.FC = () => {
                         <img
                           src={dealbreaker.image}
                           alt="dealbreaker"
-                          className="max-w-full h-auto rounded-lg hover:cursor-pointer"
+                          className="max-w-full h-auto rounded-lg hover:cursor-pointer border-1 border-gray-100"
                           onClick={() => openModal(dealbreaker.image!)}
                         />
                       </div>
@@ -240,7 +240,7 @@ const App: React.FC = () => {
                       <img
                         src={scoreResult.image}
                         alt="result"
-                        className="max-w-full h-auto rounded-lg hover:cursor-pointer"
+                        className="max-w-full h-auto rounded-lg hover:cursor-pointer border-1 border-gray-100"
                         onClick={() => openModal(scoreResult.image)}
                       />
                     </div>
@@ -250,7 +250,7 @@ const App: React.FC = () => {
                         href="https://www.instagram.com/nick.veles/"
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="flex items-center bg-pink-500 hover:bg-pink-600 text-white font-semibold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+                        className="flex items-center bg-gradient-to-r from-yellow-400 via-pink-500 to-purple-500 hover:opacity-90 text-white font-semibold py-2 px-4 rounded-full focus:outline-none focus:shadow-outline text-shadow-lg"
                       >
                         <Instagram className="w-5 h-5 mr-2" />
                         nick.veles
