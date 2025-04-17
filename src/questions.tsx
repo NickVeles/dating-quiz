@@ -38,7 +38,7 @@ export const Questions: Question[] = [
           image: "/img/db02a.png",
         },
       },
-      { text: "Female", points: 0 },
+      { text: "Female", points: 50 },
       {
         text: "Other (including trans people)",
         points: 0,
@@ -80,7 +80,7 @@ export const Questions: Question[] = [
     text: "How old are you?",
     answers: [
       { text: `18-${new Date().getFullYear() - 2003 - 1}`, points: 50 },
-      { text: `${new Date().getFullYear() - 2003}`, points: 20 },
+      { text: `${new Date().getFullYear() - 2003}`, points: 10 },
       {
         text: `${new Date().getFullYear() - 2003 + 1}+`,
         points: 0,
