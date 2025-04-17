@@ -11,11 +11,11 @@ import {
   Circle,
   Heart,
   Instagram,
-  Close,
 } from "./components/Icons";
 import Dealbreaker from "../model/Dealbreaker";
 import ReactModal from "react-modal";
-import { TransformWrapper, TransformComponent } from "react-zoom-pan-pinch";
+import InfoModal from "./components/InfoModal";
+import ImageModal from "./components/ImageModal";
 
 // Set the app element for accessibility
 ReactModal.setAppElement("#root");
@@ -37,6 +37,9 @@ const App: React.FC = () => {
   const [questions, setQuestions] = useState<Question[]>(
     Questions.map((q) => ({ ...q }))
   );
+
+  // Info Modal
+  const [isInfoModalOpen, setIsInfoModalOpen] = useState(false);
 
   // Image modal
   const [isImageModalOpen, setIsImageModalOpen] = useState(false);
@@ -200,7 +203,8 @@ const App: React.FC = () => {
                       <li className="mb-2">
                         Please answer honestly to get the best results &ndash;
                         this quiz is for you, not for me. Of course, you're more
-                        than welcome to share your results with me if you want to.
+                        than welcome to share your results with me if you want
+                        to.
                       </li>
                       <li className="mb-2">
                         Anyway, you might feel judged during this quiz
@@ -210,7 +214,9 @@ const App: React.FC = () => {
                         You might consider taking a look at my{" "}
                         <span
                           className="text-blue-500 hover:underline hover:cursor-pointer"
-                          onClick={() => {}}
+                          onClick={() => {
+                            setIsInfoModalOpen(true);
+                          }}
                         >
                           philosophy
                         </span>
@@ -360,42 +366,18 @@ const App: React.FC = () => {
         </p>
       </footer>
 
+      {/* Info modal */}
+      <InfoModal
+        isOpen={isInfoModalOpen}
+        onRequestClose={() => setIsInfoModalOpen(false)}
+      />
+
       {/* Image modal */}
-      <ReactModal
+      <ImageModal
         isOpen={isImageModalOpen}
         onRequestClose={closeImageModal}
-        contentLabel="Image Modal"
-        className="fixed inset-0 flex items-center justify-center bg-black"
-        shouldCloseOnEsc={true}
-        style={{
-          content: {
-            inset: "0",
-            background: "black",
-            border: "none",
-            padding: "0",
-          },
-        }}
-      >
-        <div className="w-full h-full flex flex-col">
-          <button
-            className="text-white hover:text-gray-300 flex-right"
-            onClick={closeImageModal}
-          >
-            <Close className="w-12 h-12" />
-          </button>
-          {modalImage && (
-            <div className="flex justify-center items-center w-full h-full">
-              <TransformWrapper>
-                <TransformComponent
-                  wrapperStyle={{ height: "100%", width: "100%" }}
-                >
-                  <img src={modalImage} alt="Zoomable" />
-                </TransformComponent>
-              </TransformWrapper>
-            </div>
-          )}
-        </div>
-      </ReactModal>
+        image={modalImage}
+      />
     </div>
   );
 };
