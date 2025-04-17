@@ -199,11 +199,22 @@ const App: React.FC = () => {
                       </li>
                       <li className="mb-2">
                         Please answer honestly to get the best results &ndash;
-                        this quiz is for you, not for me (the creator).
+                        this quiz is for you, not for me. Of course, you're more
+                        than welcome to share your results with me if you want to.
                       </li>
                       <li className="mb-2">
-                        Nevertheless, you might feel judged during this quiz
+                        Anyway, you might feel judged during this quiz
                         (unlucky). Take it with a grain of salt.
+                      </li>
+                      <li className="mb-2">
+                        You might consider taking a look at my{" "}
+                        <span
+                          className="text-blue-500 hover:underline"
+                          onClick={() => {}}
+                        >
+                          philosophy
+                        </span>
+                        .
                       </li>
                     </ol>
                     <div className="my-6 text-left">
