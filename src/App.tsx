@@ -5,7 +5,7 @@ import { Questions } from "./questions";
 import "./App.css";
 import Question from "../model/Question";
 import Answer from "../model/Answer";
-import { BrokenHeart, ChevronLeft, Circle, Heart } from "./components/Icons";
+import { BrokenHeart, ChevronLeft, Circle, Heart, Instagram } from "./components/Icons";
 import Dealbreaker from "../model/Dealbreaker";
 
 const App: React.FC = () => {
@@ -13,6 +13,13 @@ const App: React.FC = () => {
   const [currentQuestion, setCurrentQuestion] = useState<Question | null>(null);
   const [dealbreaker, setDealbreaker] = useState<Dealbreaker | null>(null);
   const [userPoints, setUserPoints] = useState(0);
+  const [scoreResult, setScoreResult] = useState({
+    emoji: "💀",
+    message:
+      "Sorry, but that's not happening... How did you even get here without any dealbreakers?",
+    instagram: "I guess you can try tell me how much you hate this quiz on my instagram:",
+    image: "/img/result0.jpg",
+  }); // default to worst result
   const [questions, setQuestions] = useState<Question[]>(
     Questions.map((q) => ({ ...q }))
   );
@@ -37,13 +44,42 @@ const App: React.FC = () => {
       setCurrentQuestionIndex(currentQuestionIndex + 1);
 
       if (currentQuestionIndex >= questions.length - 1) {
-        setUserPoints(
-          questions.reduce(
-            (total, question) =>
-              total + (question.selected ? question.selected.points : 0),
-            0
-          )
+        const points = questions.reduce(
+          (total, question) =>
+            total + (question.selected ? question.selected.points : 0),
+          0
         );
+        setUserPoints(points);
+
+        if (points >= 1500) {
+          setScoreResult({
+            emoji: "💖",
+            message: "You might be the one...",
+            instagram: "Here's my ig (pls dm me):",
+            image: "/img/result4.png",
+          });
+        } else if (points >= 1200) {
+          setScoreResult({
+            emoji: "😍",
+            message: "That's a good score btw!",
+            instagram: "Here's my ig, be welcome to dm me:",
+            image: "/img/result3.webp",
+          });
+        } else if (points >= 1000) {
+          setScoreResult({
+            emoji: "🥰",
+            message: "There's some potential!",
+            instagram: "You can contact me here:",
+            image: "/img/result2.jpg",
+          });
+        } else if (points >= 400) {
+          setScoreResult({
+            emoji: "😬",
+            message: "Ehh... Not feeling it",
+            instagram: "I guess you can dm me anyway:",
+            image: "/img/result1.jpg",
+          });
+        }
       }
     },
     [currentQuestionIndex, questions, setQuestions]
@@ -53,16 +89,6 @@ const App: React.FC = () => {
     setDealbreaker(null);
     setCurrentQuestionIndex(currentQuestionIndex - 1);
   }, [currentQuestionIndex]);
-
-  const getCompatibilityMessage = useCallback(() => {
-    if (userPoints >= 18) {
-      return "Great compatibility! You seem to have a lot in common.";
-    } else if (userPoints >= 12) {
-      return "Good compatibility! There's definitely potential here.";
-    } else {
-      return "Some differences, but opposites can attract! Let's see...";
-    }
-  }, [userPoints]);
 
   const questionVariants = {
     initial: { opacity: 0, x: -50 },
@@ -158,28 +184,47 @@ const App: React.FC = () => {
                         {dealbreaker.subtitle}
                       </div>
                     )}
-                    {dealbreaker.image && (
-                      <div className="flex justify-center mb-4">
-                        <img
-                          src={dealbreaker.image}
-                          alt="dealbreaker"
-                          className="max-w-full h-auto rounded-lg"
-                        />
-                      </div>
-                    )}
+                    <div className="flex justify-center">
+                      <img
+                        src={dealbreaker.image}
+                        alt="dealbreaker"
+                        className="max-w-full h-auto rounded-lg"
+                      />
+                    </div>
                   </>
                 )}
 
                 {/* Results screen */}
                 {!dealbreaker && currentQuestionIndex >= questions.length && (
                   <div>
-                    <h3 className="text-xl font-semibold mb-4">
+                    <h3 className="text-xl font-semibold mb-6">
                       Your Compatibility Score:
                     </h3>
-                    <p className="text-4xl font-bold text-blue-600 mb-6">
-                      {userPoints}
+                    <p className="text-5xl text-center font-bold text-pink-400 mb-6">
+                      {userPoints} {scoreResult.emoji}
                     </p>
-                    <p className="text-lg mb-4">{getCompatibilityMessage()}</p>
+                    <p className="mb-4">{scoreResult.message}</p>
+                    {scoreResult.image && (
+                      <div className="flex justify-center mb-2">
+                        <img
+                          src={scoreResult.image}
+                          alt="result"
+                          className="max-w-full h-auto rounded-lg"
+                        />
+                      </div>
+                    )}
+                    <p className="mb-4">{scoreResult.instagram}</p>
+                    <div className="flex justify-center">
+                      <a
+                        href="https://www.instagram.com/nick.veles/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="flex items-center bg-pink-500 hover:bg-pink-600 text-white font-semibold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+                      >
+                        <Instagram className="w-5 h-5 mr-2" />
+                        nick.veles
+                      </a>
+                    </div>
                   </div>
                 )}
 
