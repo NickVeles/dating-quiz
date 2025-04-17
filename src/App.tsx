@@ -11,8 +11,14 @@ import {
   Circle,
   Heart,
   Instagram,
+  Close,
 } from "./components/Icons";
 import Dealbreaker from "../model/Dealbreaker";
+import ReactModal from "react-modal";
+import { TransformWrapper, TransformComponent } from "react-zoom-pan-pinch";
+
+// Set the app element for accessibility
+ReactModal.setAppElement('#root');
 
 const App: React.FC = () => {
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(-1);
@@ -30,6 +36,10 @@ const App: React.FC = () => {
   const [questions, setQuestions] = useState<Question[]>(
     Questions.map((q) => ({ ...q }))
   );
+
+  // Image modal
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [modalImage, setModalImage] = useState<string | null>(null);
 
   useEffect(() => {
     if (currentQuestionIndex >= 0 && currentQuestionIndex < questions.length) {
@@ -96,6 +106,18 @@ const App: React.FC = () => {
     setDealbreaker(null);
     setCurrentQuestionIndex(currentQuestionIndex - 1);
   }, [currentQuestionIndex]);
+
+  // Function to open modal
+  const openModal = (image: string) => {
+    setModalImage(image);
+    setIsModalOpen(true);
+  };
+
+  // Function to close modal
+  const closeModal = () => {
+    setIsModalOpen(false);
+    setModalImage(null);
+  };
 
   const questionVariants = {
     initial: { opacity: 0, x: -50 },
@@ -197,6 +219,7 @@ const App: React.FC = () => {
                           src={dealbreaker.image}
                           alt="dealbreaker"
                           className="max-w-full h-auto rounded-lg"
+                          onClick={() => openModal(dealbreaker.image!)}
                         />
                       </div>
                     )}
@@ -218,6 +241,7 @@ const App: React.FC = () => {
                         src={scoreResult.image}
                         alt="result"
                         className="max-w-full h-auto rounded-lg"
+                        onClick={() => openModal(scoreResult.image)}
                       />
                     </div>
                     <p className="mb-4">{scoreResult.instagram}</p>
@@ -266,6 +290,7 @@ const App: React.FC = () => {
           </div>
         </div>
       </div>
+
       {/* Footer */}
       <footer className="mt-10 text-center text-gray-600">
         <p>
@@ -281,6 +306,47 @@ const App: React.FC = () => {
           .
         </p>
       </footer>
+
+      {/* Image modal */}
+      <ReactModal
+        isOpen={isModalOpen}
+        onRequestClose={closeModal}
+        contentLabel="Image Modal"
+        className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-25"
+        overlayClassName="fixed inset-0 bg-black bg-opacity-50"
+        shouldCloseOnOverlayClick={true}
+        shouldCloseOnEsc={true}
+        style={{
+          overlay: {
+            backgroundColor: "rgba(0, 0, 0, 0.1)",
+          },
+          content: {
+            background: "rgba(0, 0, 0, 0.4)",
+          },
+        }}
+      >
+        <div className="relative bg-white rounded-lg p-4 max-w-3xl w-full mx-2 flex flex-col">
+          <button
+            className="text-gray-600 hover:text-gray-800 flex self-start mb-2"
+            onClick={closeModal}
+          >
+            <Close className="w-8 h-8" />
+          </button>
+          {modalImage && (
+            <div className="flex justify-center">
+              <TransformWrapper>
+                <TransformComponent>
+                  <img
+                    src={modalImage}
+                    alt="Zoomable"
+                    className="max-w-full h-auto rounded-lg"
+                  />
+                </TransformComponent>
+              </TransformWrapper>
+            </div>
+          )}
+        </div>
+      </ReactModal>
     </div>
   );
 };
