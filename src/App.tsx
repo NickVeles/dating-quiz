@@ -5,7 +5,13 @@ import { Questions } from "./questions";
 import "./App.css";
 import Question from "../model/Question";
 import Answer from "../model/Answer";
-import { BrokenHeart, ChevronLeft, Circle, Heart, Instagram } from "./components/Icons";
+import {
+  BrokenHeart,
+  ChevronLeft,
+  Circle,
+  Heart,
+  Instagram,
+} from "./components/Icons";
 import Dealbreaker from "../model/Dealbreaker";
 
 const App: React.FC = () => {
@@ -17,7 +23,8 @@ const App: React.FC = () => {
     emoji: "💀",
     message:
       "Sorry, but that's not happening... How did you even get here without any dealbreakers?",
-    instagram: "I guess you can try tell me how much you hate this quiz on my instagram:",
+    instagram:
+      "I guess you can try tell me how much you hate this quiz on my instagram:",
     image: "/img/result0.jpg",
   }); // default to worst result
   const [questions, setQuestions] = useState<Question[]>(
@@ -184,13 +191,15 @@ const App: React.FC = () => {
                         {dealbreaker.subtitle}
                       </div>
                     )}
-                    <div className="flex justify-center">
-                      <img
-                        src={dealbreaker.image}
-                        alt="dealbreaker"
-                        className="max-w-full h-auto rounded-lg"
-                      />
-                    </div>
+                    {dealbreaker.image && (
+                      <div className="flex justify-center">
+                        <img
+                          src={dealbreaker.image}
+                          alt="dealbreaker"
+                          className="max-w-full h-auto rounded-lg"
+                        />
+                      </div>
+                    )}
                   </>
                 )}
 
@@ -204,15 +213,13 @@ const App: React.FC = () => {
                       {userPoints} {scoreResult.emoji}
                     </p>
                     <p className="mb-4">{scoreResult.message}</p>
-                    {scoreResult.image && (
-                      <div className="flex justify-center mb-2">
-                        <img
-                          src={scoreResult.image}
-                          alt="result"
-                          className="max-w-full h-auto rounded-lg"
-                        />
-                      </div>
-                    )}
+                    <div className="flex justify-center mb-2">
+                      <img
+                        src={scoreResult.image}
+                        alt="result"
+                        className="max-w-full h-auto rounded-lg"
+                      />
+                    </div>
                     <p className="mb-4">{scoreResult.instagram}</p>
                     <div className="flex justify-center">
                       <a
