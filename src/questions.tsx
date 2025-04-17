@@ -104,8 +104,8 @@ export const Questions: Question[] = [
           title: "😐",
           subtitle: (
             <>
-              <p>
-                Bruh the fact u seeing this means I'm in a different country.
+              <p className="mb-2">
+                Bruh the fact u seeing this quiz means I'm in a different country.
               </p>
               <p>Like, all I can offer is an LDR rn.</p>
             </>
@@ -133,7 +133,7 @@ export const Questions: Question[] = [
         points: 0,
         dealbreaker: {
           title: "Still too smoky 🚭",
-          subtitle: <p>Prefering fresh air enthusiasts lmao</p>,
+          subtitle: <p>Prefering fresh air enthusiasts</p>,
           image: "/img/db06.png",
         },
       },
@@ -199,7 +199,7 @@ export const Questions: Question[] = [
           title: "Not a match!",
           subtitle: (
             <>
-              <p>
+              <p className="mb-2">
                 We would simply have a very awkward time while talking about
                 philosophy and the foundations of our values 💀
               </p>
