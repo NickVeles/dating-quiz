@@ -15,6 +15,7 @@ import {
 } from "./components/Icons";
 import Dealbreaker from "../model/Dealbreaker";
 import ReactModal from "react-modal";
+import { TransformWrapper, TransformComponent } from "react-zoom-pan-pinch";
 
 // Set the app element for accessibility
 ReactModal.setAppElement("#root");
@@ -324,18 +325,20 @@ const App: React.FC = () => {
       >
         <div className="w-full h-full flex flex-col">
           <button
-            className="text-white hover:text-gray-300 flex-right mb-2"
+            className="text-white hover:text-gray-300 flex-right"
             onClick={closeModal}
           >
             <Close className="w-12 h-12" />
           </button>
           {modalImage && (
             <div className="flex justify-center items-center w-full h-full">
-              <img
-                src={modalImage}
-                alt="Zoomable"
-                className="max-w-full max-h-full"
-              />
+              <TransformWrapper>
+                <TransformComponent
+                  wrapperStyle={{ height: "100%", width: "100%" }}
+                >
+                  <img src={modalImage} alt="Zoomable" />
+                </TransformComponent>
+              </TransformWrapper>
             </div>
           )}
         </div>
