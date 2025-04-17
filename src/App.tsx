@@ -104,31 +104,22 @@ const App: React.FC = () => {
               </button>
 
               {/* Question indicator */}
-              <div className="flex flex-col gap-2 ml-4">
-                {Array.from(
-                  { length: Math.ceil(questions.length / 14) },
-                  (_, rowIndex) => (
-                    <div key={rowIndex} className="flex justify-center gap-1">
-                      {questions
-                        .slice(rowIndex * 14, rowIndex * 14 + 14)
-                        .map((question, index) => (
-                          <div
-                            key={index}
-                            className="flex justify-center items-center"
-                          >
-                            {question.selected?.dealbreaker ? (
-                              <BrokenHeart className="w-5 h-5 text-pink-500" />
-                            ) : question.selected ? (
-                              <Heart className="w-5 h-5 text-pink-500" />
-                            ) : (
-                              <Circle className="w-5 h-5 text-gray-400" />
-                            )}
-                          </div>
-                        ))}
-                    </div>
-                  )
-                )}
-              </div>
+                <div className="flex flex-wrap gap-1 ml-4 justify-center">
+                {questions.map((question, index) => (
+                  <div
+                  key={index}
+                  className="flex justify-center items-center"
+                  >
+                  {question.selected?.dealbreaker ? (
+                    <BrokenHeart className="w-5 h-5 text-pink-500" />
+                  ) : question.selected ? (
+                    <Heart className="w-5 h-5 text-pink-500" />
+                  ) : (
+                    <Circle className="w-5 h-5 text-gray-400" />
+                  )}
+                  </div>
+                ))}
+                </div>
             </div>
 
             {/* Content */}
