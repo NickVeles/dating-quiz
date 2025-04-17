@@ -20,7 +20,7 @@ export const Questions: Question[] = [
         dealbreaker: {
           title: "Sorry!",
           subtitle: <p>Only accepting the following countries:</p>,
-          image: "./img/db01a.png",
+          image: "/img/db01a.png",
         },
       },
     ],
@@ -35,7 +35,7 @@ export const Questions: Question[] = [
         dealbreaker: {
           title: "Sorry homie, this quiz ain't for you",
           subtitle: "Take this goodnight kiss tho",
-          image: "./img/db02a.png",
+          image: "/img/db02a.png",
         },
       },
       { text: "Female", points: 0 },
@@ -86,7 +86,7 @@ export const Questions: Question[] = [
         points: 0,
         dealbreaker: {
           title: "This u?",
-          image: "./img/db04a.webp",
+          image: "/img/db04a.webp",
         },
       },
     ],
@@ -110,7 +110,7 @@ export const Questions: Question[] = [
               <p>Like, all I can offer is an LDR rn.</p>
             </>
           ),
-          image: "./img/db05a.webp",
+          image: "/img/db05a.webp",
         },
       },
     ],
@@ -125,7 +125,7 @@ export const Questions: Question[] = [
         dealbreaker: {
           title: "Lung cancer? No thank you 🚭",
           subtitle: <p>Prefering fresh air enthusiasts lmao</p>,
-          image: "./img/db06.png",
+          image: "/img/db06.png",
         },
       },
       {
@@ -134,7 +134,7 @@ export const Questions: Question[] = [
         dealbreaker: {
           title: "Still too smoky 🚭",
           subtitle: <p>Prefering fresh air enthusiasts lmao</p>,
-          image: "./img/db06.png",
+          image: "/img/db06.png",
         },
       },
       { text: "Never", points: 50 },
@@ -151,7 +151,7 @@ export const Questions: Question[] = [
         dealbreaker: {
           title: "Nah",
           subtitle: <p>Alcoholism ain't cute</p>,
-          image: "./img/db07a.jpeg",
+          image: "/img/db07a.jpeg",
         },
       },
       { text: "Sometimes", points: 10 },
@@ -168,7 +168,7 @@ export const Questions: Question[] = [
         dealbreaker: {
           title: "NAH",
           subtitle: <p>Hard in Hard Drugs stands for a Hard Pass lmao</p>,
-          image: "./img/db08a.png",
+          image: "/img/db08a.png",
         },
       },
       { text: "I love soft drugs!", points: 0 },
@@ -225,7 +225,7 @@ export const Questions: Question[] = [
         points: 0,
         dealbreaker: {
           title: "Addiction is an addiction dude",
-          image: "./img/db11a.jpg",
+          image: "/img/db11a.jpg",
         },
       },
       { text: "Often", points: 0 },
@@ -255,7 +255,7 @@ export const Questions: Question[] = [
               Even diamonds can be turned into a hoe with a couple of sticks.
             </p>
           ),
-          image: "./img/db13a.png",
+          image: "/img/db13a.png",
         },
       },
       { text: "Not for me", points: 20 },
@@ -290,7 +290,7 @@ export const Questions: Question[] = [
         dealbreaker: {
           title: "BOO!",
           subtitle: <p>Did I scare you? I'm a job application</p>,
-          image: "./img/db15a.jpg",
+          image: "/img/db15a.jpg",
         },
       },
       { text: "Not for me, but I think it empowers women", points: 0 },
@@ -361,7 +361,7 @@ export const Questions: Question[] = [
         points: 0,
         dealbreaker: {
           title: "🔫🔫🔫",
-          image: "./img/db21a.webp",
+          image: "/img/db21a.webp",
         },
       },
       { text: "Power", points: 50 },
@@ -416,7 +416,7 @@ export const Questions: Question[] = [
         dealbreaker: {
           title: "ok",
           subtitle: "It's 2am as I'm coding, take this cat image and leave",
-          image: "./img/db25a.png",
+          image: "/img/db25a.png",
         },
       },
       { text: "I don't really know", points: 10 },
@@ -440,7 +440,7 @@ export const Questions: Question[] = [
         points: 0,
         dealbreaker: {
           title: "This u?",
-          image: "./img/db27a.jpg",
+          image: "/img/db27a.jpg",
         },
       },
       { text: "Extroverted", points: 25 },
