@@ -207,7 +207,8 @@ const App: React.FC = () => {
                         than welcome to share your results with me if you want
                         to.
                       </li>
-                      <li className="mb-2" onClick={() => setIsInfoModalOpen(true)}> //TODO: delete onClick
+                      {/* //TODO: delete onClick */}
+                      <li className="mb-2" onClick={() => setIsInfoModalOpen(true)}>
                         Anyway, you might feel judged during this quiz
                         (unlucky). Take it with a grain of salt.
                       </li>
