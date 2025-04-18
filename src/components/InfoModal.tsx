@@ -89,7 +89,79 @@ const InfoModal: React.FC<InfoModalProps> = ({ isOpen, onRequestClose }) => {
             <h3 className="text-center text-xl font-semibold mb-2">Stats</h3>
             <div className="mx-2 mb-12">
               <div className="max-w-md mx-auto bg-gray-50 shadow-md rounded-lg overflow-hidden">
-                <div className="p-6">{/*  */}</div>
+                <div className="p-6">
+                  <div className="flex flex-col gap-4">
+                  <div>
+                    <h4 className="text-lg font-semibold mb-2">Core</h4>
+                    <div className="flex flex-wrap gap-2">
+                    {core.map((item, index) => (
+                      <span
+                      key={`core-${index}`}
+                      className="bg-blue-50 text-blue-800 text-sm font-medium px-3 py-1 rounded border border-blue-100"
+                      >
+                      {item}
+                      </span>
+                    ))}
+                    </div>
+                  </div>
+                  <div>
+                    <h4 className="text-lg font-semibold mb-2">Languages</h4>
+                    <div className="flex flex-wrap gap-2">
+                    {languages.map((item, index) => (
+                      <span
+                      key={`languages-${index}`}
+                      className="bg-green-50 text-green-800 text-sm font-medium px-3 py-1 rounded border border-green-100"
+                      >
+                      {item}
+                      </span>
+                    ))}
+                    </div>
+                  </div>
+                  <div>
+                    <h4 className="text-lg font-semibold mb-2">
+                    Preferences
+                    </h4>
+                    <div className="flex flex-wrap gap-2">
+                    {preferences.map((item, index) => (
+                      <span
+                      key={`preferences-${index}`}
+                      className="bg-purple-50 text-purple-800 text-sm font-medium px-3 py-1 rounded border border-purple-100"
+                      >
+                      {item}
+                      </span>
+                    ))}
+                    </div>
+                  </div>
+                  <div>
+                    <h4 className="text-lg font-semibold mb-2">
+                    Personality
+                    </h4>
+                    <div className="flex flex-wrap gap-2">
+                    {personality.map((item, index) => (
+                      <span
+                      key={`personality-${index}`}
+                      className="bg-yellow-50 text-yellow-800 text-sm font-medium px-3 py-1 rounded border border-yellow-100"
+                      >
+                      {item}
+                      </span>
+                    ))}
+                    </div>
+                  </div>
+                  <div>
+                    <h4 className="text-lg font-semibold mb-2">Hobbies</h4>
+                    <div className="flex flex-wrap gap-2">
+                    {hobbies.map((item, index) => (
+                      <span
+                      key={`hobbies-${index}`}
+                      className="bg-red-50 text-red-800 text-sm font-medium px-3 py-1 rounded border border-red-100"
+                      >
+                      {item}
+                      </span>
+                    ))}
+                    </div>
+                  </div>
+                  </div>
+                </div>
               </div>
             </div>
             <h3 className="text-center text-xl font-semibold mb-2">
