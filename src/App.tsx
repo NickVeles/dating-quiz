@@ -11,6 +11,7 @@ import {
   Circle,
   Heart,
   Instagram,
+  Info,
 } from "./components/Icons";
 import Dealbreaker from "../model/Dealbreaker";
 import ReactModal from "react-modal";
@@ -210,18 +211,6 @@ const App: React.FC = () => {
                         Anyway, you might feel judged during this quiz
                         (unlucky). Take it with a grain of salt.
                       </li>
-                      <li className="mb-2">
-                        You might consider taking a look at my{" "}
-                        <span
-                          className="text-blue-500 hover:underline hover:cursor-pointer"
-                          onClick={() => {
-                            setIsInfoModalOpen(true);
-                          }}
-                        >
-                          about-me
-                        </span>
-                        .
-                      </li>
                     </ol>
                     <div className="my-6 text-left">
                       <label className="flex items-center">
@@ -313,6 +302,14 @@ const App: React.FC = () => {
                       >
                         <Instagram className="w-5 h-5 mr-2" />
                         nick.veles
+                      </a>
+                      <a
+                        href="#"
+                        onClick={() => setIsInfoModalOpen(true)}
+                        className="flex items-center bg-gray-200 hover:bg-gray-300 text-gray-800 font-semibold py-2 px-4 rounded-full focus:outline-none focus:shadow-outline ml-2"
+                      >
+                        <Info className="w-5 h-5 mr-2" />
+                        More about me
                       </a>
                     </div>
                   </div>
