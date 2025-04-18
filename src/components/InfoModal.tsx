@@ -14,6 +14,53 @@ const InfoModal: React.FC<InfoModalProps> = ({ isOpen, onRequestClose }) => {
     2003 -
     (new Date() < new Date(`${new Date().getFullYear()}-03-21`) ? 1 : 0);
 
+  const core = [
+    "🪪 Polish",
+    "♂️ Male",
+    `🎂 ${myAge}`,
+    "📏 190cm/6'3ft",
+    "🏋️ Regularly",
+    "💪 Average",
+    "💼 Software Developer",
+  ];
+
+  const languages = ["🇵🇱 Native", "🇺🇸 Fluent", "🇨🇳 (Simplified) Beginner"];
+
+  const preferences = [
+    "🙏 Atheist",
+    "💘 Straight",
+    "💍 Serious Relationship",
+    "🧑‍❤️‍👩 Monogamy",
+    "🍼 Open to having",
+    "🚬 Never",
+    "🍺 Never",
+    "🌿 Never",
+  ];
+
+  const personality = [
+    "🧮 Analytical",
+    "🤯 ASD",
+    "💫 Ambitious",
+    "😐 Straightforward",
+    "😍 Clingy",
+    "🫥 Introverted",
+    "🗣️ Talkative",
+    "⚖️ Judgmental",
+    "🤣 Absurd/Dry Humor",
+    "🪨 Resilient",
+    "😊 kind",
+  ];
+
+  const hobbies = [
+    "💻 Programming",
+    "🏛️ Philosophy",
+    "🤝 Psychology",
+    "📚 Books",
+    "🎬 Movies",
+    "🦾 Robotics and AI",
+    "🧠 Neuroscience",
+  ];
+
   return (
     <AnimatePresence>
       {isOpen && (
