@@ -248,3 +248,32 @@ export const Muscle: React.FC<IconProps> = ({ className }) => {
     </svg>
   );
 };
+
+export const Male: React.FC<IconProps> = ({ className }) => {
+  return (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth={1.5}
+      className={className}
+    >
+      <path
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        d="M 14.86,15.82 A 6.6799998,6.6799998 0 0 1 8.1800003,22.5 6.6799998,6.6799998 0 0 1 1.5000005,15.82 6.6799998,6.6799998 0 0 1 8.1800003,9.1399999 6.6799998,6.6799998 0 0 1 14.86,15.82 Z"
+      />
+      <path
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        d="m 22.5,1.5 -9.59,9.59"
+      />
+      <path
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        d="m 12.96,1.5 h 9.54 v 8.59"
+      />
+    </svg>
+  );
+};
