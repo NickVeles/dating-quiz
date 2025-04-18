@@ -296,3 +296,20 @@ export const HeartOutline: React.FC<IconProps> = ({ className }) => {
     </svg>
   );
 };
+
+export const Marriage: React.FC<IconProps> = ({ className }) => {
+  return (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth={1.5}
+      className={className}
+    >
+      <circle cx="8.66" cy="15.34" r="7.16" />
+      <circle cx="16.3" cy="12.48" r="6.2" />
+      <polygon points="16.77 6.27 15.82 6.27 12.96 3.41 13.91 1.5 18.68 1.5 19.64 3.41 16.77 6.27" />
+    </svg>
+  );
+};
