@@ -9,6 +9,11 @@ interface InfoModalProps {
 }
 
 const InfoModal: React.FC<InfoModalProps> = ({ isOpen, onRequestClose }) => {
+  const myAge =
+    new Date().getFullYear() -
+    2003 -
+    (new Date() < new Date(`${new Date().getFullYear()}-03-21`) ? 1 : 0);
+
   return (
     <AnimatePresence>
       {isOpen && (
@@ -34,14 +39,10 @@ const InfoModal: React.FC<InfoModalProps> = ({ isOpen, onRequestClose }) => {
             >
               <Close className="w-12 h-12" />
             </button>
-            <h3 className="text-center text-xl font-semibold mb-2">
-              Stats
-            </h3>
+            <h3 className="text-center text-xl font-semibold mb-2">Stats</h3>
             <div className="mx-2 mb-12">
               <div className="max-w-md mx-auto bg-gray-50 shadow-md rounded-lg overflow-hidden">
-                <div className="p-6">
-                  {/*  */}
-                </div>
+                <div className="p-6">{/*  */}</div>
               </div>
             </div>
             <h3 className="text-center text-xl font-semibold mb-2">
@@ -49,9 +50,7 @@ const InfoModal: React.FC<InfoModalProps> = ({ isOpen, onRequestClose }) => {
             </h3>
             <div className="mx-2 mb-12">
               <div className="max-w-md mx-auto bg-gray-50 shadow-md rounded-lg overflow-hidden">
-                <div className="p-6">
-                  {/*  */}
-                </div>
+                <div className="p-6">{/*  */}</div>
               </div>
             </div>
           </motion.div>
