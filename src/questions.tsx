@@ -1,6 +1,11 @@
 // src/questions.tsx
 import Question from "../model/Question";
 
+const myAge =
+  new Date().getFullYear() -
+  2003 -
+  (new Date() < new Date(`${new Date().getFullYear()}-03-21`) ? 1 : 0);
+
 export const Questions: Question[] = [
   {
     text: "Where are you from?",
@@ -80,10 +85,10 @@ export const Questions: Question[] = [
   {
     text: "How old are you?",
     answers: [
-      { text: `18-${new Date().getFullYear() - 2003 - 1}`, points: 50 },
-      { text: `${new Date().getFullYear() - 2003}`, points: 10 },
+      { text: `18-${myAge - 1}`, points: 50 },
+      { text: `${myAge}`, points: 10 },
       {
-        text: `${new Date().getFullYear() - 2003 + 1}+`,
+        text: `${myAge + 1}+`,
         points: 0,
         dealbreaker: {
           title: "This u?",
@@ -106,7 +111,8 @@ export const Questions: Question[] = [
           subtitle: (
             <>
               <p className="mb-2">
-                Bruh the fact u seeing this quiz means I'm in a different country.
+                Bruh the fact u seeing this quiz means I'm in a different
+                country.
               </p>
               <p>Like, all I can offer is an LDR rn.</p>
             </>
