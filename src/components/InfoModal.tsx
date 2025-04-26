@@ -465,17 +465,35 @@ const InfoModal: React.FC<InfoModalProps> = ({ isOpen, onRequestClose }) => {
                         Intelligent Egocentrism
                       </h4>
                       <p className="mb-2 text-justify">
-                        Velesian Titanism favors the idea of human morality
-                        being inherently egoistic. Altruism is explained as
-                        action taken to help oneself indirectly (e.g. by
-                        returning one's favor, through the domino effect, etc.).
-                        Additionally, self-sacrifice is seen as something
-                        unnatural and fundamentally broken, especially because
-                        it devalues the individual from their own perspective,
-                        and hinders the idea of one's life being the greatest
-                        value. As in Value of Value, being egoistically unfit
-                        and overly solipsistic will likely lead to one's own
-                        demise.
+                        <span className="font-bold">Velesian Titanism</span>{" "}
+                        favors the idea of human morality being{" "}
+                        <span className="italic">inherently egoistic</span>.{" "}
+                        <span className="font-bold">Altruism</span> is explained
+                        as action taken to{" "}
+                        <span className="italic">help oneself indirectly</span>{" "}
+                        (e.g. by returning one's favor, through the domino
+                        effect, etc.). Additionally,{" "}
+                        <span className="font-bold">self-sacrifice</span> is
+                        seen as something{" "}
+                        <span className="italic">unnatural</span> and{" "}
+                        <span className="italic">fundamentally broken</span>,
+                        especially because it{" "}
+                        <span className="italic">devalues</span> the individual
+                        from their own perspective, and{" "}
+                        <span className="italic">hinders</span> the idea of
+                        one's life being the greatest value. As in{" "}
+                        <span className="font-bold">Value of Value</span>, being
+                        egoistically unfit and overly{" "}
+                        <a
+                          href="https://en.wikipedia.org/wiki/Solipsism"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="text-blue-500 hover:underline"
+                        >
+                          solipsistic
+                        </a>{" "}
+                        will likely lead to one's own{" "}
+                        <span className="italic">demise</span>.
                       </p>
                     </div>
 
