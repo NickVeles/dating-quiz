@@ -1,46 +1,75 @@
-# Getting Started with Create React App
+# Nick's Dating Quiz
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Nick's Dating Quiz is a React-based web application designed to evaluate compatibility through a series of questions. The app provides a fun and interactive way to determine how well someone matches with my preferences and values. With full honesty, some day I just thought to myself, "Online dating is such a mess! I am so tired of it... I wish people just did my quiz so both of us wouldn't lose time", and so this project was born.
 
-## Available Scripts
+## Features
 
-In the project directory, you can run:
+- **Interactive Quiz**: A series of questions with multiple-choice answers.
+- **Dealbreakers**: Certain answers trigger dealbreaker screens with custom messages and images.
+- **Compatibility Scoring**: Calculates a compatibility score based on the user's answers.
+- **Dynamic Results**: Displays personalized results with emojis, messages, and images.
+- **Modern Image Viewer**: Allows users to zoom in on images using a pinch-to-zoom feature.
+- **Animated Transitions**: Smooth transitions between questions and results using Framer Motion.
+- **About Me Section**: A section that provides information about me, including my philosophy of life.
+- **Responsive Design**: Optimized for various screen sizes using Tailwind CSS.
 
-### `npm start`
+## Technologies Used
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+- **React**: For building the user interface.
+- **TypeScript**: For type safety and better developer experience.
+- **Tailwind CSS**: For styling and responsive design.
+- **Framer Motion**: For smooth animations and transitions.
+- **React Modal**: For creating modals.
+- **React Zoom Pan Pinch**: For zoomable images.
+- **Jest & React Testing Library**: For testing.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+## Installation
 
-### `npm test`
+1. Clone the repository:
+```bash
+git clone https://github.com/NickVeles/dating-quiz.git
+cd dating-quiz
+```
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+2. Install dependencies:
+```bash
+npm install
+```
 
-### `npm run build`
+3. Start the development server:
+```bash
+npm start
+```
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+4. Open your browser and navigate to `http://localhost:3000`.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Scripts
+- `npm start`: Runs the app in development mode.
+- `npm run` build: Builds the app for production.
+- `npm test`: Launches the test runner.
+- `npm run eject`: Ejects the app configuration (use with caution).
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Folder Structure
+```
+dating-quiz/
+├── model/               # TypeScript interfaces for the app
+├── public/              # Static assets
+├── src/                 # Source code
+│   ├── components/      # Reusable React components
+│   ├── App.tsx          # Main app component
+│   ├── questions.tsx    # Quiz questions and logic
+│   ├── index.tsx        # Entry point of the app
+│   ├── input.css        # Tailwind CSS input file
+│   ├── output.css       # Tailwind CSS output file
+├── .vscode/             # VS Code settings
+├── .gitignore           # Git ignore file
+├── package.json         # Project metadata and dependencies
+├── tsconfig.json        # TypeScript configuration
+└── README.md            # Project documentation
+```
 
-### `npm run eject`
+## License
+This project is licensed under the Apache License, Version 2.0. See the [LICENSE](LICENSE) file for details.
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+## Contact
+My [GitHub profile](https://www.instagram.com/nick.veles/) contains all social media you can reach me on. Feel free to connect with me for any questions or collaborations.
