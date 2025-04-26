@@ -387,7 +387,7 @@ export const Questions: Question[] = [
     category: "🧭 Values & Mindset",
   },
   {
-    text: "How would you feel if you discovered that after death, you would relive your life repeatedly, always the same exact way?",
+    text: "How would you feel if you discovered that after death, you would relive your life repeatedly, always the same exact way, and not remembering anything?",
     answers: [
       {
         text: "Great! I love my life despite occasional suffering!",
