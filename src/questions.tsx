@@ -433,7 +433,7 @@ export const Questions: Question[] = [
   {
     text: "Do you have a strong sense of purpose in life?",
     answers: [
-      { text: "Yes, and I'm working toward it", points: 50 },
+      { text: "Yes, and I'm working towards it", points: 50 },
       { text: "I'm figuring it out", points: 25 },
       { text: "No idea, I'm drifting", points: 0 },
     ],
