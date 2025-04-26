@@ -62,6 +62,8 @@ const InfoModal: React.FC<InfoModalProps> = ({ isOpen, onRequestClose }) => {
     "🎬 Movies",
   ];
 
+  const images = [""];
+
   return (
     <AnimatePresence>
       {isOpen && (
@@ -202,7 +204,7 @@ const InfoModal: React.FC<InfoModalProps> = ({ isOpen, onRequestClose }) => {
                         <span className="italic">dead</span> and{" "}
                         <span className="italic">obsolete</span>. The said{" "}
                         <span className="font-bold">titans</span>, according to
-                        my philosophy, are interpreted to be people who were
+                        my philosophy, are interpreted to be the people who were
                         enslaved by religion and traditional beliefs to conform
                         to given norms, fitting a mold, instead of becoming
                         authentic selves&mdash;these people, these{" "}
@@ -248,6 +250,8 @@ const InfoModal: React.FC<InfoModalProps> = ({ isOpen, onRequestClose }) => {
                         </span>
                         &mdash;this is the fundamental idea behind{" "}
                         <span className="font-bold">Titanism</span>.
+                      </p>
+                      <p className="mb-2 text-justify">
                         Additionally, all following ideas in this document will
                         be separated between{" "}
                         <span className="font-bold">Titanism</span> (which is
@@ -351,9 +355,11 @@ const InfoModal: React.FC<InfoModalProps> = ({ isOpen, onRequestClose }) => {
                         , as one strives for the greatest and the perfect with{" "}
                         <span className="italic">full consciousness</span> it is
                         unattainable&mdash;absurd, yet grounded in one's own
-                        meaning. My{" "}
-                        <span className="italic">very own dream</span>, as crazy
-                        as it may sound, is to become{" "}
+                        meaning.
+                      </p>
+                      <p className="mb-2 text-justify">
+                        My <span className="italic">very own dream</span>, as
+                        crazy as it may sound, is to become{" "}
                         <span className="font-bold">immortal</span>, and a{" "}
                         <span className="font-bold">god</span> at that&mdash;I
                         know I can <span className="italic">never</span> achieve
@@ -704,7 +710,10 @@ const InfoModal: React.FC<InfoModalProps> = ({ isOpen, onRequestClose }) => {
                         <span className="italic">
                           shared through mutual fulfillment
                         </span>
-                        . It rejects the idea of{" "}
+                        .
+                      </p>
+                      <p className="mb-2 text-justify">
+                        It rejects the idea of{" "}
                         <span className="italic">finding a soulmate</span>,
                         instead proposing that one's soulmate is{" "}
                         <span className="italic">"built"</span> from another
@@ -714,15 +723,20 @@ const InfoModal: React.FC<InfoModalProps> = ({ isOpen, onRequestClose }) => {
                         becoming a{" "}
                         <span className="font-bold">single being</span> in{" "}
                         <span className="font-bold">two bodies</span>, sharing
-                        one woven mind. It encourages{" "}
+                        one woven mind.
+                      </p>
+                      <p className="mb-2 text-justify">
+                        It encourages{" "}
                         <span className="italic">meaningful relationships</span>{" "}
                         over those that are short-lived and hedonistic in
-                        nature. It also favors{" "}
-                        <span className="italic">monogamy</span>, due to massive
-                        scientific and cultural evidence supporting it over
-                        polygamy, especially given the idea that trust and
-                        intimacy can never be equally shared across multiple
-                        partners.
+                        nature.
+                      </p>
+                      <p className="mb-2 text-justify">
+                        It also favors <span className="italic">monogamy</span>,
+                        due to massive scientific and cultural evidence
+                        supporting it over polygamy, especially given the idea
+                        that trust and intimacy can never be equally shared
+                        across multiple partners.
                       </p>
                     </div>
 
@@ -730,7 +744,7 @@ const InfoModal: React.FC<InfoModalProps> = ({ isOpen, onRequestClose }) => {
                       <h4 className="text-lg font-semibold mb-2">
                         Final Thoughts
                       </h4>
-                      <p className="text-justify">
+                      <p className="mb-2 text-justify">
                         If you managed to read thought all of this, you most
                         likely find my philosophy{" "}
                         <span className="italic">interestingly</span>{" "}
@@ -738,10 +752,12 @@ const InfoModal: React.FC<InfoModalProps> = ({ isOpen, onRequestClose }) => {
                         like every other one. However, if you found my
                         scribblings relatable, I am happy to hear I am not
                         alone, and there are equally eccentric people out there,
-                        with the same awareness as I have. Reiterating,{" "}
-                        <span className="font-bold">Titanism</span> is a
-                        framework to create your own philosophical frameworks,
-                        while{" "}
+                        with the same awareness as I have.
+                      </p>
+                      <p className="mb-2 text-justify">
+                        Reiterating, <span className="font-bold">Titanism</span>{" "}
+                        is a framework to create your own philosophical
+                        frameworks, while{" "}
                         <span className="font-bold">Velesian Titanism</span> is
                         on that higher level, being my actual framework. It is a{" "}
                         <span className="font-bold">tool</span>, but (hopefully)
@@ -752,8 +768,10 @@ const InfoModal: React.FC<InfoModalProps> = ({ isOpen, onRequestClose }) => {
                         <span className="italic">out of nihilism</span>, if you
                         accidentally fell into it. It has been my tool after I
                         fell into that rabbit hole, and I have never been
-                        happier before I discovered it. Thanks for sticking
-                        around.
+                        happier before I discovered it.
+                      </p>
+                      <p className="text-justify">
+                        Thanks for sticking around.
                       </p>
                     </div>
                   </div>
