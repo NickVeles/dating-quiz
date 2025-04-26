@@ -380,6 +380,7 @@ const App: React.FC = () => {
       <InfoModal
         isOpen={isInfoModalOpen}
         onRequestClose={() => setIsInfoModalOpen(false)}
+        openImageModal={openImageModal}
       />
 
       {/* Image modal */}

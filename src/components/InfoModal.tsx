@@ -6,9 +6,14 @@ import { motion, AnimatePresence } from "framer-motion";
 interface InfoModalProps {
   isOpen: boolean;
   onRequestClose: () => void;
+  openImageModal: (img: string) => void;
 }
 
-const InfoModal: React.FC<InfoModalProps> = ({ isOpen, onRequestClose }) => {
+const InfoModal: React.FC<InfoModalProps> = ({
+  isOpen,
+  onRequestClose,
+  openImageModal,
+}) => {
   const myAge =
     new Date().getFullYear() -
     2003 -
@@ -62,7 +67,20 @@ const InfoModal: React.FC<InfoModalProps> = ({ isOpen, onRequestClose }) => {
     "🎬 Movies",
   ];
 
-  const images = [""];
+  const philosophyImages = [
+    "/img/philosophy01.png",
+    "/img/philosophy02.png",
+    "/img/philosophy03.png",
+    "/img/philosophy04.png",
+    "/img/philosophy05.png",
+    "/img/philosophy06.png",
+    "/img/philosophy07.png",
+    "/img/philosophy08.png",
+    "/img/philosophy09.png",
+    "/img/philosophy10.png",
+    "/img/philosophy11.png",
+    "/img/philosophy12.png",
+  ];
 
   return (
     <AnimatePresence>
@@ -176,7 +194,7 @@ const InfoModal: React.FC<InfoModalProps> = ({ isOpen, onRequestClose }) => {
               <div className="mx-2 mb-12">
                 <div className="max-w-md mx-auto bg-gray-50 shadow-md rounded-lg overflow-hidden">
                   <div className="p-6 text-left font-(family-name:--font-noto-serif)">
-                    <div className="mb-6">
+                    <div>
                       <h4 className="text-lg font-semibold mb-2">Titanism</h4>
                       <p className="mb-2 text-justify">
                         The general name of my philosophy&mdash;or rather my
@@ -212,9 +230,17 @@ const InfoModal: React.FC<InfoModalProps> = ({ isOpen, onRequestClose }) => {
                         from their prison, ready to become their own{" "}
                         <span className="font-bold">gods</span>.
                       </p>
+                      <div className="flex justify-center mx-2 my-6">
+                        <img
+                          src={philosophyImages[0]}
+                          alt="philosophy"
+                          className="max-w-full h-auto rounded-lg hover:cursor-pointer border-1 border-gray-100"
+                          onClick={() => openImageModal(philosophyImages[0])}
+                        />
+                      </div>
                     </div>
 
-                    <div className="mb-6">
+                    <div>
                       <h4 className="text-lg font-semibold mb-2">
                         Titan Values
                       </h4>
@@ -262,9 +288,17 @@ const InfoModal: React.FC<InfoModalProps> = ({ isOpen, onRequestClose }) => {
                         <span className="italic">core titan principles</span>{" "}
                         with my own beliefs.
                       </p>
+                      <div className="flex justify-center mx-2 my-6">
+                        <img
+                          src={philosophyImages[1]}
+                          alt="philosophy"
+                          className="max-w-full h-auto rounded-lg hover:cursor-pointer border-1 border-gray-100"
+                          onClick={() => openImageModal(philosophyImages[1])}
+                        />
+                      </div>
                     </div>
 
-                    <div className="mb-6">
+                    <div>
                       <h4 className="text-lg font-semibold mb-2">
                         Scorched Earth
                       </h4>
@@ -291,9 +325,17 @@ const InfoModal: React.FC<InfoModalProps> = ({ isOpen, onRequestClose }) => {
                         already dead, leaving their prisoners free to break
                         their chains.
                       </p>
+                      <div className="flex justify-center mx-2 my-6">
+                        <img
+                          src={philosophyImages[2]}
+                          alt="philosophy"
+                          className="max-w-full h-auto rounded-lg hover:cursor-pointer border-1 border-gray-100"
+                          onClick={() => openImageModal(philosophyImages[2])}
+                        />
+                      </div>
                     </div>
 
-                    <div className="mb-6">
+                    <div>
                       <h4 className="text-lg font-semibold mb-2">Amor Fati</h4>
                       <p className="mb-2 text-justify">
                         In <span className="font-bold">Velesian Titanism</span>,
@@ -329,9 +371,17 @@ const InfoModal: React.FC<InfoModalProps> = ({ isOpen, onRequestClose }) => {
                         </span>
                         .
                       </p>
+                      <div className="flex justify-center mx-2 my-6">
+                        <img
+                          src={philosophyImages[3]}
+                          alt="philosophy"
+                          className="max-w-full h-auto rounded-lg hover:cursor-pointer border-1 border-gray-100"
+                          onClick={() => openImageModal(philosophyImages[3])}
+                        />
+                      </div>
                     </div>
 
-                    <div className="mb-6">
+                    <div>
                       <h4 className="text-lg font-semibold mb-2">
                         The Meaning
                       </h4>
@@ -373,9 +423,17 @@ const InfoModal: React.FC<InfoModalProps> = ({ isOpen, onRequestClose }) => {
                         they are always in motion, always reflecting on one's
                         path prior and now, with the goal as one's motivation.
                       </p>
+                      <div className="flex justify-center mx-2 my-6">
+                        <img
+                          src={philosophyImages[4]}
+                          alt="philosophy"
+                          className="max-w-full h-auto rounded-lg hover:cursor-pointer border-1 border-gray-100"
+                          onClick={() => openImageModal(philosophyImages[4])}
+                        />
+                      </div>
                     </div>
 
-                    <div className="mb-6">
+                    <div>
                       <h4 className="text-lg font-semibold mb-2">
                         Greatest Value
                       </h4>
@@ -404,9 +462,17 @@ const InfoModal: React.FC<InfoModalProps> = ({ isOpen, onRequestClose }) => {
                         , same as Mathematics states that one is always greater
                         than zero.
                       </p>
+                      <div className="flex justify-center mx-2 my-6">
+                        <img
+                          src={philosophyImages[5]}
+                          alt="philosophy"
+                          className="max-w-full h-auto rounded-lg hover:cursor-pointer border-1 border-gray-100"
+                          onClick={() => openImageModal(philosophyImages[5])}
+                        />
+                      </div>
                     </div>
 
-                    <div className="mb-6">
+                    <div>
                       <h4 className="text-lg font-semibold mb-2">
                         Theory of Scale
                       </h4>
@@ -443,9 +509,17 @@ const InfoModal: React.FC<InfoModalProps> = ({ isOpen, onRequestClose }) => {
                         down)&mdash;its probability is always between 0 and 1,
                         excluding these exact values.
                       </p>
+                      <div className="flex justify-center mx-2 my-6">
+                        <img
+                          src={philosophyImages[6]}
+                          alt="philosophy"
+                          className="max-w-full h-auto rounded-lg hover:cursor-pointer border-1 border-gray-100"
+                          onClick={() => openImageModal(philosophyImages[6])}
+                        />
+                      </div>
                     </div>
 
-                    <div className="mb-6">
+                    <div>
                       <h4 className="text-lg font-semibold mb-2">
                         Value of Value
                       </h4>
@@ -473,9 +547,17 @@ const InfoModal: React.FC<InfoModalProps> = ({ isOpen, onRequestClose }) => {
                         <span className="italic">outright stupid</span>, it is{" "}
                         <span className="italic">"bound"</span> to fail.
                       </p>
+                      <div className="flex justify-center mx-2 my-6">
+                        <img
+                          src={philosophyImages[7]}
+                          alt="philosophy"
+                          className="max-w-full h-auto rounded-lg hover:cursor-pointer border-1 border-gray-100"
+                          onClick={() => openImageModal(philosophyImages[7])}
+                        />
+                      </div>
                     </div>
 
-                    <div className="mb-6">
+                    <div>
                       <h4 className="text-lg font-semibold mb-2">
                         Intelligent Egocentrism
                       </h4>
@@ -510,9 +592,17 @@ const InfoModal: React.FC<InfoModalProps> = ({ isOpen, onRequestClose }) => {
                         will likely lead to one's own{" "}
                         <span className="italic">demise</span>.
                       </p>
+                      <div className="flex justify-center mx-2 my-6">
+                        <img
+                          src={philosophyImages[8]}
+                          alt="philosophy"
+                          className="max-w-full h-auto rounded-lg hover:cursor-pointer border-1 border-gray-100"
+                          onClick={() => openImageModal(philosophyImages[8])}
+                        />
+                      </div>
                     </div>
 
-                    <div className="mb-6">
+                    <div>
                       <h4 className="text-lg font-semibold mb-2">
                         Nature of Truth
                       </h4>
@@ -571,9 +661,17 @@ const InfoModal: React.FC<InfoModalProps> = ({ isOpen, onRequestClose }) => {
                         </a>
                         .
                       </p>
+                      <div className="flex justify-center mx-2 my-6">
+                        <img
+                          src={philosophyImages[9]}
+                          alt="philosophy"
+                          className="max-w-full h-auto rounded-lg hover:cursor-pointer border-1 border-gray-100"
+                          onClick={() => openImageModal(philosophyImages[9])}
+                        />
+                      </div>
                     </div>
 
-                    <div className="mb-6">
+                    <div>
                       <h4 className="text-lg font-semibold mb-2">
                         Types of Nihilism
                       </h4>
@@ -682,9 +780,17 @@ const InfoModal: React.FC<InfoModalProps> = ({ isOpen, onRequestClose }) => {
                           values).
                         </li>
                       </ul>
+                      <div className="flex justify-center mx-2 my-6">
+                        <img
+                          src={philosophyImages[10]}
+                          alt="philosophy"
+                          className="max-w-full h-auto rounded-lg hover:cursor-pointer border-1 border-gray-100"
+                          onClick={() => openImageModal(philosophyImages[10])}
+                        />
+                      </div>
                     </div>
 
-                    <div className="mb-6">
+                    <div>
                       <h4 className="text-lg font-semibold mb-2">
                         Completeness
                       </h4>
@@ -738,6 +844,14 @@ const InfoModal: React.FC<InfoModalProps> = ({ isOpen, onRequestClose }) => {
                         that trust and intimacy can never be equally shared
                         across multiple partners.
                       </p>
+                      <div className="flex justify-center mx-2 my-6">
+                        <img
+                          src={philosophyImages[11]}
+                          alt="philosophy"
+                          className="max-w-full h-auto rounded-lg hover:cursor-pointer border-1 border-gray-100"
+                          onClick={() => openImageModal(philosophyImages[11])}
+                        />
+                      </div>
                     </div>
 
                     <div>
