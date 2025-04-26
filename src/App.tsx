@@ -217,11 +217,7 @@ const App: React.FC = () => {
                         want to. If you dont already have my contact, it will be
                         given to you at the end of the quiz.
                       </li>
-                      {/* //TODO: delete this onClick */}
-                      <li
-                        className="mb-2"
-                        onClick={() => setIsInfoModalOpen(true)}
-                      >
+                      <li className="mb-2">
                         Either way, you might still feel judged during this quiz
                         (unlucky). Take it with a grain of salt.
                       </li>
