@@ -72,4 +72,4 @@ dating-quiz/
 This project is licensed under the Apache License, Version 2.0. See the [LICENSE](LICENSE) file for details.
 
 ## Contact
-My [GitHub profile](https://www.instagram.com/nick.veles/) contains all social media you can reach me on. Feel free to connect with me for any questions or collaborations.
+My [GitHub profile](https://github.com/NickVeles) contains all social media you can reach me on. Feel free to connect with me for any questions or collaborations.
