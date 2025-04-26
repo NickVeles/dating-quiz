@@ -351,13 +351,21 @@ const InfoModal: React.FC<InfoModalProps> = ({ isOpen, onRequestClose }) => {
                         , as one strives for the greatest and the perfect with{" "}
                         <span className="italic">full consciousness</span> it is
                         unattainable&mdash;absurd, yet grounded in one's own
-                        meaning. My <span className="italic">very own dream</span>, as crazy as it may sound, is
-                        to become <span className="font-bold">immortal</span>, and a <span className="font-bold">god</span> at that&mdash;I know I can <span className="italic">never</span> achieve it, <span className="italic">yet I still go towards it</span>&mdash;the path is
-                        as real as it gets, forcing me to <span className="italic">live my fullest</span>,
-                        despite the goal being unrealistic. Because one cannot
-                        stop, they are always in motion, always reflecting on
-                        one's path prior and now, with the goal as one's
-                        motivation.
+                        meaning. My{" "}
+                        <span className="italic">very own dream</span>, as crazy
+                        as it may sound, is to become{" "}
+                        <span className="font-bold">immortal</span>, and a{" "}
+                        <span className="font-bold">god</span> at that&mdash;I
+                        know I can <span className="italic">never</span> achieve
+                        it,{" "}
+                        <span className="italic">
+                          yet I still go towards it
+                        </span>
+                        &mdash;the path is as real as it gets, forcing me to{" "}
+                        <span className="italic">live my fullest</span>, despite
+                        the goal being unrealistic. Because one cannot stop,
+                        they are always in motion, always reflecting on one's
+                        path prior and now, with the goal as one's motivation.
                       </p>
                     </div>
 
@@ -366,17 +374,29 @@ const InfoModal: React.FC<InfoModalProps> = ({ isOpen, onRequestClose }) => {
                         Greatest Value
                       </h4>
                       <p className="mb-2 text-justify">
-                        Velesian Titanism acclaims life itself, especially one's
-                        own life, as the greatest value of life. From one's
-                        perspective, if their life ends, so does everything
-                        else&mdash;it is gone (emphasizing: from their
-                        perspective). One should love their life, as there is
-                        nothing, really not a single thing besides it. As
-                        Titanism encourages the creation of one's own values,
-                        Velesian Titanism creates an inherent value, stating
-                        that existence is always preferred to nonexistence, same
-                        as Mathematics states that one is always greater than
-                        zero.
+                        <span className="font-bold">Velesian Titanism</span>{" "}
+                        acclaims <span className="italic">life itself</span>,
+                        especially{" "}
+                        <span className="italic">one's own life</span>, as{" "}
+                        <span className="italic">
+                          the greatest value of life
+                        </span>
+                        . From one's perspective, if their life ends, so does
+                        everything else&mdash;it is gone (emphasizing:{" "}
+                        <span className="italic">from their perspective</span>).
+                        One should{" "}
+                        <span className="font-bold">love their life</span>, as
+                        there is <span className="italic">nothing</span>, really
+                        not a single thing besides it. As{" "}
+                        <span className="font-bold">Titanism</span> encourages
+                        the creation of one's own values,{" "}
+                        <span className="font-bold">Velesian Titanism</span>{" "}
+                        creates an inherent value, stating that{" "}
+                        <span className="italic">
+                          existence is always preferred to nonexistence
+                        </span>
+                        , same as Mathematics states that one is always greater
+                        than zero.
                       </p>
                     </div>
 
