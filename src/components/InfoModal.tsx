@@ -406,7 +406,16 @@ const InfoModal: React.FC<InfoModalProps> = ({ isOpen, onRequestClose }) => {
                       </h4>
                       <p className="mb-2 text-justify">
                         In <span className="font-bold">Velesian Titanism</span>,
-                        drawing from quantum mechanics, it is stated that{" "}
+                        drawing from{" "}
+                        <a
+                          href="https://en.wikipedia.org/wiki/Quantum_mechanics"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="text-blue-500 hover:underline"
+                        >
+                          quantum mechanics
+                        </a>
+                        , it is stated that{" "}
                         <span className="italic">
                           the universe is purely random
                         </span>{" "}
@@ -499,26 +508,62 @@ const InfoModal: React.FC<InfoModalProps> = ({ isOpen, onRequestClose }) => {
 
                     <div className="mb-6">
                       <h4 className="text-lg font-semibold mb-2">
-                        Objective Truth
+                        Nature of Truth
                       </h4>
                       <p className="mb-2 text-justify">
-                        Titanism defines objective truth as subjective truth of
-                        the majority&mdash;if something holds up for the
-                        majority, it is believed to work for everyone. The key
-                        takeaway from that idea is the fact that there is no
-                        inherent objectivism&mdash;it is created by gathering
-                        the perspective of many, requiring constant skepticism.
-                        Truth is contextual&mdash;both subjective and objective
-                        truth can be revisited, revaluated, and changed.
+                        <span className="font-bold">Titanism</span> defines{" "}
+                        <span className="italic">objective truth</span> as{" "}
+                        <span className="italic">
+                          subjective truth of the majority
+                        </span>
+                        &mdash;if something holds up for the majority, it is
+                        believed to work for everyone. The key takeaway from
+                        that idea is the fact that{" "}
+                        <span className="italic">
+                          there is no inherent objectivism
+                        </span>
+                        &mdash;it is created by gathering the perspective of
+                        many, requiring constant{" "}
+                        <span className="italic">skepticism</span>. Truth is{" "}
+                        <span className="italic">contextual</span>&mdash;both
+                        subjective and objective truth can be revisited,
+                        revaluated, and changed.
                       </p>
-                    </div>
-
-                    <div className="mb-6">
-                      <h4 className="text-lg font-semibold mb-2">Realism</h4>
                       <p className="mb-2 text-justify">
-                        Velesian Titanism favors the idea of realism, as it
-                        focuses on life as it is experienced, rejecting claims
-                        that lack sensible evidence.
+                        This is a direct reference to{" "}
+                        <a
+                          href="https://en.wikipedia.org/wiki/Postpositivism"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="text-blue-500 hover:underline"
+                        >
+                          Postpositivism
+                        </a>{" "}
+                        if it was considered as a social construct.
+                      </p>
+                      <p className="mb-2 text-justify">
+                        Moreover, the definition of{" "}
+                        <span className="font-bold">subjective truth</span> in{" "}
+                        <span className="font-bold">Velesian Titanism</span> is
+                        direcrly taken from{" "}
+                        <a
+                          href="https://en.wikipedia.org/wiki/Radical_empiricism"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="text-blue-500 hover:underline"
+                        >
+                          Radical Empiricism
+                        </a>
+                        , sweetened with some good ol'{" "}
+                        <a
+                          href="https://en.wikipedia.org/wiki/Pragmatism"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="text-blue-500 hover:underline"
+                        >
+                          Pragmatism
+                        </a>
+                        .
                       </p>
                     </div>
 
@@ -527,55 +572,107 @@ const InfoModal: React.FC<InfoModalProps> = ({ isOpen, onRequestClose }) => {
                         Types of Nihilism
                       </h4>
                       <p className="mb-2 text-justify">
-                        The relation of nihilism and Titanism is quite
-                        paradoxical, as Titanism states that one should create
-                        their own values to avoid nihilism, making them rightful
-                        to change the its definition to whatever they please, as
+                        The relation of <span className="italic">nihilism</span>{" "}
+                        and <span className="font-bold">Titanism</span> is quite
+                        paradoxical, as{" "}
+                        <span className="font-bold">Titanism</span> states that
+                        one should{" "}
+                        <span className="italic">create their own values</span>{" "}
+                        to avoid nihilism, making them rightful to change the
+                        its definition to{" "}
+                        <span className="italic">whatever they please</span>, as
                         one's individual perspective also dictates how they
                         define the world. What makes it troublesome, is the fact
-                        that from one's own perspective, everything can be
-                        nihilistic if it defies their values. The values of
-                        others can be simply rejected, as they are not one's own
-                        values, thus being subjectively meaningless. Velesian
-                        Titanism defines six core types of nihilism:
+                        that from one's own perspective,{" "}
+                        <span className="italic">
+                          everything can be nihilistic
+                        </span>{" "}
+                        if it defies their values. The values of others can be
+                        simply <span className="italic">rejected</span>, as they
+                        are not one's own values, thus being subjectively{" "}
+                        <span className="italic">meaningless</span>.{" "}
+                        <span className="font-bold">Velesian Titanism</span>{" "}
+                        defines six core types of nihilism:
                       </p>
-                      <ul className="list-disc list-outside px-4">
+                      <ul className="list-disc list-outside px-4 text-justify">
                         <li className="mb-2">
-                          Classic (Existential) Nihilism&mdash;the belief that
-                          existence does not have any meaning, often paired with
-                          the belief that existence cannot have any meaning
+                          <span className="font-bold">
+                            Classic (Existential) Nihilism
+                          </span>{" "}
+                          &ndash; the belief that{" "}
+                          <span className="italic">
+                            existence does not have any meaning
+                          </span>
+                          , often paired with the belief that{" "}
+                          <span className="italic">
+                            existence <span className="font-bold">cannot</span>{" "}
+                            have any meaning
+                          </span>
                           &mdash;it is a complete denial of life.
                         </li>
                         <li className="mb-2">
-                          Epistemic Nihilism&mdash;the belief that knowledge is
-                          impossible. Although it praises skepticism, it denies
-                          the need for any kind of settlement, making it
-                          dangerously chaotic, even somewhat paranoic.
+                          <span className="font-bold">Epistemic Nihilism</span>{" "}
+                          &ndash; the belief that{" "}
+                          <span className="italic">
+                            knowledge is impossible
+                          </span>
+                          . Although it praises skepticism, it denies the need
+                          for any kind of settlement, making it{" "}
+                          <span className="italic">dangerously chaotic</span>,
+                          even somewhat paranoid.
                         </li>
                         <li className="mb-2">
-                          Hedonism&mdash;the idea that the greatest value of
-                          life is maximizing pleasure, which is synonymous with
-                          quick gratification and short-lived, extreme sparks of
-                          emotions. Due to its self-destructive nature, it
-                          hinders one's life, being incompatible with the
-                          Greatest Value.
+                          <a
+                            href="https://en.wikipedia.org/wiki/Hedonism"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="text-blue-500 hover:underline font-bold"
+                          >
+                            Hedonism
+                          </a>{" "}
+                          &ndash; the idea that the greatest value of life is{" "}
+                          <span className="italic">maximizing pleasure</span>,
+                          which is synonymous with quick gratification and
+                          short-lived, extreme sparks of emotions. Due to its{" "}
+                          <span className="italic">
+                            self-destructive nature
+                          </span>
+                          , it hinders one's life, being incompatible with the{" "}
+                          <span className="font-bold">Greatest Value</span>.
                         </li>
                         <li className="mb-2">
-                          Metaphysics&mdash;the belief that there is a plane of
-                          existence that cannot be experienced. It is
-                          incompatible with realism, which is core to the
-                          Greatest Value.
+                          <a
+                            href="https://en.wikipedia.org/wiki/Metaphysics"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="text-blue-500 hover:underline font-bold"
+                          >
+                            Metaphysics
+                          </a>{" "}
+                          &ndash; the belief that{" "}
+                          <span className="italic">
+                            there is a plane of existence that cannot be
+                            experienced
+                          </span>
+                          . It is incompatible with the{" "}
+                          <span className="font-bold">Nature of Truth</span>.
                         </li>
                         <li className="mb-2">
-                          Radical Nihilism&mdash;the belief that existence
-                          should not have any meaning, paired with the belief
-                          that it should be eradicated.
+                          <span className="font-bold">Radical Nihilism</span>{" "}
+                          &ndash; the belief that{" "}
+                          <span className="italic">
+                            existence should not have any meaning
+                          </span>
+                          , paired with the belief that it should be{" "}
+                          <span className="italic">eradicated</span>.
                         </li>
                         <li className="mb-2">
-                          Subjective Nihilism&mdash;as stated above, it is the
-                          idea of defining the values of others as meaningless
-                          for oneself (it is probably the only type of nihilism
-                          that is somewhat unavoidable while defining one's own
+                          <span className="font-bold">Subjective Nihilism</span>{" "}
+                          &ndash; as stated above, it is the idea of defining
+                          the values of others as{" "}
+                          <span className="italic">meaningless</span> for
+                          oneself (it is probably the only type of nihilism that
+                          is somewhat unavoidable while defining one's own
                           values).
                         </li>
                       </ul>
@@ -586,25 +683,46 @@ const InfoModal: React.FC<InfoModalProps> = ({ isOpen, onRequestClose }) => {
                         Completeness
                       </h4>
                       <p className="mb-2 text-justify">
-                        Very intimate part of Velesian Titanism, defined as the
-                        idea that a close relationship with another person is
-                        essential for healthy functioning&mdash;providing help,
-                        support, and pushing one's perspective &ndash; leading
-                        to both personal and shared growth, essentially
-                        completing each other. The love in a relationship is not
-                        transactional, as a blind egoist would assume, but
-                        shared through mutual fulfillment. It rejects the idea
-                        of finding a soulmate, instead proposing that one's
-                        soulmate is "built" from another person through shared
-                        values and experiences (especially creating these values
-                        and experiences), up to the point of becoming a single
-                        being in two bodies, sharing one woven mind. It
-                        encourages meaningful relationships over those that are
-                        short-lived and hedonistic in nature. It also favors
-                        monogamy, due to massive scientific and cultural
-                        evidence supporting it over polygamy, especially given
-                        the idea that trust and intimacy can never be equally
-                        shared across multiple partners.
+                        Very intimate part of{" "}
+                        <span className="font-bold">Velesian Titanism</span>,
+                        defined as the idea that{" "}
+                        <span className="italic">
+                          a close relationship with another person is essential
+                          for healthy functioning
+                        </span>
+                        &mdash;providing help, support, and pushing one's
+                        perspective &ndash; leading to both{" "}
+                        <span className="font-bold">
+                          personal and shared growth
+                        </span>
+                        , essentially{" "}
+                        <span className="italic">completing each other</span>.
+                        The <span className="font-bold">love</span> in a
+                        relationship is not{" "}
+                        <span className="italic">transactional</span>, as a
+                        blind egoist would assume, but{" "}
+                        <span className="italic">
+                          shared through mutual fulfillment
+                        </span>
+                        . It rejects the idea of{" "}
+                        <span className="italic">finding a soulmate</span>,
+                        instead proposing that one's soulmate is{" "}
+                        <span className="italic">"built"</span> from another
+                        person through shared values and experiences (especially{" "}
+                        <span className="italic">creating</span> these values
+                        and experiences), up to the point of (metaphorically)
+                        becoming a{" "}
+                        <span className="font-bold">single being</span> in{" "}
+                        <span className="font-bold">two bodies</span>, sharing
+                        one woven mind. It encourages{" "}
+                        <span className="italic">meaningful relationships</span>{" "}
+                        over those that are short-lived and hedonistic in
+                        nature. It also favors{" "}
+                        <span className="italic">monogamy</span>, due to massive
+                        scientific and cultural evidence supporting it over
+                        polygamy, especially given the idea that trust and
+                        intimacy can never be equally shared across multiple
+                        partners.
                       </p>
                     </div>
 
@@ -614,19 +732,24 @@ const InfoModal: React.FC<InfoModalProps> = ({ isOpen, onRequestClose }) => {
                       </h4>
                       <p className="text-justify">
                         If you managed to read thought all of this, you most
-                        likely find my philosophy "interestingly"
+                        likely find my philosophy{" "}
+                        <span className="italic">interestingly</span>{" "}
                         repulsive&mdash;disgust is a valid feeling after all,
                         like every other one. However, if you found my
                         scribblings relatable, I am happy to hear I am not
                         alone, and there are equally eccentric people out there,
-                        with the same awareness as I have. Reiterating, Titanism
-                        is a framework to create your own philosophical
-                        frameworks, while Velesian Titanism is on that higher
-                        level, being my actual framework. It is a tool, but
-                        (hopefully) not one to fill you with existential dread,
-                        breaking all of your current values, and turning you
-                        into a nihilist. Quite opposite, it is a tool built for
-                        the sake of getting you out of nihilism, if you
+                        with the same awareness as I have. Reiterating,{" "}
+                        <span className="font-bold">Titanism</span> is a
+                        framework to create your own philosophical frameworks,
+                        while{" "}
+                        <span className="font-bold">Velesian Titanism</span> is
+                        on that higher level, being my actual framework. It is a{" "}
+                        <span className="font-bold">tool</span>, but (hopefully)
+                        not one to fill you with existential dread, breaking all
+                        of your current values, and turning you into a{" "}
+                        <span className="italic">nihilist</span>. Quite
+                        opposite, it is a tool built for the sake of getting you{" "}
+                        <span className="italic">out of nihilism</span>, if you
                         accidentally fell into it. It has been my tool after I
                         fell into that rabbit hole, and I have never been
                         happier before I discovered it. Thanks for sticking
