@@ -31,7 +31,7 @@ const InfoModal: React.FC<InfoModalProps> = ({
 
   const languages = ["🇵🇱 Native", "🇺🇸 Fluent", "🇨🇳 (Simplified) Beginner"];
 
-  const preferences = [
+  const values = [
     "🙏 Atheist",
     "💘 Straight",
     "💍 Serious Relationship",
@@ -151,12 +151,12 @@ const InfoModal: React.FC<InfoModalProps> = ({
                       </div>
                       <div className="mb-4">
                         <h4 className="text-lg font-semibold mb-2">
-                          Preferences
+                          Values
                         </h4>
                         <div className="flex flex-wrap gap-2">
-                          {preferences.map((item, index) => (
+                          {values.map((item, index) => (
                             <span
-                              key={`preferences-${index}`}
+                              key={`values-${index}`}
                               className="bg-purple-50 text-purple-800 text-sm font-medium px-3 py-1 rounded border border-purple-100"
                             >
                               {item}
