@@ -148,7 +148,7 @@ const App: React.FC = () => {
                   dealbreaker ||
                   (currentQuestionIndex > 0 &&
                     currentQuestionIndex < Questions.length)
-                    ? "hover:bg-gray-300"
+                    ? "hover:cursor-pointer"
                     : "opacity-50 cursor-not-allowed"
                 }`}
                 onClick={handleGoBack}
@@ -341,7 +341,7 @@ const App: React.FC = () => {
                       {currentQuestion.answers?.map((answer) => (
                         <button
                           key={answer.text}
-                          className={`text-gray-800 font-semibold py-2 px-4 rounded focus:outline-none focus:shadow-outline ${
+                          className={`text-gray-800 font-semibold py-2 px-4 rounded focus:outline-none focus:shadow-outline hover:cursor-pointer ${
                             questions[currentQuestionIndex]?.selected === answer
                               ? "bg-pink-200 hover:bg-pink-300"
                               : "bg-gray-200 hover:bg-gray-300"
