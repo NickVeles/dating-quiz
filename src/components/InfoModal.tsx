@@ -332,21 +332,28 @@ const InfoModal: React.FC<InfoModalProps> = ({ isOpen, onRequestClose }) => {
                         The Meaning
                       </h4>
                       <p className="mb-2 text-justify">
-                        Velesian Titanism establishes the idea of bitter
-                        meaning&mdash;as life is filled with suffering, pain is
-                        unavoidable. Even more extremely, if suffering provides
-                        growth, it should be sought after&mdash;not in terms of
-                        cruelty and trauma, but in terms of stepping out one's
-                        comfort zone. The fulfillment does not come from the
-                        finish line&mdash;it comes from the rugged path one
-                        takes towards it. A titan is far from the idea of
-                        Aristotelian "Perfect Man", as one strives for the
-                        greatest and the perfect with full consciousness it is
-                        not attainable&mdash;absurd, yet grounded in one's own
-                        meaning. My very own dream, as crazy as it may sound, is
-                        to become immortal, and a god at that&mdash;I know I can
-                        never achieve it, yet I go towards it&mdash;the path is
-                        as real as it gets, forcing me to live my fullest,
+                        <span className="font-bold">Velesian Titanism</span>{" "}
+                        establishes the idea of{" "}
+                        <span className="font-bold">bitter meaning</span>
+                        &mdash;as life is filled with suffering,{" "}
+                        <span className="italic">pain is unavoidable</span>.
+                        Even more extremely, if suffering provides growth, it
+                        should be <span className="italic">sought after</span>
+                        &mdash;not in terms of cruelty and trauma, but in terms
+                        of stepping out one's comfort zone. The{" "}
+                        <span className="font-bold">fulfillment</span> does not
+                        come from the finish line&mdash;it comes from the rugged
+                        path one takes towards it. A titan is far from the idea
+                        of{" "}
+                        <span className="italic">
+                          Aristotelian "Perfect Man"
+                        </span>
+                        , as one strives for the greatest and the perfect with{" "}
+                        <span className="italic">full consciousness</span> it is
+                        unattainable&mdash;absurd, yet grounded in one's own
+                        meaning. My <span className="italic">very own dream</span>, as crazy as it may sound, is
+                        to become <span className="font-bold">immortal</span>, and a <span className="font-bold">god</span> at that&mdash;I know I can <span className="italic">never</span> achieve it, <span className="italic">yet I still go towards it</span>&mdash;the path is
+                        as real as it gets, forcing me to <span className="italic">live my fullest</span>,
                         despite the goal being unrealistic. Because one cannot
                         stop, they are always in motion, always reflecting on
                         one's path prior and now, with the goal as one's
