@@ -2,8 +2,7 @@
 
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Noto Sans', 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', 'Noto Color Emoji',
+  font-family: -apple-system, BlinkMacSystemFont, 'Noto Sans', 'Noto Serif', 'Segoe UI', 'Roboto', 'Noto Color Emoji',
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
