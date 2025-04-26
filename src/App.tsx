@@ -319,9 +319,9 @@ const App: React.FC = () => {
                       </a>
                       <div
                         onClick={() => setIsInfoModalOpen(true)}
-                        className="flex items-center bg-gray-200 hover:bg-gray-300 text-gray-800 font-semibold py-2 px-4 rounded-full focus:outline-none focus:shadow-outline ml-2"
+                        className="flex items-center bg-gray-200 hover:bg-gray-300 hover:cursor-pointer text-gray-800 font-semibold py-2 px-4 rounded-full focus:outline-none focus:shadow-outline ml-2"
                       >
-                        <Info className="w-5 h-5 mr-2" />
+                        <Info className="w-6 h-6 mr-2" />
                         More about me
                       </div>
                     </div>
