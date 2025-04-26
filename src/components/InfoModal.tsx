@@ -284,28 +284,46 @@ const InfoModal: React.FC<InfoModalProps> = ({ isOpen, onRequestClose }) => {
                         <span className="font-bold">building on top</span> of
                         its already existing ashes, for one's own sake. The
                         titans did not revolt against gods&mdash;the gods were
-                        already dead, leaving their prisoners free to break their
-                        chains.
+                        already dead, leaving their prisoners free to break
+                        their chains.
                       </p>
                     </div>
 
                     <div className="mb-6">
                       <h4 className="text-lg font-semibold mb-2">Amor Fati</h4>
                       <p className="mb-2 text-justify">
-                        In Velesian Titanism, existence is believed to have no
-                        heritage, essentially being absurd from its
-                        beginning&mdash;there is fate, yet it is inherently
-                        unpredictable, perhaps due to its complexity, or maybe
-                        even due to its core, intangible nature. It concludes
-                        that meaning of everything is not inherited from any
-                        primordial idea (e.g. god), and it could never exist
-                        before our consciousness&mdash;it is inherently absent
-                        and chaotic. Thus, one should not despair due to
-                        suffering, as it is a core part of life, same as
-                        happiness. Instead, one should cherish their fate,
-                        however depressing it could get, in order to stay sane
-                        and productive, allowing for more fortunate events to
-                        occur, praising resilience over surrender.
+                        In <span className="font-bold">Velesian Titanism</span>,
+                        existence is believed to have no heritage, essentially
+                        being <span className="italic">absurd</span> from its
+                        beginning&mdash;
+                        <span className="font-bold">there is fate</span>, yet it
+                        is{" "}
+                        <span className="font-bold">
+                          inherently unpredictable
+                        </span>
+                        , perhaps due to its complexity, or maybe even due to
+                        its core, intangible nature. It concludes that{" "}
+                        <span className="italic">
+                          meaning of everything is not inherited from any
+                          primordial idea
+                        </span>{" "}
+                        (e.g. god), and it could never exist before our
+                        consciousness&mdash;it is inherently{" "}
+                        <span className="italic">absent</span> and{" "}
+                        <span className="italic">chaotic</span>. Thus, one
+                        should not despair due to{" "}
+                        <span className="font-bold">suffering</span>, as it is a{" "}
+                        <span className="italic">core part of life</span>, same
+                        as <span className="font-bold">happiness</span>.
+                        Instead, one should cherish their fate, however
+                        depressing it could get, in order to stay{" "}
+                        <span className="italic">sane</span> and{" "}
+                        <span className="italic">productive</span>, allowing for
+                        more fortunate events to occur, praising{" "}
+                        <span className="italic">
+                          resilience over surrender
+                        </span>
+                        .
                       </p>
                     </div>
 
