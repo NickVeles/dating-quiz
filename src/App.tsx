@@ -211,7 +211,7 @@ const App: React.FC = () => {
                         potentially wasting time, hoping for any deeper
                         relationship.
                       </li>
-                      <li>
+                      <li className="mb-2">
                         You don't have to, you're more than welcome to share
                         your results (as well as your opinion!) with me if you
                         want to. If you dont already have my contact, it will be
