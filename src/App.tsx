@@ -197,19 +197,32 @@ const App: React.FC = () => {
                     </h3>
                     <ol className="list-decimal list-outside my-4 text-left px-4">
                       <li className="mb-2">
-                        This site does not collect any data, and this quiz is
-                        fully anonymous &ndash; your answers will not be stored
-                        anywhere.
+                        <span className="font-semibold">
+                          This site does not collect any data
+                        </span>
+                        , and this quiz is{" "}
+                        <span className="font-semibold">fully anonymous</span>{" "}
+                        &ndash; your answers will not be stored anywhere.
                       </li>
                       <li className="mb-2">
                         Please answer honestly to get the best results &ndash;
-                        this quiz is for you, not for me. Of course, you're more
-                        than welcome to share your results with me if you want
-                        to.
+                        this quiz is for you, not for me &ndash; by doing this
+                        quiz, you save yorself time getting to know me,
+                        potentially wasting time, hoping for any deeper
+                        relationship.
                       </li>
-                      {/* //TODO: delete onClick */}
-                      <li className="mb-2" onClick={() => setIsInfoModalOpen(true)}>
-                        Anyway, you might feel judged during this quiz
+                      <li>
+                        You don't have to, you're more than welcome to share
+                        your results (as well as your opinion!) with me if you
+                        want to. If you dont already have my contact, it will be
+                        given to you at the end of the quiz.
+                      </li>
+                      {/* //TODO: delete this onClick */}
+                      <li
+                        className="mb-2"
+                        onClick={() => setIsInfoModalOpen(true)}
+                      >
+                        Either way, you might still feel judged during this quiz
                         (unlucky). Take it with a grain of salt.
                       </li>
                     </ol>
@@ -302,7 +315,7 @@ const App: React.FC = () => {
                         className="flex items-center bg-gradient-to-r from-yellow-400 via-pink-500 to-purple-500 hover:opacity-90 text-white font-semibold py-2 px-4 rounded-full focus:outline-none focus:shadow-outline text-shadow-lg"
                       >
                         <Instagram className="w-5 h-5 mr-2" />
-                        nick.veles
+                        @nick.veles
                       </a>
                       <a
                         href="#"
