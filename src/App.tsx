@@ -33,7 +33,7 @@ const App: React.FC = () => {
       "Sorry, but that's not happening... How did you even get here without any dealbreakers?",
     instagram:
       "I guess you can try tell me how much you hate this quiz on my instagram:",
-    image: "/img/result0.jpg",
+    image: process.env.PUBLIC_URL + "/img/result0.jpg",
   }); // default to worst result
   const [questions, setQuestions] = useState<Question[]>(
     Questions.map((q) => ({ ...q }))
@@ -78,28 +78,28 @@ const App: React.FC = () => {
             emoji: "💖",
             message: "You might be the one...",
             instagram: "Here's my ig (pls dm me):",
-            image: "/img/result4.png",
+            image: process.env.PUBLIC_URL + "/img/result4.png",
           });
         } else if (points >= 1200) {
           setScoreResult({
             emoji: "😍",
             message: "That's a good score btw!",
             instagram: "Here's my ig, be welcome to dm me:",
-            image: "/img/result3.webp",
+            image: process.env.PUBLIC_URL + "/img/result3.webp",
           });
         } else if (points >= 1000) {
           setScoreResult({
             emoji: "🥰",
             message: "There's some potential!",
             instagram: "You can contact me here:",
-            image: "/img/result2.jpg",
+            image: process.env.PUBLIC_URL + "/img/result2.jpg",
           });
         } else if (points >= 400) {
           setScoreResult({
             emoji: "😬",
             message: "Ehh... Not feeling it",
             instagram: "I guess you can dm me anyway:",
-            image: "/img/result1.jpg",
+            image: process.env.PUBLIC_URL + "/img/result1.jpg",
           });
         }
       }

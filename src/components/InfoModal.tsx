@@ -68,18 +68,18 @@ const InfoModal: React.FC<InfoModalProps> = ({
   ];
 
   const philosophyImages = [
-    "/img/philosophy01.png",
-    "/img/philosophy02.png",
-    "/img/philosophy03.png",
-    "/img/philosophy04.png",
-    "/img/philosophy05.png",
-    "/img/philosophy06.png",
-    "/img/philosophy07.png",
-    "/img/philosophy08.png",
-    "/img/philosophy09.png",
-    "/img/philosophy10.png",
-    "/img/philosophy11.png",
-    "/img/philosophy12.png",
+    process.env.PUBLIC_URL + "/img/philosophy01.png",
+    process.env.PUBLIC_URL + "/img/philosophy02.png",
+    process.env.PUBLIC_URL + "/img/philosophy03.png",
+    process.env.PUBLIC_URL + "/img/philosophy04.png",
+    process.env.PUBLIC_URL + "/img/philosophy05.png",
+    process.env.PUBLIC_URL + "/img/philosophy06.png",
+    process.env.PUBLIC_URL + "/img/philosophy07.png",
+    process.env.PUBLIC_URL + "/img/philosophy08.png",
+    process.env.PUBLIC_URL + "/img/philosophy09.png",
+    process.env.PUBLIC_URL + "/img/philosophy10.png",
+    process.env.PUBLIC_URL + "/img/philosophy11.png",
+    process.env.PUBLIC_URL + "/img/philosophy12.png",
   ];
 
   return (
