@@ -405,17 +405,24 @@ const InfoModal: React.FC<InfoModalProps> = ({ isOpen, onRequestClose }) => {
                         Theory of Scale
                       </h4>
                       <p className="mb-2 text-justify">
-                        In Velesian Titanism, drawing from quantum mechanics, it
-                        is stated that universe is purely random at the micro
-                        scale due to its nature/complexity (highly debated),
-                        making it unpredictable (there is no free will, but fate
-                        is not predefined&mdash;it is essentially random).
-                        However, at the macro scale, actions are more
-                        predictable (yet still indeterministic), due to billions
-                        of little actions summing into one single occurring
-                        pattern. What makes this idea profound, is the fact that
-                        no matter how predictable a single action becomes at a
-                        given time and space&mdash;it is never fully guaranteed,
+                        In <span className="font-bold">Velesian Titanism</span>,
+                        drawing from quantum mechanics, it is stated that{" "}
+                        <span className="italic">
+                          the universe is purely random
+                        </span>{" "}
+                        at the <span className="font-bold">micro scale</span>{" "}
+                        due to its nature/complexity (highly debated), making it{" "}
+                        <span className="italic">unpredictable</span> (there is
+                        no free will, but fate is not predefined&mdash;it is
+                        essentially random). However, at the{" "}
+                        <span className="font-bold">macro scale</span>, actions
+                        are more predictable (yet still indeterministic), due to
+                        billions of little actions summing into one single
+                        occurring <span className="italic">pattern</span>. What
+                        makes this idea profound, is the fact that no matter how{" "}
+                        <span className="italic">predictable</span> a single
+                        action becomes at a given time and space&mdash;it is
+                        never fully <span className="italic">guaranteed</span>,
                         and thus, even things we take for granted can suddenly
                         change (e.g. direction of gravity turning upside
                         down)&mdash;its probability is always between 0 and 1,
@@ -428,17 +435,28 @@ const InfoModal: React.FC<InfoModalProps> = ({ isOpen, onRequestClose }) => {
                         Value of Value
                       </h4>
                       <p className="mb-2 text-justify">
-                        In Titanism, when two opposing values clash with each
-                        other, similarly to Darwin's theory of evolution, it is
-                        stated that the greater value will always prevail over
-                        the lesser value. Velesian Titanism expands this vague
-                        definition, stating that no value is inherently greater
-                        or lesser than any other. Instead, the outcome of the
-                        clashing is decided in accordance to The Theory of
-                        Scale. It is worth noting that in Titanism, in general,
+                        In <span className="font-bold">Titanism</span>, when two
+                        opposing values <span className="italic">clash</span>{" "}
+                        with each other, in a Darwinian fashion, it is stated
+                        that the <span className="italic">greater value</span>{" "}
+                        will always prevail over the{" "}
+                        <span className="italic">lesser value</span>.{" "}
+                        <span className="font-bold">Velesian Titanism</span>{" "}
+                        expands this vague definition, stating that{" "}
+                        <span className="italic">
+                          no value is inherently greater or lesser than any
+                          other
+                        </span>
+                        . Instead, the outcome of the clashing is decided in
+                        accordance to{" "}
+                        <span className="font-bold">The Theory of Scale</span>.
+                        It is worth noting that in{" "}
+                        <span className="font-bold">Titanism</span>, in general,
                         a value does not need to be opposed by another
-                        value&mdash;if it is self-destructive or outright
-                        stupid, it is "bound" to fail.
+                        value&mdash;if it is{" "}
+                        <span className="italic">self-destructive</span> or{" "}
+                        <span className="italic">outright stupid</span>, it is{" "}
+                        <span className="italic">"bound"</span> to fail.
                       </p>
                     </div>
 
