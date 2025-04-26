@@ -632,7 +632,7 @@
 }
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Noto Sans', 'Noto Serif', 'Segoe UI', 'Roboto', 'Noto Color Emoji', sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, 'Noto Sans', 'Noto Serif', 'Segoe UI', 'Roboto', 'Georgia', 'Noto Color Emoji', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
