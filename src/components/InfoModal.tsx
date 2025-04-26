@@ -91,6 +91,14 @@ const InfoModal: React.FC<InfoModalProps> = ({
           contentLabel="Info Modal"
           className="fixed inset-0 flex items-center justify-center"
           shouldCloseOnEsc={true}
+          style={{
+            content: {
+              zIndex: 1000,
+            },
+            overlay: {
+              zIndex: 990,
+            },
+          }}
           ariaHideApp={false}
           overlayClassName={"bg-transparent"}
         >

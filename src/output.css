@@ -222,6 +222,12 @@
   .z-50 {
     z-index: 50;
   }
+  .z-1000 {
+    z-index: 1000;
+  }
+  .z-1100 {
+    z-index: 1100;
+  }
   .m-2 {
     margin: calc(var(--spacing) * 2);
   }

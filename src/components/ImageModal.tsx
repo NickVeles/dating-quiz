@@ -19,10 +19,14 @@ const ImageModal: React.FC<ImageModalProps> = ({ isOpen, onRequestClose, image }
       shouldCloseOnEsc={true}
       style={{
         content: {
+          zIndex: 1050,
           inset: "0",
           background: "black",
           border: "none",
           padding: "0",
+        },
+        overlay: {
+          zIndex: 1040,
         },
       }}
     >
