@@ -223,7 +223,7 @@ const App: React.FC = () => {
                       </li>
                     </ol>
                     <div className="my-6 text-left">
-                      <label className="flex items-center">
+                      <label className="flex items-center hover:cursor-pointer">
                         <input
                           type="checkbox"
                           className="mr-2"
@@ -246,7 +246,7 @@ const App: React.FC = () => {
                     <button
                       className={`bg-blue-500 text-white font-semibold py-2 px-4 rounded focus:outline-none focus:shadow-outline ${
                         isAgreementChecked
-                          ? "hover:bg-blue-600"
+                          ? "hover:bg-blue-600 hover:cursor-pointer"
                           : "opacity-50 cursor-not-allowed"
                       }`}
                       onClick={() => setCurrentQuestionIndex(0)}
