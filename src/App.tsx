@@ -264,7 +264,7 @@ const App: React.FC = () => {
                 {/* Dealbreaker screen */}
                 {dealbreaker && (
                   <>
-                    <p className="mb-2 text-sm font-semibold text-gray-600 text-center">
+                    <p className="mb-4 text-sm font-semibold text-gray-600 text-center">
                       Oops... That's a dealbreaker
                     </p>
                     <h3 className="text-xl font-semibold mb-2">
@@ -332,7 +332,7 @@ const App: React.FC = () => {
                 {!dealbreaker && currentQuestion && (
                   <>
                     {currentQuestion.category && (
-                      <p className="mb-2 text-sm font-semibold text-gray-600 text-center">
+                      <p className="mb-4 text-sm font-semibold text-gray-600 text-center">
                         {currentQuestion.category}
                       </p>
                     )}
