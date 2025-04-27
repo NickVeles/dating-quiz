@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/dating-quiz/static/css/main.a8c4f8c0.css",
-    "main.js": "/dating-quiz/static/js/main.f07ef6d8.js",
+    "main.js": "/dating-quiz/static/js/main.1b33c5c4.js",
     "static/js/453.b658e1d5.chunk.js": "/dating-quiz/static/js/453.b658e1d5.chunk.js",
     "index.html": "/dating-quiz/index.html",
     "main.a8c4f8c0.css.map": "/dating-quiz/static/css/main.a8c4f8c0.css.map",
-    "main.f07ef6d8.js.map": "/dating-quiz/static/js/main.f07ef6d8.js.map",
+    "main.1b33c5c4.js.map": "/dating-quiz/static/js/main.1b33c5c4.js.map",
     "453.b658e1d5.chunk.js.map": "/dating-quiz/static/js/453.b658e1d5.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.a8c4f8c0.css",
-    "static/js/main.f07ef6d8.js"
+    "static/js/main.1b33c5c4.js"
   ]
 }
