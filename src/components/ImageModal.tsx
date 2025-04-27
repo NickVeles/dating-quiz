@@ -38,7 +38,7 @@ const ImageModal: React.FC<ImageModalProps> = ({ isOpen, onRequestClose, image }
           <Close className="w-12 h-12" />
         </button>
         {image && (
-          <div className="flex justify-center items-center w-full h-full pb-10">
+          <div className="flex justify-center items-center w-full h-full pb-12">
             <TransformWrapper>
               <TransformComponent
                 wrapperStyle={{ height: "100%", width: "100%" }}
