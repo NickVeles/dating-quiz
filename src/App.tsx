@@ -17,6 +17,7 @@ import Dealbreaker from "../model/Dealbreaker";
 import ReactModal from "react-modal";
 import InfoModal from "./components/InfoModal";
 import ImageModal from "./components/ImageModal";
+import { debug } from "console";
 
 // Set the app element for accessibility
 ReactModal.setAppElement("#root");
@@ -26,6 +27,7 @@ const App: React.FC = () => {
   const [currentQuestion, setCurrentQuestion] = useState<Question | null>(null);
   const [isAgreementChecked, setIsAgreementChecked] = useState(false);
   const [dealbreaker, setDealbreaker] = useState<Dealbreaker | null>(null);
+  const [debugInfoModalCount, setDebugInfoModalCount] = useState(0);
   const [userPoints, setUserPoints] = useState(0);
   const [scoreResult, setScoreResult] = useState({
     emoji: "💀",
@@ -53,6 +55,12 @@ const App: React.FC = () => {
       setCurrentQuestion(null);
     }
   }, [currentQuestionIndex, questions]);
+
+  useEffect(() => {
+    if (debugInfoModalCount > 9) {
+      setIsInfoModalOpen(true);
+    }
+  }, [debugInfoModalCount]);
 
   const handleAnswerSelect = useCallback(
     (answer: Answer) => {
@@ -135,7 +143,10 @@ const App: React.FC = () => {
       <h1 className="text-center text-2xl font-bold text-gray-800 mb-2">
         Nick's Dating Quiz
       </h1>
-      <p className="text-center text-gray-600 mb-6">
+      <p
+        className="text-center text-gray-600 mb-6"
+        onClick={() => setDebugInfoModalCount(debugInfoModalCount + 1)}
+      >
         Let's see how compatible we are 😎
       </p>
       <div className="mx-2 flex-grow">
@@ -214,8 +225,8 @@ const App: React.FC = () => {
                       <li className="mb-2">
                         You don't have to, but you're more than welcome to share
                         your results (as well as your opinion!) with me if you
-                        want to. If you don't already have my contact, it will be
-                        given to you at the end of the quiz.
+                        want to. If you don't already have my contact, it will
+                        be given to you at the end of the quiz.
                       </li>
                       <li className="mb-2">
                         Either way, you might still feel judged during this quiz
