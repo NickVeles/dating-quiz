@@ -17,7 +17,6 @@ import Dealbreaker from "../model/Dealbreaker";
 import ReactModal from "react-modal";
 import InfoModal from "./components/InfoModal";
 import ImageModal from "./components/ImageModal";
-import { debug } from "console";
 
 // Set the app element for accessibility
 ReactModal.setAppElement("#root");
