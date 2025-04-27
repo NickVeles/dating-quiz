@@ -195,7 +195,7 @@ const App: React.FC = () => {
                     <h3 className="text-xl font-semibold mb-4">
                       Before you begin!
                     </h3>
-                    <ol className="list-decimal list-outside my-4 text-left px-4">
+                    <ol className="list-decimal list-outside my-4 text-justify px-4">
                       <li className="mb-2">
                         <span className="font-semibold">
                           This site does not collect any data
@@ -207,14 +207,14 @@ const App: React.FC = () => {
                       <li className="mb-2">
                         Please answer honestly to get the best results &ndash;
                         this quiz is for you, not for me &ndash; by doing this
-                        quiz, you save yorself time getting to know me,
-                        potentially wasting time, hoping for any deeper
-                        relationship.
+                        quiz, you save yourself time getting to know me,
+                        potentially wasting it, hoping for any deeper
+                        relationship that might not come.
                       </li>
                       <li className="mb-2">
                         You don't have to, you're more than welcome to share
                         your results (as well as your opinion!) with me if you
-                        want to. If you dont already have my contact, it will be
+                        want to. If you don't already have my contact, it will be
                         given to you at the end of the quiz.
                       </li>
                       <li className="mb-2">
