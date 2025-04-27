@@ -32,8 +32,6 @@ const App: React.FC = () => {
     emoji: "💀",
     message:
       "Sorry, but that's not happening... How did you even get here without any dealbreakers?",
-    instagram:
-      "I guess you can try tell me how much you hate this quiz on my instagram:",
     image: process.env.PUBLIC_URL + "/img/result0.jpg",
   }); // default to worst result
   const [questions, setQuestions] = useState<Question[]>(
@@ -84,28 +82,24 @@ const App: React.FC = () => {
           setScoreResult({
             emoji: "💖",
             message: "You might be the one...",
-            instagram: "Here's my ig (pls dm me):",
             image: process.env.PUBLIC_URL + "/img/result4.png",
           });
         } else if (points >= 1200) {
           setScoreResult({
             emoji: "😍",
             message: "That's a good score btw!",
-            instagram: "Here's my ig, be welcome to dm me:",
             image: process.env.PUBLIC_URL + "/img/result3.webp",
           });
         } else if (points >= 1000) {
           setScoreResult({
             emoji: "🥰",
             message: "There's some potential!",
-            instagram: "You can contact me here:",
             image: process.env.PUBLIC_URL + "/img/result2.jpg",
           });
         } else if (points >= 400) {
           setScoreResult({
             emoji: "😬",
             message: "Ehh... Not feeling it",
-            instagram: "I guess you can dm me anyway:",
             image: process.env.PUBLIC_URL + "/img/result1.jpg",
           });
         }
@@ -300,36 +294,35 @@ const App: React.FC = () => {
                     <h3 className="text-xl font-semibold mb-6">
                       Your Compatibility Score:
                     </h3>
-                    <p className="text-5xl text-center font-bold text-pink-400 mb-6">
+                    <p className="text-5xl text-center font-bold text-pink-400 mb-7">
                       {userPoints} {scoreResult.emoji}
                     </p>
-                    <p className="mb-4">{scoreResult.message}</p>
-                    <div className="flex justify-center mb-2">
-                      <img
-                        src={scoreResult.image}
-                        alt="result"
-                        className="max-w-full h-auto rounded-lg hover:cursor-pointer border-1 border-gray-100"
-                        onClick={() => openImageModal(scoreResult.image)}
-                      />
-                    </div>
-                    <p className="mb-4">{scoreResult.instagram}</p>
-                    <div className="flex justify-center">
+                    <div className="flex mb-6">
                       <a
                         href="https://www.instagram.com/nick.veles/"
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="flex items-center bg-gradient-to-r from-yellow-400 via-pink-500 to-purple-500 hover:opacity-90 text-white font-semibold py-2 px-4 rounded-full focus:outline-none focus:shadow-outline text-shadow-lg"
+                        className="flex flex-1 flex-grow items-center justify-center bg-gradient-to-r from-yellow-400 via-pink-500 to-purple-500 hover:opacity-80 text-white font-semibold py-2 px-4 rounded focus:outline-none focus:shadow-outline text-shadow-lg"
                       >
                         <Instagram className="w-5 h-5 mr-2" />
                         @nick.veles
                       </a>
                       <div
                         onClick={() => setIsInfoModalOpen(true)}
-                        className="flex items-center bg-gray-200 hover:bg-gray-300 hover:cursor-pointer text-gray-800 font-semibold py-2 px-4 rounded-full focus:outline-none focus:shadow-outline ml-2"
+                        className="flex flex-1 flex-grow items-center justify-center bg-gray-200 hover:bg-gray-300 hover:cursor-pointer text-gray-800 font-semibold py-2 px-4 rounded focus:outline-none focus:shadow-outline ml-2"
                       >
                         <Info className="w-6 h-6 mr-2" />
                         More about me
                       </div>
+                    </div>
+                    <p className="mb-2">{scoreResult.message}</p>
+                    <div className="flex justify-center">
+                      <img
+                        src={scoreResult.image}
+                        alt="result"
+                        className="max-w-full h-auto rounded-lg hover:cursor-pointer border-1 border-gray-100"
+                        onClick={() => openImageModal(scoreResult.image)}
+                      />
                     </div>
                   </div>
                 )}

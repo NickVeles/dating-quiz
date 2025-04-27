@@ -242,6 +242,9 @@
   .mb-6 {
     margin-bottom: calc(var(--spacing) * 6);
   }
+  .mb-7 {
+    margin-bottom: calc(var(--spacing) * 7);
+  }
   .mb-12 {
     margin-bottom: calc(var(--spacing) * 12);
   }
@@ -622,10 +625,10 @@
       }
     }
   }
-  .hover\:opacity-90 {
+  .hover\:opacity-80 {
     &:hover {
       @media (hover: hover) {
-        opacity: 90%;
+        opacity: 80%;
       }
     }
   }
