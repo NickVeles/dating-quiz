@@ -406,7 +406,7 @@ export const Questions: Question[] = [
     text: "What is your take on immortality?",
     answers: [
       { text: "Hell yeah!", points: 50 },
-      { text: "Only my partner gets to be immortal as well", points: 50 },
+      { text: "Only if my partner gets to be immortal as well", points: 50 },
       { text: "Hell nah!", points: 0 },
     ],
     category: "🧭 Values & Mindset",
