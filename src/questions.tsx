@@ -76,6 +76,7 @@ export const Questions: Question[] = [
         dealbreaker: {
           title: "Sorry dude",
           subtitle: <p>My deck ain't needing more aces 🃏</p>,
+          image: process.env.PUBLIC_URL + "/img/db03b.jpg",
         },
       },
       { text: "Other", points: 0 },
