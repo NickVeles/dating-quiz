@@ -212,7 +212,7 @@ const App: React.FC = () => {
                         relationship that might not come.
                       </li>
                       <li className="mb-2">
-                        You don't have to, you're more than welcome to share
+                        You don't have to, but you're more than welcome to share
                         your results (as well as your opinion!) with me if you
                         want to. If you don't already have my contact, it will be
                         given to you at the end of the quiz.
