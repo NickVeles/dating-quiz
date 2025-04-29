@@ -10,10 +10,10 @@ export const Questions: Question[] = [
   {
     text: "Where are you from?",
     answers: [
+      { text: "🇪🇺 Europe", points: 35 },
       { text: "🇦🇺 Australia", points: 75 },
       { text: "🇨🇦 Canada", points: 55 },
       { text: "🇨🇳 China", points: 90 },
-      { text: "🇪🇺 Europe", points: 35 },
       { text: "🇯🇵 Japan", points: 90 },
       { text: "🇳🇿 New Zealand", points: 65 },
       { text: "🇸🇬 Singapore", points: 100 },
