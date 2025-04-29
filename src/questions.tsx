@@ -163,7 +163,7 @@ export const Questions: Question[] = [
         },
       },
       { text: "Sometimes", points: 10 },
-      { text: "Never", points: 50 },
+      { text: "Rarely / Never", points: 50 },
     ],
     category: "🌿 Lifestyle & Habits",
   },
