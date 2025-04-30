@@ -460,10 +460,13 @@ export const Questions: Question[] = [
                 The premise is: you know that you can just{" "}
                 <span className="font-bold">communicate</span> your issues,
                 right? I'm just another human, I consider myself emotionally
-                mature, and I don't bite lol. Saying, "I don't wan't to continue
-                our talks &ndash; I hope you can understand" will not hurt
-                anyone, even without stating any reason. It will give us both a
-                clear indicator to move on.
+                mature, and I don't bite lol. Saying,{" "}
+                <span className="italic">
+                  "I don't wan't to continue our talks &ndash; I hope you can
+                  understand"
+                </span>{" "}
+                will not hurt anyone, even without stating any reason. It will
+                give us both a clear indicator to move on.
               </p>
               <p>
                 And all that just regarding initial stages of getting to know
