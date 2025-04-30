@@ -294,12 +294,12 @@ export const Questions: Question[] = [
         },
       },
       { text: "Not for me, but I think it empowers women", points: 0 },
-      { text: "I don't like it", points: 50 },
+      { text: "I hate the idea", points: 50 },
     ],
     category: "💞 Relationship Philosophy",
   },
   {
-    text: "What is your take on non-monogamy? (Having multiple partners)",
+    text: "What is your take on non-monogamy/open relationships?",
     answers: [
       {
         text: "Hell yeah!",
@@ -347,6 +347,66 @@ export const Questions: Question[] = [
       { text: "Yes, I welcome emotional depth", points: 50 },
       { text: "It depends", points: 25 },
       { text: "I prefer chill and easygoing only", points: 0 },
+    ],
+    category: "💞 Relationship Philosophy",
+  },
+  {
+    text: "Why are you looking for a relationship?",
+    answers: [
+      { text: "I'm looking for a life partner", points: 100 },
+      {
+        text: "I'm looking for a temporary relationship",
+        points: 0,
+        dealbreaker: {
+          title: "I am not",
+          image: process.env.PUBLIC_URL + "/img/db99a.png",
+        },
+      },
+      {
+        text: "I'm looking for friends",
+        points: 0,
+        dealbreaker: {
+          title: "Cool!",
+          subtitle: (
+            <>
+              <p className="mb-2">All relationships start with friendships!</p>
+              <p className="mb-2">
+                But let's be real, if there isn't a spark between us, I'm
+                probably just gonna bail out after 2 weeks. I'm just too busy
+                with life, and I'm simply looking for something deeper than
+                "friends".
+              </p>
+              <p>
+                However, if you're looking for a web developer to collaborate
+                with, you can just contact me through my GitHub link located at
+                the bottom of the page!
+              </p>
+            </>
+          ),
+          image: process.env.PUBLIC_URL + "/img/db99b.jpg",
+        },
+      },
+      {
+        text: "I'm feeling lonely",
+        points: 0,
+        dealbreaker: {
+          title: "Damn, I feel ya bro",
+          subtitle: (
+            <p>
+              That shouldn't be your sole reason to look for a relationship tho.
+            </p>
+          ),
+          image: process.env.PUBLIC_URL + "/img/db99c.jpg",
+        },
+      },
+      {
+        text: "I'm not looking for a relationship at all",
+        points: 0,
+        dealbreaker: {
+          title: "Let me guess, you like doing quizzes?",
+          image: process.env.PUBLIC_URL + "/img/db99d.png",
+        },
+      },
     ],
     category: "💞 Relationship Philosophy",
   },
