@@ -537,8 +537,8 @@ export const Questions: Question[] = [
               </p>
               <p>
                 And all that just regarding initial stages of getting to know
-                each other, I remind you! For emotional immaturity in
-                relationships, I recommend just asking your{" "}
+                each other, I remind you! For emotional immaturity in later
+                stages of a relationship, I recommend just asking your{" "}
                 <a
                   href="https://chatgpt.com/?q=what%20are%20some%20indicators%20someone%20is%20not%20mature%20emotionally%20in%20a%20relationship%3F"
                   target="_blank"
