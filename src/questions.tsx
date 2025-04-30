@@ -404,6 +404,12 @@ export const Questions: Question[] = [
         points: 0,
         dealbreaker: {
           title: "Let me guess, you like doing quizzes?",
+          subtitle: (
+            <p>
+              I don't blame you. Just be sure to check what bread you are
+              afterwards!
+            </p>
+          ),
           image: process.env.PUBLIC_URL + "/img/db99d.png",
         },
       },
