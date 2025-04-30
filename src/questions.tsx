@@ -542,7 +542,7 @@ export const Questions: Question[] = [
                   href="https://chatgpt.com/?q=what%20are%20some%20indicators%20someone%20is%20not%20mature%20emotionally%20in%20a%20relationship%3F"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-blue-500 hover:underline font-bold"
+                  className="text-blue-500 hover:underline"
                 >
                   chatgpt
                 </a>
