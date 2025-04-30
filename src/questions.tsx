@@ -487,7 +487,8 @@ export const Questions: Question[] = [
               <ul className="list-disc list-outside pl-4">
                 <li className="mb-2">
                   <span className="font-bold">Ghosting and reappearing</span>{" "}
-                  &ndash; you can just say you're busy or whatever.
+                  &ndash; if you're busy and can't manage time properly, just
+                  don't look for a relationship.
                 </li>
                 <li className="mb-2">
                   <span className="font-bold">Playing multiple sides</span>{" "}
