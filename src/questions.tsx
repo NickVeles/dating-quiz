@@ -205,19 +205,11 @@ export const Questions: Question[] = [
         points: 0,
         dealbreaker: {
           title: "Not a match!",
-          subtitle: (
-            <>
-              <p className="mb-2">
-                We would simply have a very awkward time while talking about
-                philosophy and the foundations of our values 💀
-              </p>
-              <p>No offense ofc</p>
-            </>
-          ),
+          subtitle: "No offense ofc. We just don't vibe philosophy-wise.",
         },
       },
       {
-        text: "Yes, I'm a Deist, but not associated with any particular religion",
+        text: "Maybe, I'm a Deist, but not associated with any particular religion",
         points: 0,
       },
       { text: "No, I'm an Atheist/Agnostic", points: 50 },
@@ -403,11 +395,94 @@ export const Questions: Question[] = [
     category: "🧭 Values & Mindset",
   },
   {
-    text: "What is your take on immortality?",
+    text: "Are you emotionally mature?",
     answers: [
-      { text: "Hell yeah!", points: 50 },
-      { text: "Only if my partner gets to be immortal as well", points: 50 },
-      { text: "Hell nah!", points: 0 },
+      { text: "Yes", points: 50 },
+      {
+        text: "Maybe / IDK / No",
+        points: 0,
+        dealbreaker: {
+          title: "Then take a minute to read this",
+          subtitle: (
+            <>
+              <p className="mb-2">
+                Since you're between 18-{myAge}, I assume you might've not had
+                much experience with relationships, and that's somewhat fine,
+                since I mainly prioritize shared values over emotional maturity
+                (it's just statistically less common that someone is open to my
+                values than is emotionally mature, and I really like my values).
+              </p>
+              <p className="mb-2">
+                <span className="font-bold">HOWEVER!</span> That doesn't excuse
+                certain actions I see people do{" "}
+                <span className="italic">way too often</span> during initial
+                stages of getting to know each other, including:
+              </p>
+              <ul className="list-disc list-outside pl-4">
+                <li className="mb-2">
+                  <span className="font-bold">Ghosting and reappearing</span>{" "}
+                  &ndash; you can just say you're busy or whatever.
+                </li>
+                <li className="mb-2">
+                  <span className="font-bold">Playing multiple sides</span>{" "}
+                  &ndash; just pick a single guy and tell others you don't feel
+                  it.
+                </li>
+                <li className="mb-2">
+                  <span className="font-bold">Too intense too soon</span>{" "}
+                  &ndash; simply calm down, we're not getting married on Day 1.
+                </li>
+                <li className="mb-2">
+                  <span className="font-bold">
+                    Pressuring into vulnerability
+                  </span>{" "}
+                  &ndash; you should reciprocate.
+                </li>
+                <li className="mb-2">
+                  <span className="font-bold">Small talk limbo</span> &ndash;
+                  don't avoid deeper topics.
+                </li>
+                <li className="mb-2">
+                  <span className="font-bold">"My ex is so bad"</span> &ndash;
+                  99% you both failed at that relationship, so don't victimize
+                  yourself.
+                </li>
+                <li className="mb-2">
+                  <span className="font-bold">"My ex..."</span> &ndash; stop
+                  comparing others to your ex.
+                </li>
+                <li className="mb-2">
+                  <span className="font-bold">Lying</span> &ndash; that way the
+                  relationship is bound to fail from the start.
+                </li>
+              </ul>
+              <p className="mb-2">
+                The premise is: you know that you can just{" "}
+                <span className="font-bold">communicate</span> your issues,
+                right? I'm just another human, I consider myself emotionally
+                mature, and I don't bite lol. Saying, "I don't wan't to continue
+                our talks &ndash; I hope you can understand" will not hurt
+                anyone, even without stating any reason. It will give us both a
+                clear indicator to move on.
+              </p>
+              <p>
+                And all that just regarding initial stages of getting to know
+                each other, I remind you! For emotional immaturity in
+                relationships, I recommend just asking your{" "}
+                <a
+                  href="https://chatgpt.com/?q=what%20are%20some%20indicators%20someone%20is%20not%20mature%20emotionally%20in%20a%20relationship%3F"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-blue-500 hover:underline font-bold"
+                >
+                  chatgpt
+                </a>
+                .
+              </p>
+            </>
+          ),
+        },
+      },
     ],
     category: "🧭 Values & Mindset",
   },
@@ -423,7 +498,8 @@ export const Questions: Question[] = [
         points: 0,
         dealbreaker: {
           title: "ok",
-          subtitle: "It's 2am as I'm coding, take this cat image and leave",
+          subtitle:
+            "It's 2am as I'm coding this, take this cat image and leave",
           image: process.env.PUBLIC_URL + "/img/db25a.png",
         },
       },
