@@ -78,7 +78,7 @@ const App: React.FC = () => {
         );
         setUserPoints(points);
 
-        if (points >= 1500) {
+        if (points >= 1555) {
           setScoreResult({
             emoji: "💖",
             message: "You might be the one...",
