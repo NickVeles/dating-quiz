@@ -209,10 +209,14 @@ export const Questions: Question[] = [
         },
       },
       {
+        text: "Kinda, I'm Zen/Secular Buddhist",
+        points: 25,
+      },
+      {
         text: "Maybe, I'm a Deist, but not associated with any particular religion",
         points: 0,
       },
-      { text: "No, I'm an Atheist/Agnostic", points: 50 },
+      { text: "No, I'm Atheist/Agnostic", points: 50 },
       { text: "I don't know, I doubt my current beliefs", points: 10 },
     ],
     category: "🌿 Lifestyle & Habits",
