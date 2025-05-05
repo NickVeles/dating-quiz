@@ -255,7 +255,7 @@ const InfoModal: React.FC<InfoModalProps> = ({
                       <p className="mb-2 text-justify">
                         To stay aware and find{" "}
                         <span className="font-bold">fulfillment</span>, one
-                        needs to <span className="italic">ackgnowledge</span>{" "}
+                        needs to <span className="italic">acknowledge</span>{" "}
                         the meaninglessness of existence in order to{" "}
                         <span className="italic">build</span> their own values
                         and meaning from the ground up&mdash;not founded in
@@ -649,7 +649,7 @@ const InfoModal: React.FC<InfoModalProps> = ({
                         Moreover, the definition of{" "}
                         <span className="font-bold">subjective truth</span> in{" "}
                         <span className="font-bold">Velesian Titanism</span> is
-                        direcrly taken from{" "}
+                        directly taken from{" "}
                         <a
                           href="https://en.wikipedia.org/wiki/Radical_empiricism"
                           target="_blank"
@@ -658,7 +658,7 @@ const InfoModal: React.FC<InfoModalProps> = ({
                         >
                           Radical Empiricism
                         </a>
-                        , sweetened with some good ol'{" "}
+                        , complemented by principles from{" "}
                         <a
                           href="https://en.wikipedia.org/wiki/Pragmatism"
                           target="_blank"
