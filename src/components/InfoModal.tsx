@@ -150,9 +150,7 @@ const InfoModal: React.FC<InfoModalProps> = ({
                         </div>
                       </div>
                       <div className="mb-4">
-                        <h4 className="text-lg font-semibold mb-2">
-                          Values
-                        </h4>
+                        <h4 className="text-lg font-semibold mb-2">Values</h4>
                         <div className="flex flex-wrap gap-2">
                           {values.map((item, index) => (
                             <span
@@ -255,8 +253,8 @@ const InfoModal: React.FC<InfoModalProps> = ({
                       <p className="mb-2 text-justify">
                         To stay aware and find{" "}
                         <span className="font-bold">fulfillment</span>, one
-                        needs to <span className="italic">acknowledge</span>{" "}
-                        the meaninglessness of existence in order to{" "}
+                        needs to <span className="italic">acknowledge</span> the
+                        meaninglessness of existence in order to{" "}
                         <span className="italic">build</span> their own values
                         and meaning from the ground up&mdash;not founded in
                         inherited beliefs, but in one's own{" "}
@@ -482,41 +480,78 @@ const InfoModal: React.FC<InfoModalProps> = ({
 
                     <div>
                       <h4 className="text-lg font-semibold mb-2">
-                        Theory of Scale
+                        Emergent Fate
                       </h4>
                       <p className="mb-2 text-justify">
                         In <span className="font-bold">Velesian Titanism</span>,
-                        drawing from{" "}
+                        drawing from established physics, it is argued that the
+                        universe is fundamentally{" "}
+                        <span className="font-bold">probabilistic</span>
+                        &mdash;nondeterministic, with fate that is random at its
+                        core. On the{" "}
                         <a
                           href="https://en.wikipedia.org/wiki/Quantum_mechanics"
                           target="_blank"
                           rel="noopener noreferrer"
                           className="text-blue-500 hover:underline"
                         >
-                          quantum mechanics
+                          quantum scale
                         </a>
-                        , it is stated that{" "}
-                        <span className="italic">
-                          the universe is purely random
-                        </span>{" "}
-                        at the <span className="font-bold">micro scale</span>{" "}
-                        due to its nature/complexity (highly debated), making it{" "}
-                        <span className="italic">unpredictable</span> (there is
-                        no free will, but fate is not predefined&mdash;it is
-                        essentially random). However, at the{" "}
-                        <span className="font-bold">macro scale</span>, actions
-                        are more predictable (yet still indeterministic), due to
-                        billions of little actions summing into one single
-                        occurring <span className="italic">pattern</span>. What
-                        makes this idea profound, is the fact that no matter how{" "}
-                        <span className="italic">predictable</span> a single
-                        action becomes at a given time and space&mdash;it is
-                        never fully <span className="italic">guaranteed</span>,
-                        and thus, even things we take for granted can suddenly
-                        change (e.g. direction of gravity turning upside
-                        down)&mdash;its probability is always between 0 and 1,
-                        excluding these exact values.
+                        , particles exist in{" "}
+                        <a
+                          href="https://en.wikipedia.org/wiki/Quantum_superposition"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="text-blue-500 hover:underline"
+                        >
+                          superpositions
+                        </a>{" "}
+                        and can{" "}
+                        <a
+                          href="https://en.wikipedia.org/wiki/Quantum_tunnelling"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="text-blue-500 hover:underline"
+                        >
+                          tunnel
+                        </a>{" "}
+                        through classically forbidden barriers, as described by
+                        the{" "}
+                        <a
+                          href="https://en.wikipedia.org/wiki/Schr%C3%B6dinger_equation"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="text-blue-500 hover:underline"
+                        >
+                          Schrödinger equation
+                        </a>{" "}
+                        and quantum tunneling.
                       </p>
+
+                      <p className="mb-2 text-justify">
+                        These truly random events make even something as extreme
+                        as{" "}
+                        <span className="italic">
+                          spontaneous human combustion
+                        </span>
+                        &mdash;via improbable quantum
+                        transitions&mdash;technically possible, revealing that
+                        macroscopic stability rests on unpredictable
+                        foundations. Yet when countless quantum events combine,
+                        classical laws emerge: the motions of planets and the
+                        flow of time follow reliable statistical patterns
+                        governed by Newtonian science.
+                      </p>
+
+                      <p className="mb-2 text-justify">
+                        Still, no matter how deterministic the world appears at
+                        our scale, it is fundamentally random, like a path that
+                        unfolds with each individual step taken&mdash;whether it
+                        turns right, left, up, or down, is always more or less
+                        probable, but <span className="italic">never</span>{" "}
+                        guaranteed.
+                      </p>
+
                       <div className="flex justify-center mx-2 my-6">
                         <img
                           src={philosophyImages[6]}
@@ -546,8 +581,8 @@ const InfoModal: React.FC<InfoModalProps> = ({
                         </span>
                         . Instead, the outcome of the clashing is decided in
                         accordance to{" "}
-                        <span className="font-bold">The Theory of Scale</span>.
-                        It is worth noting that in{" "}
+                        <span className="font-bold">Emergent Fate</span>. It is
+                        worth noting that in{" "}
                         <span className="font-bold">Titanism</span>, in general,
                         a value does not need to be opposed by another
                         value&mdash;if it is{" "}
