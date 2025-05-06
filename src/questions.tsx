@@ -291,8 +291,8 @@ export const Questions: Question[] = [
         },
       },
       {
-        text: "Kinda, I'm Zen/Secular Buddhist",
-        points: 25,
+        text: "Yes, but I'm secular (I don't believe the stories, just the teachings)",
+        points: 10,
       },
       {
         text: "Maybe, I'm a Deist, but not associated with any particular religion",
