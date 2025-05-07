@@ -292,13 +292,11 @@ export const Questions: Question[] = [
       },
       {
         text: "Yes, but I'm secular (I don't believe the stories, just the teachings)",
-        points: 10,
+        points: 5,
       },
-      {
-        text: "Maybe, I'm a Deist, but not associated with any particular religion",
-        points: 0,
-      },
-      { text: "No, I'm Atheist/Agnostic", points: 50 },
+      { text: "No, I'm Deist", points: 10 },
+      { text: "No, I'm Agnostic", points: 50 },
+      { text: "No, I'm Atheist", points: 50 },
       { text: "I don't know, I doubt my current beliefs", points: 10 },
     ],
     category: "🌿 Lifestyle & Habits",
