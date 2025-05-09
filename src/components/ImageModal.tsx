@@ -9,7 +9,11 @@ interface ImageModalProps {
   image: string | null;
 }
 
-const ImageModal: React.FC<ImageModalProps> = ({ isOpen, onRequestClose, image }) => {
+const ImageModal: React.FC<ImageModalProps> = ({
+  isOpen,
+  onRequestClose,
+  image,
+}) => {
   return (
     <ReactModal
       isOpen={isOpen}
@@ -39,7 +43,7 @@ const ImageModal: React.FC<ImageModalProps> = ({ isOpen, onRequestClose, image }
         </button>
         {image && (
           <div className="flex justify-center items-center w-full h-full pb-12">
-            <TransformWrapper>
+            <TransformWrapper minScale={0.75}>
               <TransformComponent
                 wrapperStyle={{ height: "100%", width: "100%" }}
               >
