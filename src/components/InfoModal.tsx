@@ -201,7 +201,7 @@ const InfoModal: React.FC<InfoModalProps> = ({
                       </div>
                       <div>
                         <h4 className="text-lg font-semibold mb-2">Bogus</h4>
-                        <div className="flex flex-wrap gap-2 justify-center">
+                        <div className="flex flex-wrap gap-2">
                           {bogus.map((item, index) => (
                             <span
                               key={`bogus-${index}`}
