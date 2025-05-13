@@ -24,9 +24,11 @@ const InfoModal: React.FC<InfoModalProps> = ({
     "♂️ Male",
     "🪪 Polish",
     "📏 190cm/6'3ft",
-    "💼 Software Developer",
-    "🏋️ Regularly",
-    "💪 Average",
+    "⚖️ 71kg/156lbs",
+    "💼 Programmer",
+    "🎓 Self-taught",
+    "🏋️ 6d/week",
+    "💪 Slightly athletic",
   ];
 
   const languages = ["🇵🇱 Native", "🇺🇸 Fluent", "🇨🇳 (Simplified) Beginner"];
@@ -54,6 +56,7 @@ const InfoModal: React.FC<InfoModalProps> = ({
     "😊 Kind",
     "🪨 Resilient",
     "⚖️ Judgmental",
+    "📈 Growth Mindset"
   ];
 
   const hobbies = [
@@ -66,6 +69,12 @@ const InfoModal: React.FC<InfoModalProps> = ({
     "📚 Books",
     "🎬 Movies",
   ];
+
+  const bogus = [
+    "♈ Aries",
+    "🧠 INTJ",
+    "🪄 8w7",
+  ]
 
   const philosophyImages = [
     process.env.PUBLIC_URL + "/img/philosophy01.png",
@@ -184,6 +193,19 @@ const InfoModal: React.FC<InfoModalProps> = ({
                             <span
                               key={`hobbies-${index}`}
                               className="bg-red-50 text-red-800 text-sm font-medium px-3 py-1 rounded border border-red-100"
+                            >
+                              {item}
+                            </span>
+                          ))}
+                        </div>
+                      </div>
+                      <div>
+                        <h4 className="text-lg font-semibold mb-2">Bogus</h4>
+                        <div className="flex flex-wrap gap-2 justify-center">
+                          {bogus.map((item, index) => (
+                            <span
+                              key={`bogus-${index}`}
+                              className="bg-gray-200 text-gray-800 text-sm font-medium px-3 py-1 rounded border border-gray-300"
                             >
                               {item}
                             </span>
