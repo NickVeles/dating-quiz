@@ -1,617 +1,193 @@
 // src/questions.tsx
-import Dealbreaker from "../model/Dealbreaker";
 import Question from "../model/Question";
-
-const myAge =
-  new Date().getFullYear() -
-  2003 -
-  (new Date() < new Date(`${new Date().getFullYear()}-03-21`) ? 1 : 0);
-
-const immaturity: Dealbreaker = {
-  title: "Then take a minute to read this",
-  subtitle: (
-    <>
-      <p className="mb-2">
-        Since you're between 18-{myAge}, I assume you might've not had much
-        experience with relationships, and that's somewhat fine, since I mainly
-        prioritize shared values over emotional maturity (it's just
-        statistically less common that someone is open to my values than is
-        emotionally mature, and I really like my values).
-      </p>
-      <p className="mb-2">
-        <span className="font-bold">HOWEVER!</span> That doesn't excuse certain
-        actions I see people do <span className="italic">way too often</span>{" "}
-        during initial stages of getting to know each other, including:
-      </p>
-      <ul className="list-disc list-outside pl-4">
-        <li className="mb-2">
-          <span className="font-bold">Ghosting and reappearing</span> &ndash; if
-          you're busy and can't manage time properly, just don't look for a
-          relationship.
-        </li>
-        <li className="mb-2">
-          <span className="font-bold">Playing multiple sides</span> &ndash; just
-          pick a single guy and tell others you don't feel it.
-        </li>
-        <li className="mb-2">
-          <span className="font-bold">Too intense too soon</span> &ndash; simply
-          calm down, we're not getting married on Day 1.
-        </li>
-        <li className="mb-2">
-          <span className="font-bold">Pressuring into vulnerability</span>{" "}
-          &ndash; you should reciprocate.
-        </li>
-        <li className="mb-2">
-          <span className="font-bold">Small talk limbo</span> &ndash; don't
-          avoid deeper topics.
-        </li>
-        <li className="mb-2">
-          <span className="font-bold">"My ex is so bad"</span> &ndash; 99% you
-          both failed at that relationship, so don't victimize yourself.
-        </li>
-        <li className="mb-2">
-          <span className="font-bold">"My ex..."</span> &ndash; stop comparing
-          others to your ex.
-        </li>
-        <li className="mb-2">
-          <span className="font-bold">Lying</span> &ndash; that way the
-          relationship is bound to fail from the start.
-        </li>
-      </ul>
-      <p className="mb-2">
-        The premise is: you know that you can just{" "}
-        <span className="font-bold">communicate</span> your issues, right? I'm
-        just another human, I consider myself emotionally mature, and I don't
-        bite lol. Saying,{" "}
-        <span className="italic">
-          "I don't wan't to continue our talks &ndash; I hope you can
-          understand"
-        </span>{" "}
-        will not hurt anyone, even without stating any reason. It will give us
-        both a clear indicator to move on.
-      </p>
-      <p>
-        And all that just regarding initial stages of getting to know each
-        other, I remind you! For emotional immaturity in later stages of a
-        relationship, I recommend just asking your{" "}
-        <a
-          href="https://chatgpt.com/?q=what%20are%20some%20indicators%20someone%20is%20not%20mature%20emotionally%20in%20a%20relationship%3F"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="text-blue-500 hover:underline"
-        >
-          chatgpt
-        </a>
-        .
-      </p>
-    </>
-  ),
-};
 
 export const Questions: Question[] = [
   {
-    text: "Where are you from?",
+    text: "Which breakfast food do you prefer?",
     answers: [
-      { text: "🇪🇺 Europe", points: 35 },
-      { text: "🇦🇺 Australia", points: 75 },
-      { text: "🇨🇦 Canada", points: 55 },
-      { text: "🇨🇳 China", points: 90 },
-      { text: "🇯🇵 Japan", points: 90 },
-      { text: "🇳🇿 New Zealand", points: 65 },
-      { text: "🇸🇬 Singapore", points: 100 },
-      { text: "🇹🇼 Taiwan", points: 85 },
-      { text: "🇺🇸 USA", points: 65 },
+      { text: "Pancakes", points: 0 },
+      { text: "Omelette", points: 60 },
+      { text: "Cereal", points: 40 },
+      { text: "Toast", points: 100 },
+      { text: "Fruit", points: 70 },
+    ],
+    category: "🍳 Food & Drink",
+  },
+  {
+    text: "What type of bread best matches your personality?",
+    answers: [
+      { text: "Sourdough", points: 0 },
+      { text: "Rye", points: 80 },
+      { text: "Whole Wheat", points: 60 },
       {
-        text: "Other",
+        text: "White",
         points: 0,
         dealbreaker: {
-          title: "Sorry!",
-          subtitle: <p>Only accepting the following countries:</p>,
-          image: process.env.PUBLIC_URL + "/img/db01a.png",
+          title: "Oops!",
+          subtitle: "Out bread types don't match 💔",
         },
       },
+      { text: "Banana Bread", points: 100 },
     ],
-    category: "🔒 Practical Filters",
+    category: "🍞 Fun Personality",
   },
   {
-    text: "What is your sex?",
+    text: "Which season do you enjoy the most?",
     answers: [
+      { text: "Spring", points: 100 },
+      { text: "Summer", points: 0 },
+      { text: "Autumn", points: 90 },
+      { text: "Winter", points: 70 },
+    ],
+    category: "🌤️ Preferences",
+  },
+  {
+    text: "Pick a pet:",
+    answers: [
+      { text: "Dog", points: 90 },
+      { text: "Cat", points: 100 },
+      { text: "Bird", points: 70 },
+      { text: "Fish", points: 60 },
+      { text: "Hamster", points: 0 },
+    ],
+    category: "🐾 Animals",
+  },
+  {
+    text: "Which superpower would you choose?",
+    answers: [
+      { text: "Invisibility", points: 80 },
+      { text: "Flying", points: 100 },
+      { text: "Super strength", points: 90 },
+      { text: "Time travel", points: 0 },
+      { text: "Telepathy", points: 60 },
+    ],
+    category: "🦸 Imagination",
+  },
+  {
+    text: "What’s your favorite way to spend a weekend?",
+    answers: [
+      { text: "Reading", points: 90 },
+      { text: "Exploring outdoors", points: 100 },
+      { text: "Watching movies", points: 80 },
+      { text: "Cooking", points: 0 },
+      { text: "Gaming", points: 60 },
+    ],
+    category: "🎉 Hobbies",
+  },
+  {
+    text: "Which color do you vibe with most?",
+    answers: [
+      { text: "Blue", points: 0 },
       {
-        text: "Male",
+        text: "Green",
         points: 0,
         dealbreaker: {
-          title: "Sorry homie, this quiz ain't for you",
-          subtitle: "Take this goodnight kiss tho",
-          image: process.env.PUBLIC_URL + "/img/db02a.png",
+          title: "I don't like green! 😭",
         },
       },
-      { text: "Female", points: 50 },
-      {
-        text: "Other (including trans people)",
-        points: 0,
-        dealbreaker: {
-          title: "Not a match!",
-          subtitle: <p>No hard feelings tho ❤️🌈</p>,
-        },
-      },
+      { text: "Red", points: 80 },
+      { text: "Yellow", points: 70 },
+      { text: "Purple", points: 100 },
     ],
-    category: "🔒 Practical Filters",
+    category: "🎨 Preferences",
   },
   {
-    text: "What is your sexuality?",
+    text: "What’s your favorite type of weather?",
     answers: [
-      { text: "Straight", points: 50 },
-      { text: "Bi", points: 25 },
-      { text: "Pansexual", points: 25 },
-      {
-        text: "Gay",
-        points: 0,
-        dealbreaker: {
-          title: "Not a match!",
-          subtitle: <p>No hard feelings tho ❤️🌈</p>,
-          image: process.env.PUBLIC_URL + "/img/db03a.webp",
-        },
-      },
-      {
-        text: "Asexual",
-        points: 0,
-        dealbreaker: {
-          title: "Sorry dude",
-          subtitle: <p>My deck ain't needing more aces 🃏</p>,
-          image: process.env.PUBLIC_URL + "/img/db03b.jpg",
-        },
-      },
-      { text: "Other", points: 0 },
+      { text: "Sunny", points: 100 },
+      { text: "Rainy", points: 80 },
+      { text: "Snowy", points: 70 },
+      { text: "Windy", points: 0 },
+      { text: "Cloudy", points: 90 },
     ],
-    category: "🔒 Practical Filters",
+    category: "🌦️ Preferences",
   },
   {
-    text: "How old are you?",
+    text: "Which genre of music do you listen to most?",
     answers: [
-      { text: `18-${myAge - 1}`, points: 50 },
-      { text: `${myAge}`, points: 10 },
-      {
-        text: `${myAge + 1}+`,
-        points: 0,
-        dealbreaker: {
-          title: "This u?",
-          image: process.env.PUBLIC_URL + "/img/db04a.webp",
-        },
-      },
+      { text: "Pop", points: 100 },
+      { text: "Rock", points: 90 },
+      { text: "Classical", points: 80 },
+      { text: "Jazz", points: 0 },
+      { text: "Hip-Hop", points: 60 },
     ],
-    category: "🔒 Practical Filters",
+    category: "🎵 Music",
   },
   {
-    text: "Could you take up a Long-Distance Relationship (LDR)?",
+    text: "Choose a vacation destination:",
     answers: [
-      { text: "Yes", points: 50 },
-      { text: "Only if we were in the same country", points: 10 },
-      {
-        text: "No",
-        points: 0,
-        dealbreaker: {
-          title: "😐",
-          subtitle: (
-            <>
-              <p className="mb-2">
-                Bruh the fact u seeing this quiz means I'm in a different
-                country.
-              </p>
-              <p>Like, all I can offer is an LDR rn.</p>
-            </>
-          ),
-          image: process.env.PUBLIC_URL + "/img/db05a.webp",
-        },
-      },
+      { text: "Beach", points: 100 },
+      { text: "Mountains", points: 90 },
+      { text: "City", points: 80 },
+      { text: "Countryside", points: 0 },
+      { text: "Forest", points: 60 },
     ],
-    category: "🔒 Practical Filters",
+    category: "✈️ Travel",
   },
   {
-    text: "How often do you smoke/vape?",
+    text: "Which dessert would you never skip?",
     answers: [
-      {
-        text: "Often",
-        points: 0,
-        dealbreaker: {
-          title: "Lung cancer? No thank you 🚭",
-          subtitle: <p>Prefering fresh air enthusiasts lmao</p>,
-          image: process.env.PUBLIC_URL + "/img/db06.png",
-        },
-      },
-      {
-        text: "Sometimes",
-        points: 0,
-        dealbreaker: {
-          title: "Still too smoky 🚭",
-          subtitle: <p>Prefering fresh air enthusiasts</p>,
-          image: process.env.PUBLIC_URL + "/img/db06.png",
-        },
-      },
-      { text: "Never", points: 50 },
-      { text: "Trying to quit", points: 10 },
+      { text: "Ice cream", points: 100 },
+      { text: "Cake", points: 0 },
+      { text: "Cookies", points: 80 },
+      { text: "Fruit salad", points: 70 },
+      { text: "Chocolate", points: 60 },
     ],
-    category: "🌿 Lifestyle & Habits",
+    category: "🍰 Food & Drink",
   },
   {
-    text: "How often do you drink?",
+    text: "What’s your favorite board game?",
     answers: [
-      {
-        text: "Often",
-        points: 0,
-        dealbreaker: {
-          title: "Nah",
-          subtitle: <p>Alcoholism ain't cute</p>,
-          image: process.env.PUBLIC_URL + "/img/db07a.jpeg",
-        },
-      },
-      { text: "Sometimes", points: 10 },
-      { text: "Rarely / Never", points: 50 },
+      { text: "Chess", points: 100 },
+      { text: "Monopoly", points: 90 },
+      { text: "Scrabble", points: 80 },
+      { text: "Clue", points: 70 },
+      { text: "Catan", points: 0 },
     ],
-    category: "🌿 Lifestyle & Habits",
+    category: "🎲 Games",
   },
   {
-    text: "What is your take on drugs?",
+    text: "Which fictional world would you visit?",
     answers: [
-      {
-        text: "I love both hard and soft drugs!",
-        points: 0,
-        dealbreaker: {
-          title: "NAH",
-          subtitle: <p>Hard in Hard Drugs stands for a Hard Pass lmao</p>,
-          image: process.env.PUBLIC_URL + "/img/db08a.png",
-        },
-      },
-      { text: "I love soft drugs!", points: 0 },
-      { text: "I could try weed, but I don't want to be a stoner", points: 10 },
-      { text: "No, thank you", points: 50 },
+      { text: "Hogwarts", points: 100 },
+      { text: "Narnia", points: 90 },
+      { text: "Middle-earth", points: 80 },
+      { text: "Wakanda", points: 70 },
+      { text: "Star Wars Galaxy", points: 0 },
     ],
-    category: "🌿 Lifestyle & Habits",
+    category: "📚 Imagination",
   },
   {
-    text: "Do you consider yourself healthy?",
+    text: "How do you like your coffee (or tea)?",
     answers: [
-      {
-        text: "Yes, I have a good BMI score, diet, sleep, exercise, and go to the doctor when I need to!",
-        points: 50,
-      },
-      { text: "Yes", points: 25 },
-      { text: "No", points: 0 },
+      { text: "Black", points: 100 },
+      { text: "With milk", points: 90 },
+      { text: "Sweetened", points: 80 },
+      { text: "I prefer tea", points: 70 },
+      { text: "I don't drink either", points: 0 },
     ],
-    category: "🌿 Lifestyle & Habits",
+    category: "☕ Food & Drink",
   },
   {
-    text: "Are you religious?",
+    text: "Which hobby would you like to try?",
     answers: [
-      {
-        text: "Yes",
-        points: 0,
-        dealbreaker: {
-          title: "Not a match!",
-          subtitle: "No offense ofc. We just don't vibe philosophy-wise.",
-        },
-      },
-      {
-        text: "Yes, but I'm secular (I don't believe the stories, just the teachings)",
-        points: 5,
-      },
-      { text: "No, I'm Deist", points: 10 },
-      { text: "No, I'm Agnostic", points: 50 },
-      { text: "No, I'm Atheist", points: 50 },
-      { text: "I don't know, I doubt my current beliefs", points: 10 },
+      { text: "Painting", points: 100 },
+      { text: "Gardening", points: 90 },
+      { text: "Dancing", points: 80 },
+      { text: "Cooking", points: 0 },
+      { text: "Photography", points: 60 },
     ],
-    category: "🌿 Lifestyle & Habits",
+    category: "🎨 Hobbies",
   },
   {
-    text: "How often do you use social media?",
+    text: "What’s your favorite time of day?",
     answers: [
-      {
-        text: "I'm addicted to doom-scrolling",
-        points: 0,
-        dealbreaker: {
-          title: "Addiction is an addiction dude",
-          image: process.env.PUBLIC_URL + "/img/db11a.jpg",
-        },
-      },
-      { text: "Often", points: 0 },
-      { text: "Sometimes", points: 25 },
-      { text: "Rarely / Never", points: 50 },
+      { text: "Morning", points: 100 },
+      { text: "Afternoon", points: 90 },
+      { text: "Evening", points: 80 },
+      { text: "Night", points: 70 },
+      { text: "Anytime", points: 0 },
     ],
-    category: "🌿 Lifestyle & Habits",
-  },
-  {
-    text: "Would you like to have a profound life?",
-    answers: [
-      { text: "Yes", points: 25 },
-      { text: "No", points: 0 },
-    ],
-    category: "🌿 Lifestyle & Habits",
-  },
-  {
-    text: "What do you think about casual hookups?",
-    answers: [
-      {
-        text: "Love them!",
-        points: 0,
-        dealbreaker: {
-          title: "💎",
-          subtitle: (
-            <p>
-              Even diamonds can be turned into a hoe with a couple of sticks.
-            </p>
-          ),
-          image: process.env.PUBLIC_URL + "/img/db13a.png",
-        },
-      },
-      { text: "Not for me", points: 20 },
-      { text: "Eww...", points: 50 },
-    ],
-    category: "💞 Relationship Philosophy",
-  },
-  {
-    text: "Body count?",
-    answers: [
-      { text: "0", points: 100 },
-      { text: "1", points: 50 },
-      { text: "2", points: 25 },
-      { text: "3", points: 0 },
-      {
-        text: "4+",
-        points: 0,
-        dealbreaker: {
-          title: "Wow...",
-          subtitle: <p>Can't quite get it right, huh? 🙃</p>,
-        },
-      },
-    ],
-    category: "💞 Relationship Philosophy",
-  },
-  {
-    text: "What do you think about selling nude content online?",
-    answers: [
-      {
-        text: "I do it myself!",
-        points: 0,
-        dealbreaker: {
-          title: "BOO!",
-          subtitle: <p>Did I scare you? I'm a job application</p>,
-          image: process.env.PUBLIC_URL + "/img/db15a.jpg",
-        },
-      },
-      { text: "Not for me, but I think it empowers women", points: 0 },
-      { text: "I hate the idea", points: 50 },
-    ],
-    category: "💞 Relationship Philosophy",
-  },
-  {
-    text: "What is your take on non-monogamy/open relationships?",
-    answers: [
-      {
-        text: "Hell yeah!",
-        points: 0,
-        dealbreaker: {
-          title: "That's just a no for me",
-          subtitle: <p>Weird ass mfers these days...</p>,
-        },
-      },
-      { text: "Eww...", points: 50 },
-    ],
-    category: "💞 Relationship Philosophy",
-  },
-  {
-    text: "Are you clingy?",
-    answers: [
-      { text: "Yes", points: 25 },
-      { text: "No", points: 0 },
-    ],
-    category: "💞 Relationship Philosophy",
-  },
-  {
-    text: "Do you like deep and long talks?",
-    answers: [
-      { text: "Yes!", points: 50 },
-      { text: "Booooring!", points: 0 },
-    ],
-    category: "💞 Relationship Philosophy",
-  },
-  {
-    text: "What is your love language?",
-    answers: [
-      { text: "Words of affirmation", points: 25 },
-      { text: "Quality time", points: 50 },
-      { text: "Acts of service", points: 25 },
-      { text: "Receiving gifts", points: 10 },
-      { text: "Physical touch", points: 25 },
-      { text: "I don't know / Never thought about it", points: 10 },
-    ],
-    category: "💞 Relationship Philosophy",
-  },
-  {
-    text: "Can you handle intense emotions in a partner?",
-    answers: [
-      { text: "Yes, I welcome emotional depth", points: 50 },
-      { text: "It depends", points: 25 },
-      { text: "I prefer chill and easygoing only", points: 0 },
-    ],
-    category: "💞 Relationship Philosophy",
-  },
-  {
-    text: "Why are you looking for a relationship?",
-    answers: [
-      { text: "I'm looking for a life partner", points: 100 },
-      {
-        text: "I'm looking for a temporary relationship",
-        points: 0,
-        dealbreaker: {
-          title: "I am not",
-          image: process.env.PUBLIC_URL + "/img/db99a.png",
-        },
-      },
-      {
-        text: "I'm looking for friends",
-        points: 0,
-        dealbreaker: {
-          title: "Cool!",
-          subtitle: (
-            <>
-              <p className="mb-2">All relationships start with friendships!</p>
-              <p className="mb-2">
-                But let's be real, if there isn't a spark between us, I'm
-                probably just gonna bail out after 2 weeks. I'm just too busy
-                with life, and I'm simply looking for something deeper than
-                "friends".
-              </p>
-              <p>
-                However, if you're looking for a web developer to collaborate
-                with, you can just contact me through my GitHub link located at
-                the bottom of the page!
-              </p>
-            </>
-          ),
-          image: process.env.PUBLIC_URL + "/img/db99b.jpg",
-        },
-      },
-      {
-        text: "I'm feeling lonely",
-        points: 0,
-        dealbreaker: {
-          title: "Damn, I feel ya bro",
-          subtitle: (
-            <p>
-              That shouldn't be your sole reason to look for a relationship tho.
-            </p>
-          ),
-          image: process.env.PUBLIC_URL + "/img/db99c.jpg",
-        },
-      },
-      {
-        text: "I'm not looking for a relationship at all",
-        points: 0,
-        dealbreaker: {
-          title: "Let me guess, you like doing quizzes?",
-          subtitle: (
-            <p>
-              I don't blame you. Just be sure to check what bread you are
-              afterwards!
-            </p>
-          ),
-          image: process.env.PUBLIC_URL + "/img/db99d.png",
-        },
-      },
-    ],
-    category: "💞 Relationship Philosophy",
-  },
-  {
-    text: "What is the greatest value of life? (in your opinion)",
-    answers: [
-      { text: "Family", points: 25 },
-      { text: "Knowledge", points: 75 },
-      { text: "Money & Wealth", points: 50 },
-      {
-        text: "Pleasure",
-        points: 0,
-        dealbreaker: {
-          title: "🔫🔫🔫",
-          image: process.env.PUBLIC_URL + "/img/db21a.webp",
-        },
-      },
-      { text: "Power", points: 50 },
-      { text: "Self-discovery", points: 100 },
-      { text: "I don't know...", points: 10 },
-      { text: "Other", points: 50 },
-    ],
-    category: "🧭 Values & Mindset",
-  },
-  {
-    text: "Would you like to study even after finishing school?",
-    answers: [
-      { text: "Yes, I'm a lifelong learner!", points: 50 },
-      { text: "Not really", points: 0 },
-    ],
-    category: "🧭 Values & Mindset",
-  },
-  {
-    text: "How would you feel if you discovered that after death, you would relive your life repeatedly, always the same exact way, and not remembering anything?",
-    answers: [
-      {
-        text: "Great! I love my life despite occasional suffering!",
-        points: 100,
-      },
-      { text: "Well... At least it's better than nothing?", points: 50 },
-      {
-        text: "Awful! No way I'm gonna relive all that shit again...",
-        points: 0,
-      },
-    ],
-    category: "🧭 Values & Mindset",
-  },
-  {
-    text: "Are you emotionally mature?",
-    answers: [
-      { text: "Yes", points: 50 },
-      {
-        text: "Maybe",
-        points: 0,
-        dealbreaker: immaturity,
-      },
-      {
-        text: "I don't know",
-        points: 0,
-        dealbreaker: immaturity,
-      },
-      {
-        text: "No",
-        points: 0,
-        dealbreaker: immaturity,
-      },
-    ],
-    category: "🧭 Values & Mindset",
-  },
-  {
-    text: "What makes you feel most alive?",
-    answers: [
-      { text: "Creating something meaningful", points: 50 },
-      { text: "Helping others", points: 50 },
-      { text: "Traveling and exploring", points: 25 },
-      { text: "Achieving goals", points: 25 },
-      {
-        text: "Partying and letting loose",
-        points: 0,
-        dealbreaker: {
-          title: "ok",
-          subtitle:
-            "It's 2am as I'm coding this, take this cat image and leave",
-          image: process.env.PUBLIC_URL + "/img/db25a.png",
-        },
-      },
-      { text: "I don't really know", points: 10 },
-    ],
-    category: "🧭 Values & Mindset",
-  },
-  {
-    text: "Do you have a strong sense of purpose in life?",
-    answers: [
-      { text: "Yes, and I'm working towards it", points: 50 },
-      { text: "I'm figuring it out", points: 25 },
-      { text: "No idea, I'm drifting", points: 0 },
-    ],
-    category: "🧭 Values & Mindset",
-  },
-  {
-    text: "Are you extroverted/introverted?",
-    answers: [
-      {
-        text: "Party animal",
-        points: 0,
-        dealbreaker: {
-          title: "This u?",
-          image: process.env.PUBLIC_URL + "/img/db27a.jpg",
-        },
-      },
-      { text: "Extroverted", points: 25 },
-      { text: "A mix of both", points: 50 },
-      { text: "Introverted", points: 50 },
-      { text: "Socially anxious", points: 10 },
-    ],
-    category: "🧠 Personality",
+    category: "🕒 Preferences",
   },
 ];

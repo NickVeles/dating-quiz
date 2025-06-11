@@ -140,7 +140,7 @@ const App: React.FC = () => {
         className="text-center text-gray-600 mb-6"
         onClick={() => setDebugInfoModalCount(debugInfoModalCount + 1)}
       >
-        Let's see how compatible we are 😎
+        WARNING: I no longer use this project for dating (even though it was pretty useful when I still used it) &ndash; it has become outdated, obsolete, archived, and all actual questions have been replaced with silly and meaningless substitutes!
       </p>
       <div className="mx-2 flex-grow">
         <div className="max-w-md mx-auto bg-white shadow-md rounded-lg overflow-hidden">
